@@ -70,7 +70,12 @@ let getDate = data => {
 			}
 		})
 	})
-	return arr;
+	return arr.sort(function(a,b){
+		a = new Date(a);
+		b = new Date(b);
+		if (a > b) return true;
+		else return false;
+	})
 }
 
 let getSeries = data => {
