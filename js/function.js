@@ -5,7 +5,7 @@
 // 	}
 // })
 
-ajax('get','json/state.json',function(data){
+ajax('get','json/data.json',function(data){
 	console.log(data);
 	var myChart = echarts.init(document.getElementById('chart'));
 	var chartOption = {
@@ -14,7 +14,7 @@ ajax('get','json/state.json',function(data){
 	myChart.setOption(chartOption);
 })
 
-let ajax = (type,url,callback) => {
+var ajax = (type,url,callback) => {
 	var xhr;
 	if (window.XMLHttpRequest) {
 		xhr = window.XMLHttpRequest();
