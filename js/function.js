@@ -1,18 +1,16 @@
-var vm = new Vue({
-	el: '#index',
-	data: {
-		price: 100,
-		len: 0
-	}
-})
+// var vm = new Vue({
+// 	el: '#index',
+// 	data: {
+// 		text: '这是第一个github.io'
+// 	}
+// })
 window.onload = function(){
 	ajax('get','json/data.json',function(data){
 		data = JSON.parse(data);
-		var lineChart = echarts.init(document.getElementById('lineChart'));
-		var barChart = echarts.init(document.getElementById('barChart'));
-		var lineOption = {
+		var myChart = echarts.init(document.getElementById('chart'));
+		var chartOption = {
 			title: {
-				text: '折线图'
+				text: 'No fxxk'
 			},
 			tooltip: {
 				trigger: 'axis'
@@ -30,38 +28,7 @@ window.onload = function(){
 			},
 			series: getSeries(data)
 		}
-		var barOption = {
-			title: {
-				text: '柱状图'
-			},
-			color: ['#3398DB'],
-			tooltip: {
-				trigger: 'axis',
-				axisPointer : {
-					type : 'shadow'
-				}
-			},
-			xAxis: {
-				type: 'category',
-				axisTick: {
-					alignWithLabel: true
-				},
-				data: getPeople(data)
-			},
-			yAxis: {
-				type: 'value'
-			},
-			series : [
-				{
-					name: '哔哔',
-					type: 'bar',
-					barWidth:  '60%',
-					data: getEachNum(data)
-				}
-			]
-		}
-		lineChart.setOption(lineOption);
-		barChart.setOption(barOption);
+		myChart.setOption(chartOption);
 	})
 }
 
@@ -140,21 +107,5 @@ let getNum = (data, from) => {
 			arr.push(0);
 		}
 	})
-	return arr;
-}
-
-let getEachNum = (data) => {
-	var people = getPeople(data);
-	var data = data.data;
-	let arr = [], len = 0;
-	people.forEach(function(a){
-		data.forEach(function(b){
-			if (b.name === a) {
-				arr.push(b.list.length);
-				len += b.list.length;
-			}
-		})
-	})
-	vm.len = len;
 	return arr;
 }
