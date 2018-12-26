@@ -1,0 +1,18 @@
+body{background-color: #ebebeb;}
+.widthContent{width: 90%; max-width: 1000px; margin-left: auto; margin-right: auto;}
+
+// 超长则省略
+.singleline{overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.doubleline{overflow : hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;}
+
+@mixin transition($during) {
+  transition: all $during;
+  -o-transition: all $during;
+  -ms-transition: all $during;
+  -moz-transition: all $during;
+  -webkit-transition: all $during;
+}
+
+// 动画
+.transition3{@include transition(.3s)};
+.transition5{@include transition(.5s)};
