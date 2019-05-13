@@ -33,11 +33,26 @@
   <div class="content">
     <h2>我是分身流派，ED到底要加多少级呢？ <span>V 3.1.0</span></h2>
     <div class="form">
-      <input type="tel" id="max" placeholder="极限层数" maxlength="5" oninput="setLS(this)" />
-      <input type="tel" id="arcane" placeholder="讨价还价等级" maxlength="4" oninput="setLS(this)" />
-      <input type="tel" id="mystic" placeholder="神秘冲击等级" maxlength="4" oninput="setLS(this)" />
-      <input type="tel" id="presence" placeholder="威名赫赫等级" maxlength="4" oninput="setLS(this)" />
-      <input type="tel" id="platinum" placeholder="周年白金套装乘数" maxlength="10" oninput="setLS(this)" />
+      <div class="item">
+        <p>极限层数</p>
+        <input type="tel" id="max" placeholder="请输入极限层数" maxlength="5" oninput="setLS(this)" />
+      </div>
+      <div class="item">
+        <p>讨价还价等级</p>
+        <input type="tel" id="arcane" placeholder="请输入讨价还价等级" maxlength="4" oninput="setLS(this)" />
+      </div>
+      <div class="item">
+        <p>神秘冲击等级</p>
+        <input type="tel" id="mystic" placeholder="请输入神秘冲击等级" maxlength="4" oninput="setLS(this)" />
+      </div>
+      <div class="item">
+        <p>威名赫赫等级</p>
+        <input type="tel" id="presence" placeholder="请输入威名赫赫等级" maxlength="4" oninput="setLS(this)" />
+      </div>
+      <div class="item">
+        <p>周年白金套装乘数</p>
+        <input type="tel" id="platinum" placeholder="请输入周年白金套装乘数" maxlength="10" oninput="setLS(this)" value="1" />
+      </div>
       <button class="btn" onclick="result(edData)">看看结果</button>
     </div>
     <div class="result">
@@ -83,6 +98,7 @@
 
     var setLS = (el) => {
       var id = el.id;
+      el.value = el.value.replace(/[^0-9]/g, '');
       var value = el.value;
       localStorage.setItem('ed:' + id, value);
     }
@@ -100,11 +116,11 @@
     var calcTotalNum = (max, arcane, presence) => {
       var baseNum = 8; // 基础小怪数量
       var totalNum = Math.floor(max / 500) * 2 + baseNum;
-      var result = totalNum - arcane - presence;
+      var result = totalNum - parseInt(arcane) - parseInt(presence);
       return result;
     }
 
-    var calcSlashNum = (arcane, mystic) => (arcane-0) + (mystic-0);
+    var calcSlashNum = (arcane, mystic) => parseInt(arcane) + parseInt(mystic);
 
     var validate = (...argu) => {
       var flag = true;
@@ -124,29 +140,34 @@
     }
 
     var result = (edData) => {
-      var max = document.getElementById('max').value;
-      var arcane = document.getElementById('arcane').value;
-      var mystic = document.getElementById('mystic').value;
-      var presence = document.getElementById('presence').value;
-      var platinum = document.getElementById('platinum').value;
+      var max = document.getElementById('max').value.trim();
+      var arcane = document.getElementById('arcane').value.trim();
+      var mystic = document.getElementById('mystic').value.trim();
+      var presence = document.getElementById('presence').value.trim();
+      var platinum = document.getElementById('platinum').value.trim();
       if (!validate(max, arcane, mystic, presence, platinum)) return;
       
       var totalNum = calcTotalNum(max, arcane, presence);
       var slashNum = calcSlashNum(arcane, mystic);
-      var half = [], full = [];
-      edData.forEach((i) => {
-        var slash = i[1];
-        var finalSlash = (slash + slashNum) * platinum;
-        if (finalSlash > Math.floor(totalNum / 2)) {
-          half.push(i);
-        }
-        if (finalSlash > totalNum) {
-          full.push(i);
-        }
-      })
+      if (totalNum > 0) {
+        var half = [], full = [];
+        edData.forEach((i) => {
+          var slash = i[1];
+          var finalSlash = (slash + slashNum) * platinum;
+          if (finalSlash > Math.floor(totalNum / 2)) {
+            half.push(i);
+          }
+          if (finalSlash > totalNum) {
+            full.push(i);
+          }
+        })
+        document.getElementById('half').innerHTML = half[0][0] + '级 溅射数：' + half[0][1] + ' 总技能点：' + half[0][3];
+        document.getElementById('full').innerHTML = full[0][0] + '级 溅射数：' + full[0][1] + ' 总技能点：' + full[0][3];
+      } else {
+        document.getElementById('half').innerHTML = '';
+        document.getElementById('full').innerHTML = '';
+      }
       document.getElementById('totalNum').innerHTML = totalNum;
-      document.getElementById('half').innerHTML = half[0][0] + '级 溅射数：' + half[0][1] + ' 总技能点：' + half[0][3];
-      document.getElementById('full').innerHTML = full[0][0] + '级 溅射数：' + full[0][1] + ' 总技能点：' + full[0][3];
     }
 
     var initTable = (edData) => {
