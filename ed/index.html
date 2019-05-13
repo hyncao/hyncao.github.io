@@ -146,6 +146,8 @@
       var presence = document.getElementById('presence').value.trim();
       var platinum = document.getElementById('platinum').value.trim();
       if (!validate(max, arcane, mystic, presence, platinum)) return;
+      var halfEl = document.getElementById('half');
+      var fullEl = document.getElementById('full');
       
       var totalNum = calcTotalNum(max, arcane, presence);
       var slashNum = calcSlashNum(arcane, mystic);
@@ -161,11 +163,19 @@
             full.push(i);
           }
         })
-        document.getElementById('half').innerHTML = half[0][0] + '级 溅射数：' + half[0][1] + ' 总技能点：' + half[0][3];
-        document.getElementById('full').innerHTML = full[0][0] + '级 溅射数：' + full[0][1] + ' 总技能点：' + full[0][3];
+        if (half.length) {
+          halfEl.innerHTML = half[0][0] + '级 溅射数：' + half[0][1] + ' 总技能点：' + half[0][3];
+        } else {
+          halfEl.innerHTML = '溅射数远远不够，满级ED也无法提供足够的溅射数，请提高被动技能等级';
+        }
+        if (full.length) {
+          fullEl.innerHTML = full[0][0] + '级 溅射数：' + full[0][1] + ' 总技能点：' + full[0][3];
+        } else {
+          fullEl.innerHTML = '溅射数远远不够，满级ED也无法提供足够的溅射数，请提高被动技能等级';
+        }
       } else {
-        document.getElementById('half').innerHTML = '';
-        document.getElementById('full').innerHTML = '';
+        halfEl.innerHTML = '';
+        fullEl.innerHTML = '';
       }
       document.getElementById('totalNum').innerHTML = totalNum;
     }
