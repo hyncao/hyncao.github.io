@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>ED</title>
+
+  <style>
+    *{margin: 0; padding: 0; font: 14px 'Microsoft Yahei'; color: #595959;}
+    body{background-color: #f5f5f5;}
+    .content{padding: 20px;}
+    .btn{display: block; background-color: #1890ff; color: #fff; width: 100%; height: 50px; line-height: 50px; text-align: center; font-size: 18px; border-radius: 8px; outline: 0; border: 0; cursor: pointer;}
+    .bold{font-size: inherit; color: #595959; font-weight: bold; margin: 0 6px;}
+    h2{font-size: 16px; font-weight: bold; margin-bottom: 20px;}
+    h2 span{color: #096dd9; font-size: 12px; font-weight: bold;}
+    .form input, .form select{-webkit-appearance: none; display: block; width: 100%; height: 40px; line-height: 40px; text-indent: 8px; font-size: 16px; border: 1px solid #d9d9d9; border-radius: 8px; margin-bottom: 10px; outline: 0; cursor: pointer;}
+    .form .btn{margin-top: 20px;}
+    .result{margin-top: 20px;}
+    .result *{font-size: 16px; font-weight: bold;}
+    .result span{color: #f5222d;}
+    .text{margin-top: 20px;}
+    .text h3{font-size: 16px; font-weight: bold; margin: 10px 0;}
+    .text p{margin-bottom: 8px; color: #8c8c8c;}
+    table{width: 100%; border-collapse: collapse; background-color: #fff;}
+    table th{font-size: 16px;}
+    table tr{border-bottom: 1px solid #d9d9d9; height: 40px;}
+    table tr:hover{background-color: #efefef;}
+    table td{text-align: center;}
+  </style>
+</head>
+<body>
+  <div class="content">
+    <h2>我是分身流派，ED到底要加多少级呢？ <span>V 3.1.0</span></h2>
+    <div class="form">
+      <input type="tel" id="max" placeholder="极限层数" maxlength="5" oninput="setLS(this)" />
+      <input type="tel" id="arcane" placeholder="讨价还价等级" maxlength="4" oninput="setLS(this)" />
+      <input type="tel" id="mystic" placeholder="神秘冲击等级" maxlength="4" oninput="setLS(this)" />
+      <input type="tel" id="presence" placeholder="威名赫赫等级" maxlength="4" oninput="setLS(this)" />
+      <input type="tel" id="platinum" placeholder="周年白金套装乘数" maxlength="10" oninput="setLS(this)" />
+      <button class="btn" onclick="result(edData)">看看结果</button>
+    </div>
+    <div class="result">
+      <p>总小怪数量：<span id="totalNum">0</span></p>
+      <p>满ED： <span id="full">0</span></p>
+      <p>半ED： <span id="half">0</span></p>
+    </div>
+    <div class="text">
+      <h3>一些说明</h3>
+      <p>针对分身套来说，ED加多少级困扰了好多人，因为需要的技能点偏多，加多了没用，加少了又不能跳关，特意出了这个工具。</p>
+      <p>使用此工具的前提是你有<span class="bold">分身套</span>，有分身套才能跳关，跳关基础触发率为:<span class="bold">25%</span></p>
+      <p>有无天堂套决定了你跳关的最大关数，没有的话最多跳4层，有则是12层</p>
+      <p>有问题可以联系<span class="bold">qq 277148066</span>，敲门砖：tt2</p>
+      <h3>一些备注</h3>
+      <p class="bold">*周年白金乘数: 没有填1，有则填写乘数</p>
+      <p>*ED：永恒黑暗技能 即蓝3-3</p>
+      <p>*炸弹怪：带有炸弹怪buff，则小怪数量减半</p>
+      <p>*满ED：极限层，无需炸弹怪buff，都可以跳关（技能点消耗很大）</p>
+      <p>*半ED：极限层，只在有炸弹怪buff时，才可以跳关（技能点消耗一般）</p>
+      <h3>ED等级参照表</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>等级</th>
+            <th>溅射数</th>
+            <th>每级消耗</th>
+            <th>总消耗</th>
+          </tr>
+        </thead>
+        <tbody id="table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    var edData = [
+      [1, 0, 2, 2], [2, 1, 2, 4], [3, 2, 3, 7], [4, 3, 3, 10], [5, 4, 3, 13],
+      [6, 6, 4, 17], [7, 8, 5, 22], [8, 10, 5, 27], [9, 12, 6, 33], [10, 14, 7, 40],
+      [11, 16, 8, 48], [12, 18, 9, 57], [13, 20, 11, 68], [14, 23, 12, 80], [15, 26, 14, 94],
+      [16, 29, 16, 110], [17, 33, 19, 129], [18, 38, 22, 151], [19, 44, 25, 176], [20, 51, 28, 204],
+      [21, 59, 33, 237], [22, 68, 38, 275], [23, 78, 43, 318], [24, 89, 50, 368], [25, 101, 57, 425],
+    ];
+
+    var setLS = (el) => {
+      var id = el.id;
+      var value = el.value;
+      localStorage.setItem('ed:' + id, value);
+    }
+
+    var loadLS = () => {
+      var arr = ['ed:max', 'ed:arcane', 'ed:mystic', 'ed:presence', 'ed:platinum'];
+      arr.forEach((i) => {
+        if (localStorage.getItem(i)) {
+          var id = i.substr('3');
+          document.getElementById(id).value = localStorage.getItem(i);
+        }
+      })
+    }
+
+    var calcTotalNum = (max, arcane, presence) => {
+      var baseNum = 8; // 基础小怪数量
+      var totalNum = Math.floor(max / 500) * 2 + baseNum;
+      var result = totalNum - arcane - presence;
+      return result;
+    }
+
+    var calcSlashNum = (arcane, mystic) => (arcane-0) + (mystic-0);
+
+    var validate = (...argu) => {
+      var flag = true;
+      for (var i = 0; i < argu.length; i++){
+        if (!argu[i] || !/^\d+\.?\d?$/.test(argu[i])){
+          flag = false;
+          break;
+        }
+      }
+      return flag;
+    }
+
+    var result = (edData) => {
+      var max = document.getElementById('max').value;
+      var arcane = document.getElementById('arcane').value;
+      var mystic = document.getElementById('mystic').value;
+      var presence = document.getElementById('presence').value;
+      var platinum = document.getElementById('platinum').value;
+      if (!validate(max, arcane, mystic, presence, platinum)) return;
+      
+      var totalNum = calcTotalNum(max, arcane, presence);
+      var slashNum = calcSlashNum(arcane, mystic);
+      var half = [], full = [];
+      edData.forEach((i) => {
+        var slash = i[1];
+        var finalSlash = (slash + slashNum) * platinum;
+        if (finalSlash > Math.floor(totalNum / 2)) {
+          half.push(i);
+        }
+        if (finalSlash > totalNum) {
+          full.push(i);
+        }
+      })
+      document.getElementById('totalNum').innerHTML = totalNum;
+      document.getElementById('half').innerHTML = half[0][0] + '级 溅射数：' + half[0][1] + ' 总技能点：' + half[0][3];
+      document.getElementById('full').innerHTML = full[0][0] + '级 溅射数：' + full[0][1] + ' 总技能点：' + full[0][3];
+    }
+
+    var initTable = (edData) => {
+      var html = edData.map((i) => {
+        var td = i.map((item) => '<td>' + item + '</td>').join('');
+        var tr = '<tr>' + td + '</tr>';
+        return tr;
+      }).join('');
+      document.getElementById('table').innerHTML = html;
+    }
+
+    loadLS();
+
+    initTable(edData);
+
+  </script>
+</body>
+</html>

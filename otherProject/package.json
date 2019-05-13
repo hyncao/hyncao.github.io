@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "config": {
+    "port": "3000"
+  },
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hyncao/hyncao.github.io.git"
+  },
+  "author": "Hyn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hyncao/hyncao.github.io/issues"
+  },
+  "homepage": "https://github.com/hyncao/hyncao.github.io#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}
