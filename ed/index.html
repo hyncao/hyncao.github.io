@@ -109,9 +109,15 @@
     var validate = (...argu) => {
       var flag = true;
       for (var i = 0; i < argu.length; i++){
-        if (!argu[i] || !/^\d+\.?\d?$/.test(argu[i])){
+        if (!argu[i]){
           flag = false;
           break;
+        }
+        if (i == 4) {
+          if (!/(^[1-9]$)|(^[1-9]\.\d+$)/.test(argu[i])) {
+            flag = false;
+            break;
+          }
         }
       }
       return flag;
