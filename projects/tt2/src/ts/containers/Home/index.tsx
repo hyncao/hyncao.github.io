@@ -10,6 +10,7 @@ interface styles {
 class Home extends Component {
   state = {
     list: [
+      {'name': '神器升级工具', url: 'https://fanwenkui.github.io/tt2-artifacts/'},
       {'name': 'ED等级计算器', url: 'https://hyncao.github.io/ed/'},
     ]
   }
