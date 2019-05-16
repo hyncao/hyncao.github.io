@@ -98,7 +98,11 @@
 
     var setLS = (el) => {
       var id = el.id;
-      el.value = el.value.replace(/[^0-9]/g, '');
+      if (id == 'platinum') {
+        el.value = el.value.replace(/[^0-9\.]/g, '');
+      } else {
+        el.value = el.value.replace(/[^0-9]/g, '');
+      }
       var value = el.value;
       localStorage.setItem('ed:' + id, value);
     }
