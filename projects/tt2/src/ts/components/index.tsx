@@ -1,3 +1,5 @@
-// 将containers的组件全部导出
-export { default as Vision } from './Vision';
-export { default as ToolItem } from './ToolItem';
+import Vision from './Vision';
+import ToolItem from './ToolItem';
+import EdInputItem from './ToolItem';
+
+export { Vision, ToolItem, EdInputItem }
