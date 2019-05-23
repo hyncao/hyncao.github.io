@@ -1,7 +1,55 @@
 * {
-  font: 14px 'Microsoft Yahei';
-  color: #e8e8e8;
+  font: .28rem 'Microsoft Yahei';
+  margin: 0;
+  padding: 0;
 }
-body{
-  background-color: #262626;
+
+body {
+  background-color: #f5f5f5;
+}
+
+html {
+  font-size: 100px;
+}
+
+@media only screen and (min-width: 640px) and (max-width:640px) {
+  html {
+    font-size: 85.33px;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  html {
+    font-size: 96px;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  html {
+    font-size: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  html {
+    font-size: 102.4px;
+  }
+}
+
+@media only screen and (min-width: 824px) {
+  html {
+    font-size: 109.87px;
+  }
+}
+
+@media only screen and (min-width: 828px) {
+  html {
+    font-size: 110.4px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 204.8px;
+  }
 }

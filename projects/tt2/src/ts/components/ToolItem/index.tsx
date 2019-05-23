@@ -1,12 +1,12 @@
 import React from 'react';
+import styles from './index.module.scss';
 
 interface props {
   url: string;
   name: string;
+  jump: (url: string) => void;
 }
 
-const style:object = {display: 'inline-block', color: '#b7eb8f', margin: '20px 0'}
-
-const ToolItem = ({ url, name }:props) => <div><a style={style} rel="noopener noreferrer" href={url} target="_blank">{name}</a></div>;
+const ToolItem = ({ url, name, jump }: props) => <div><span className={styles.item} onClick={() => jump(url)}>{name}</span></div>;
 
 export default ToolItem;

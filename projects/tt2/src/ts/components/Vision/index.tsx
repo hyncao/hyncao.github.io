@@ -1,7 +1,6 @@
 import React from 'react';
+import styles from './index.module.scss';
 
-const styles:object = {fontSize: '14px', color: '#ffa940', fontWeight: 'bold'};
-
-const Vision = () => <p style={styles}>V 3.1.0</p>;
+const Vision = () => <p className={styles.vision}>V 3.1.0</p>;
 
 export default Vision;
