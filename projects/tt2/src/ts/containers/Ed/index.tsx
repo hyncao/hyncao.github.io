@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { EdInputItem, Vision } from '../../components';
+import { hocLogger } from '../../hoc';
 import styles from './index.module.scss';
 
 interface IProps { }
@@ -170,8 +171,8 @@ class Ed extends Component<IProps, IState> {
         <div className={styles.result}>
           <p>总小怪数量：<span>{totalNum}</span></p>
           <p>被动技能溅射数：<span>{slashNum}</span></p>
-          <p>满ED： <span>{halfText}</span></p>
-          <p>半ED： <span>{fullText}</span></p>
+          <p>满ED： <span>{fullText}</span></p>
+          <p>半ED： <span>{halfText}</span></p>
         </div>
 
         <div className={styles.text}>
@@ -212,4 +213,4 @@ class Ed extends Component<IProps, IState> {
   }
 }
 
-export default Ed;
+export default hocLogger(Ed);

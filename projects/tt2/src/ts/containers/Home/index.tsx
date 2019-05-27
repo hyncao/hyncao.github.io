@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Vision, ToolItem } from '../../components';
+import { hocLogger } from '../../hoc';
 import styles from './index.module.scss';
 
 interface IProps {
@@ -56,4 +57,4 @@ class Home extends Component<IProps, IState> {
   }
 }
 
-export default Home;
+export default hocLogger(Home);
