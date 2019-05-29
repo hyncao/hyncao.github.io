@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/iis/tt2/tt2-optimizer.herokuapp.com.html#artifacts -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <!-- Required meta tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Bootstrap CSS -->
+  <link href="./css/bootstrap.min.css" rel="stylesheet">
+  <link href="./css/jquery.dataTables.min.css" rel="stylesheet">
+  <link href="./css/responsive.dataTables.min.css" rel="stylesheet">
+  <link href="./css/app.css" rel="stylesheet">
+</head>
+
+<body class="bg-dark text-light">
+  <div class="container-fluid">
+    <div class="sticky-top border-bottom border-secondary bg-dark">
+      <ul class="nav nav-pills" id="navTab" role="tablist">
+        <li class="nav-item"><a class="nav-link text-light active show" id="options-tab" data-toggle="tab" href="#options"
+            role="tab" aria-controls="options" aria-selected="true">配置（优先填写）</a></li>
+        <li class="nav-item"><a class="nav-link text-light" id="artifacts-tab" data-toggle="tab" href="#artifacts"
+            role="tab" aria-controls="artifacts" aria-selected="false">神器升级</a></li>
+        <li class="nav-item"><a class="nav-link text-light" id="skills-tab" data-toggle="tab" href="#skills"
+            role="tab" aria-controls="skills" aria-selected="false">技能加点</a></li>
+      </ul>
+      <h1 class="h4">TT2 优化器 <span class="badge badge-secondary">2.12.2</span></h1>
+    </div>
+    <div class="tab-content" id="tabContent">
+      <div class="tab-pane fade active show" id="options" role="tabpanel" aria-labelledby="options-tab">
+        <p></p>
+        <p>本页面为英文原版翻译（基于游戏简体中文语言），版本：2.12.2，夹带少量私货。如有出入请联系qq 277148066，访问原版请访问
+          <a class="sc" target="_blank" href="https://tt2-optimizer.herokuapp.com/">英文原版地址</a>
+        </p>
+        <p>小老弟，看到这么多东西不要慌，一步一步来。首先完成 <strong class="text-warning">配置</strong> 选项卡，之后就可以进入 <strong class="text-warning">神器升级</strong>
+          和 <strong class="text-warning">技能加点</strong> 查看结果</p>
+        <p>填写数据的时候注意单位，绝大部分都有说明，请仔细看。神器升级的体验不如以前的版本，但是这版的亮点在于<strong class="text-warning">个性化的技能加点</strong></p>
+        <form>
+          <div class="form-row mb-4">
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="ltr">总圣物数</label>
+              <div class="input-group">
+                <input type="number" id="ltr" class="form-control" placeholder="#.##" aria-label="lifetime relics"
+                  onchange="storeValues();" step="0.01">
+                <select id="ltr_factor" onchange="storeValues();">
+                  <option value="e0"></option>
+                  <option value="e3">K</option>
+                  <option value="e6">M</option>
+                  <option value="e9">B</option>
+                  <option value="e12">T</option>
+                  <option value="e15">e15/aa</option>
+                  <option value="e16">e16</option>
+                  <option value="e17">e17</option>
+                  <option value="e18">e18/ab</option>
+                  <option value="e19">e19</option>
+                  <option value="e20">e20</option>
+                  <option value="e21">e21/ac</option>
+                  <option value="e22">e22</option>
+                  <option value="e23">e23</option>
+                  <option value="e24">e24/ad</option>
+                  <option value="e25">e25</option>
+                  <option value="e26">e26</option>
+                  <option value="e27">e27/ae</option>
+                  <option value="e28">e28</option>
+                  <option value="e29">e29</option>
+                  <option value="e30">e30/af</option>
+                  <option value="e31">e31</option>
+                  <option value="e32">e32</option>
+                  <option value="e33">e33/ag</option>
+                  <option value="e34">e34</option>
+                  <option value="e35">e35</option>
+                  <option value="e36">e36/ah</option>
+                  <option value="e37">e37</option>
+                  <option value="e38">e38</option>
+                  <option value="e39">e39/ai</option>
+                  <option value="e40">e40</option>
+                  <option value="e41">e41</option>
+                  <option value="e42">e42/aj</option>
+                  <option value="e43">e43</option>
+                  <option value="e44">e44</option>
+                  <option value="e45">e45/ak</option>
+                  <option value="e46">e46</option>
+                  <option value="e47">e47</option>
+                  <option value="e48">e48/al</option>
+                  <option value="e49">e49</option>
+                  <option value="e50">e50</option>
+                  <option value="e51">e51/am</option>
+                  <option value="e52">e52</option>
+                  <option value="e53">e53</option>
+                  <option value="e54">e54/an</option>
+                  <option value="e55">e55</option>
+                  <option value="e56">e56</option>
+                  <option value="e57">e57/ao</option>
+                  <option value="e58">e58</option>
+                  <option value="e59">e59</option>
+                  <option value="e60">e60/ap</option>
+                  <option value="e61">e61</option>
+                  <option value="e62">e62</option>
+                  <option value="e63">e63/aq</option>
+                  <option value="e64">e64</option>
+                  <option value="e65">e65</option>
+                  <option value="e66">e66/ar</option>
+                  <option value="e67">e67</option>
+                  <option value="e68">e68</option>
+                  <option value="e69">e69/as</option>
+                  <option value="e70">e70</option>
+                  <option value="e71">e71</option>
+                  <option value="e72">e72/at</option>
+                  <option value="e73">e73</option>
+                  <option value="e74">e74</option>
+                  <option value="e75">e75/au</option>
+                  <option value="e76">e76</option>
+                  <option value="e77">e77</option>
+                  <option value="e78">e78/av</option>
+                  <option value="e79">e79</option>
+                  <option value="e80">e80</option>
+                  <option value="e81">e81/aw</option>
+                  <option value="e82">e82</option>
+                  <option value="e83">e83</option>
+                  <option value="e84">e84/ax</option>
+                  <option value="e85">e85</option>
+                  <option value="e86">e86</option>
+                  <option value="e87">e87/ay</option>
+                  <option value="e88">e88</option>
+                  <option value="e89">e89</option>
+                  <option value="e90">e90/az</option>
+                  <option value="e91">e91</option>
+                  <option value="e92">e92</option>
+                  <option value="e93">e93/ba</option>
+                  <option value="e94">e94</option>
+                  <option value="e95">e95</option>
+                  <option value="e96">e96/bb</option>
+                  <option value="e97">e97</option>
+                  <option value="e98">e98</option>
+                  <option value="e99">e99/bc</option>
+                  <option value="e100">e100</option>
+                  <option value="e101">e101</option>
+                  <option value="e102">e102/bd</option>
+                </select>
+              </div>
+              <p class="mb-0"><em><small>(统计数据界面，拉到最下面)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="sp">总技能点</label>
+              <input type="tel" id="sp" class="form-control" placeholder="#" aria-label="total skill points" value="0"
+                onchange="storeValues();">
+              <p class="mb-0"><em><small>(根据输入的技能点生成个性化加点方案)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="bospct">暗影之书所占比重</label>
+              <div class="input-group">
+                <input type="number" id="bospct" class="form-control" placeholder="#.##" aria-label="relics value"
+                  onchange="storeValues();" step="0.01" value="50.00">
+                <div class="input-group-append">
+                  <select class="form-control" id="bosunit" onchange="storeValues();">
+                    <option value="pct">%</option>
+                    <option value="e0">(&lt; 1000)</option>
+                    <option value="e3">K</option>
+                    <option value="e6">M</option>
+                    <option value="e9">B</option>
+                    <option value="e12">T</option>
+                    <option value="e15">e15/aa</option>
+                    <option value="e16">e16</option>
+                    <option value="e17">e17</option>
+                    <option value="e18">e18/ab</option>
+                    <option value="e19">e19</option>
+                    <option value="e20">e20</option>
+                    <option value="e21">e21/ac</option>
+                    <option value="e22">e22</option>
+                    <option value="e23">e23</option>
+                    <option value="e24">e24/ad</option>
+                    <option value="e25">e25</option>
+                    <option value="e26">e26</option>
+                    <option value="e27">e27/ae</option>
+                    <option value="e28">e28</option>
+                    <option value="e29">e29</option>
+                    <option value="e30">e30/af</option>
+                  </select>
+                </div>
+              </div>
+              <p class="mb-0"><em><small>(你期望的暗影之书所占比重，建议单位选择百分比来设置，50%为推荐数值。所占比重指的是将你的圣物花费多少来加到暗影之书上面。)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="hero">你当前的最强英雄</label>
+              <select class="form-control" id="hero" onchange="storeValues();">
+                <option value="maya">守望者玛雅·穆塔</option>
+                <option value="zato">盲棍大师扎托</option>
+                <option value="sophia">剑之勇士索菲亚</option>
+                <option value="lance">钴钢骑士兰斯</option>
+                <option value="pingo">托利族的平哥</option>
+                <option value="rosabella">弓箭手罗莎贝拉·邦妮</option>
+                <option value="gulbrand">毁灭者布尔兰德</option>
+                <option value="davey">戴维·加农船长</option>
+                <option value="rhys">伊维塔教团法师里斯</option>
+                <option value="kronus">审判使者克洛诺斯</option>
+                <option value="cosette">佩剑家族之宝柯赛特</option>
+                <option value="kiki">龙骑士琪琪</option>
+                <option value="maddie">影子盗贼玛迪</option>
+                <option value="beany">豆芽一世</option>
+                <option value="sawyer">荒野枪手索耶</option>
+                <option value="ursa">小熊乌尔沙</option>
+                <option value="saje">花园守护者萨杰</option>
+                <option value="wally">魔法师瓦利瓦</option>
+                <option value="jayce">冷血屠夫杰斯</option>
+                <option value="pharaoh">大法老</option>
+                <option value="boomoh">布莫医生</option>
+                <option value="dex">Dex-1000</option>
+                <option value="cass">贵夫人卡斯</option>
+                <option value="lala">快箭手拉拉</option>
+                <option value="aya">闪电紫罗兰阿雅</option>
+                <option value="lucy">暗夜术士露西女士</option>
+                <option value="jazz">爵士摇滚乐手</option>
+                <option value="maple">秋季卫士阿枫</option>
+                <option value="kin">蓬蓬兽阿金</option>
+                <option value="titania">仙子公主泰坦尼娅</option>
+                <option value="miki">优雅舞者米琪</option>
+                <option value="mina">光之女祭司米娜</option>
+                <option value="yzafa">恐怖大盗伊扎法</option>
+                <option value="zolom">太空猎人佐龙·布拉斯特</option>
+                <option value="finn">怪异卫兵费恩</option>
+                <option value="nohni">矛灵诺尼</option>
+                <option value="damon">黑暗达蒙</option>
+                <option value="split">[ 平衡所有英雄 ]</option>
+              </select>
+              <p class="mb-0"><em><small>(原作者是建议选平衡所有英雄，各位酌情考虑)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="allprob">来自劈砍装备的所有概率加成</label>
+              <div class="input-group">
+                <input type="number" id="allprob" class="form-control" placeholder="#.##" aria-label="all probability slash boost"
+                  onchange="storeValues();" step="0.01">
+                <div class="input-group-append">
+                  <span class="input-group-text">x (来自劈砍装备)</span>
+                </div>
+              </div>
+              <p class="mb-0"><em><small>(如果你的劈砍装备没有这项加成，请写1，有就写1.xx)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="crit">当前的暴击率</label>
+              <div class="input-group">
+                <input type="number" id="crit" class="form-control" placeholder="#.##" aria-label="critical chance stat"
+                  onchange="storeValues();" step="0.01">
+                <div class="input-group-append">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+              <p class="mb-0"><em><small>(统计数据界面有)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="chesterson">当前的宝箱兽概率</label>
+              <div class="input-group">
+                <input type="number" id="chesterson" class="form-control" placeholder="#.##" aria-label="chesterson chance stat"
+                  onchange="storeValues();" step="0.01">
+                <div class="input-group-append">
+                  <span class="input-group-text">%</span>
+                </div>
+              </div>
+              <p class="mb-0"><em><small>(统计数据界面有)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="cleaving">当前的劈砍技能等级（红3-1）</label>
+              <select class="form-control" id="cleaving" onchange="storeValues();">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+              </select>
+              <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="spoils">当前的战利品技能等级（黄2-1）</label>
+              <select class="form-control" id="spoils" onchange="storeValues();">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+              </select>
+              <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="ip">威吓灵气技能等级</label>
+              <div class="input-group">
+                <input type="tel" id="ip" class="form-control" placeholder="#" aria-label="current IP level" onchange="storeValues();">
+                <div class="input-group-append">
+                  <span class="input-group-text">IP level</span>
+                </div>
+              </div>
+              <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="mi">神秘的冲击技能等级</label>
+              <div class="input-group">
+                <input type="tel" id="mi" class="form-control" placeholder="#" aria-label="current MI level" onchange="storeValues();">
+                <div class="input-group-append">
+                  <span class="input-group-text">MI level</span>
+                </div>
+              </div>
+              <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="ms">你的极限层数</label>
+              <select class="form-control" id="ms" onchange="storeValues();">
+                <option value="500">1 – 500</option>
+                <option value="1000">501 – 1000</option>
+                <option value="1500">1001 – 1500</option>
+                <option value="2000">1501 – 2000</option>
+                <option value="2500">2001 – 2500</option>
+                <option value="3000">2501 – 3000</option>
+                <option value="3500">3001 – 3500</option>
+                <option value="4000">3501 – 4000</option>
+                <option value="4500">4001 – 4500</option>
+                <option value="5000">4501 – 5000</option>
+                <option value="5500">5001 – 5500</option>
+                <option value="6000">5501 – 6000</option>
+                <option value="6500">6001 – 6500</option>
+                <option value="7000">6501 – 7000</option>
+                <option value="7500">7001 – 7500</option>
+                <option value="8000">7501 – 8000</option>
+                <option value="8500">8001 – 8500</option>
+                <option value="9000">8501 – 9000</option>
+                <option value="9500">9001 – 9500</option>
+                <option value="10000">9501 – 10000</option>
+                <option value="10500">10001 – 10500</option>
+                <option value="11000">10501 – 11000</option>
+                <option value="11500">11001 – 11500</option>
+                <option value="12000">11501 – 12000</option>
+                <option value="12500">12001 – 12500</option>
+                <option value="13000">12501 – 13000</option>
+                <option value="13500">13001 – 13500</option>
+                <option value="14000">13501 – 14000</option>
+                <option value="14500">14001 – 14500</option>
+                <option value="15000">14501 – 15000</option>
+                <option value="15500">15001 – 15500</option>
+                <option value="16000">15501 – 16000</option>
+                <option value="16500">16001 – 16500</option>
+                <option value="17000">16501 – 17000</option>
+                <option value="17500">17001 – 17500</option>
+                <option value="18000">17501 – 18000</option>
+                <option value="18500">18001 – 18500</option>
+                <option value="19000">18501 – 19000</option>
+                <option value="19500">19001 – 19500</option>
+                <option value="20000">19501 – 20000</option>
+                <option value="20500">20001 – 20500</option>
+                <option value="21000">20501 – 21000</option>
+                <option value="21500">21001 – 21500</option>
+                <option value="22000">21501 – 22000</option>
+                <option value="22500">22001 – 22500</option>
+                <option value="23000">22501 – 23000</option>
+                <option value="23500">23001 – 23500</option>
+                <option value="24000">23501 – 24000</option>
+                <option value="24500">24001 – 24500</option>
+                <option value="25000">24501 – 25000</option>
+                <option value="25500">25001 – 25500</option>
+                <option value="26000">25501 – 26000</option>
+                <option value="26500">26001 – 26500</option>
+                <option value="27000">26501 – 27000</option>
+                <option value="27500">27001 – 27500</option>
+                <option value="28000">27501 – 28000</option>
+                <option value="28500">28001 – 28500</option>
+                <option value="29000">28501 – 29000</option>
+                <option value="29500">29001 – 29500</option>
+                <option value="30000">29501 – 30000</option>
+                <option value="30500">30001 – 30500</option>
+                <option value="31000">30501 – 31000</option>
+                <option value="31500">31001 – 31500</option>
+                <option value="32000">31501 – 32000</option>
+                <option value="32500">32001 – 32500</option>
+                <option value="33000">32501 – 33000</option>
+                <option value="33500">33001 – 33500</option>
+                <option value="34000">33501 – 34000</option>
+                <option value="34500">34001 – 34500</option>
+                <option value="35000">34501 – 35000</option>
+                <option value="35500">35001 – 35500</option>
+                <option value="36000">35501 – 36000</option>
+                <option value="36500">36001 – 36500</option>
+                <option value="37000">36501 – 37000</option>
+                <option value="37500">37001 – 37500</option>
+                <option value="38000">37501 – 38000</option>
+                <option value="38500">38001 – 38500</option>
+                <option value="39000">38501 – 39000</option>
+                <option value="39500">39001 – 39500</option>
+                <option value="40000">39501 – 40000</option>
+                <option value="40500">40001 – 40500</option>
+                <option value="41000">40501 – 41000</option>
+                <option value="41500">41001 – 41500</option>
+                <option value="42000">41501 – 42000</option>
+                <option value="42500">42001 – 42500</option>
+                <option value="43000">42501 – 43000</option>
+                <option value="43500">43001 – 43500</option>
+                <option value="44000">43501 – 44000</option>
+                <option value="44500">44001 – 44500</option>
+                <option value="45000">44501 – 45000</option>
+                <option value="45500">45001 – 45500</option>
+                <option value="46000">45501 – 46000</option>
+                <option value="46500">46001 – 46500</option>
+                <option value="47000">46501 – 47000</option>
+                <option value="47500">47001 – 47500</option>
+                <option value="48000">47501 – 48000</option>
+                <option value="48500">48001 – 48500</option>
+                <option value="49000">48501 – 49000</option>
+                <option value="49500">49001 – 49500</option>
+                <option value="50000">49501 – 50000</option>
+                <option value="50500">50001 – 50500</option>
+                <option value="51000">50501 – 51000</option>
+                <option value="51500">51001 – 51500</option>
+                <option value="52000">51501 – 52000</option>
+                <option value="52500">52001 – 52500</option>
+                <option value="53000">52501 – 53000</option>
+                <option value="53500">53001 – 53500</option>
+                <option value="54000">53501 – 54000</option>
+                <option value="54500">54001 – 54500</option>
+                <option value="55000">54501 – 55000</option>
+              </select>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="crafting">手工艺品等级</label>
+              <div class="input-group">
+                <input type="tel" id="crafting" class="form-control" placeholder="#" aria-label="crafting power level"
+                  onchange="storeValues();">
+                <div class="input-group-append">
+                  <span class="input-group-text">手工艺品等级</span>
+                </div>
+              </div>
+              <p><em><small>(在装备选项卡中的手工艺界面的最下方)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="warcry">你的战壕技能等级</label>
+              <select class="form-control" id="warcry" onchange="storeValues();">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+              </select>
+              <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="clone">你的影分身技能等级</label>
+              <select class="form-control" id="clone" onchange="storeValues();">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+              </select>
+              <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="build">你用的伤害流派</label>
+              <select class="form-control" id="build" onchange="storeValues();">
+                <option value="cs">大船流</option>
+                <option value="hs">天堂流</option>
+                <option value="hscs">天堂 + 大船</option>
+                <option value="hssc">天堂 + 影分身</option>
+                <option value="pet">宠物流</option>
+                <option value="sc">影分身流</option>
+              </select>
+              <p><em><small>(天堂流会因为使用者的喜好而有两种混合流派)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="gold">你用的金钱流派</label>
+              <select class="form-control" id="gold" onchange="storeValues();">
+                <option value="phom">米心金 (pHoM)</option>
+                <option value="fairy">仙女金</option>
+                <option value="chest">宝箱金</option>
+                <option value="boss">头目金</option>
+              </select>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="active">离线还是在线<br><label class="switch"><input type="checkbox" id="active" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label><span id="active_message">在线</span></label>
+              <p><em><small>(随个人喜好吧，不过冲比赛的时候还是建议在线)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="unit">升级圣物的单位<br><label class="switch"><input type="checkbox" id="unit" onchange="storeValues();"
+                    class="maxbg"><span class="slider round"></span></label><span id="unit_message">1%, 5%, or 25%
+                  Upgrades</span></label>
+              <p><em><small>(到中期圣物多起来了，建议改为%单位升级圣物)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="taps">每秒点击多少下</label>
+              <div class="input-group">
+                <input type="tel" id="taps" class="form-control" placeholder="#" aria-label="taps per second" onchange="storeValues();">
+                <div class="input-group-append">
+                  <span class="input-group-text">taps per second</span>
+                </div>
+              </div>
+              <p><em><small>(基本上除了宠物流之外的流派，都可以写0，宠物流要有大量的点击，心疼)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="patience">为了杀一个头目，你最多期望用多久时间</label>
+              <div class="input-group">
+                <input type="tel" id="patience" class="form-control" placeholder="#" aria-label="time willing to wait for a titan kill"
+                  onchange="storeValues();">
+                <div class="input-group-append">
+                  <span class="input-group-text">seconds for a kill</span>
+                </div>
+              </div>
+              <p><em><small>(对于加了闪电打击天赋，并且有黑暗守卫神器(增加60秒头目时间)的玩家来说比较有价值，更渴望推高的可以填更多，渴望速刷的就填少一些)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="greed">当你技能点不够用于点出下一个 <em>*收益最高的*</em> 技能时<br><label class="switch"><input type="checkbox" id="greed"
+                    onchange="storeValues();" class="maxbg"><span class="slider round"></span></label><span id="greed_message">存起来，为了那个收益最高的技能</span></label>
+              <p><em><small>(选择“将技能点用于当前的最优技能”时，会将你当前的技能点尽量的花光，来点那些收益没那么高的天赋，但是也总比存着不用有收益。
+                    这个选择取决于玩家，把技能点存起来以换来更大的提升还是尽快花光技能点，嗯，哲学问题)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="notation">是否用科学计数法<br><label class="switch"><input type="checkbox" id="notation" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label><span id="notation_message">^_^ Scientific
+                  Notation ^_^</span></label>
+              <p><em><small>(可以在右上角的设置里选择是否用科学计数法， <strong>*强烈推荐*</strong> 使用科学计数法，数字更加直观，这个不是私货，原作者也是这么推荐的)</small></em></p>
+            </div>
+          </div>
+          <h2 class="h5">你凑齐了哪些装备套装</h2>
+          <p>凑齐了就选中，这里的翻译用游戏中的翻译</p>
+          <div class="form-row mb-4">
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="ancient"><label class="switch"><input type="checkbox" id="ancient" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label>古代的战士 (神话) </label>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="ruthless"><label class="switch"><input type="checkbox" id="ruthless" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label>无情死灵 (神话) </label>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="angelic"><label class="switch"><input type="checkbox" id="angelic" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label>守护天使 (神话) </label>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="emerald"><label class="switch"><input type="checkbox" id="emerald" onchange="storeValues();"
+                    class="maxbg"><span class="slider round"></span></label>腐败翡翠骑士 (传奇)
+              </label>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="chained"><label class="switch"><input type="checkbox" id="chained" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label>链发条 (传奇) </label>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="platinum"><label class="switch"><input type="checkbox" id="platinum" onchange="storeValues();"
+                    class="scbg"><span class="slider round"></span></label>周年白金 (传奇) </label>
+            </div>
+          </div>
+          <h2 class="h5">你的神器</h2>
+          <p>这里请勾选你已经 <string>*拥有*</string> 的神器，而不是躺在你的打捞池里的神器</p>
+          <div class="btn btn-sm btn-secondary mb-3" onclick="shoppingSpree();">
+            全选神器
+          </div>
+          <div class="form-row mb-4" id="artifacts_catalog">
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact22" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact22" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>暗影之书</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact2" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact2" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>瓦如恩之石</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact19" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact19" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>满足宝箱</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact1" class="text-secondary"><label class="switch"><input
+                    class="artcheck bg-secondary" type="checkbox" id="Artifact1" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>英勇之盾</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact20" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact20" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>预言之书</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact66" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact66" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>Khrysos碗</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact43" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact43" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>扎金索斯银币</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact44" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact44" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>崇高仙子徽章</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact45" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact45" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>猫雕塑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact79" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact79" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>惠比须神银币</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact82" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact82" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>古铜色的指南针</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact84" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact84" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>独奏者的长笛</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact26" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact26" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>天堂之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact31" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact31" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>神圣报应</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact29" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact29" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>醉汉榔头</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact51" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact51" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>萨摩赛克之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact59" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact59" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>复仇者</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact83" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact83" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>Stryfe的和平</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact35" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact35" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>英雄之刃</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact32" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact32" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>风暴之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact33" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact33" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>复仇女神之弓</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact34" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact34" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>古代护身符</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact61" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact61" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>迷你世界树</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact62" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact62" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>埃尔密斯头盔</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact38" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact38" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>伊甸之果</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact30" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact30" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>感化灵药</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact64" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact64" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>奥莱恩护身符</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact52" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact52" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>风暴之心</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact53" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact53" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>太阳神之石</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact67" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact67" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>Portara的耳环</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact42" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact42" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>仙鸟之羽</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact46" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact46" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>腐败符文之心</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact55" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact55" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>迪朗达尔之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact56" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact56" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>冥界头骨</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact75" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact75" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>誓言的负担</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact76" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact76" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>星座之冠</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact77" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact77" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>二氧化钛的权杖</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact78" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact78" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>费金之握</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact40" class="scgold"><label class="switch"><input
+                    class="artcheck scgoldbg" type="checkbox" id="Artifact40" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>卡利斯托之戒</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact25" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact25" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>达摩克利斯之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact17" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact17" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>疯狂头盔</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact23" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact23" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>钛钢镀饰</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact73" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact73" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>月光手环</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact28" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact28" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>紫晶之杖</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact86" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact86" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>皇家队之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact87" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact87" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>Spearit的 哨</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact88" class="scgold"><label class="switch"><input
+                    class="artcheck scgoldbg" type="checkbox" id="Artifact88" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>钴板</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact89" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact89" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>审判印记</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact90" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact90" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>守护者的树叶</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact47" class="scgold"><label class="switch"><input
+                    class="artcheck scgoldbg" type="checkbox" id="Artifact47" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>入侵者的海姆达尔之角</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact11" class="text-secondary"><label
+                  class="switch"><input class="artcheck bg-secondary" type="checkbox" id="Artifact11" checked="checked"
+                    onchange="storeValues();"><span class="slider round"></span></label>巨人面具</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact41" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact41" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>皇室毒物</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact9" class="text-success"><label class="switch"><input
+                    class="artcheck bg-success" type="checkbox" id="Artifact9" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>工人垂饰</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact10" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact10" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>诸神黄昏使者</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact7" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact7" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>预知羊皮纸</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact6" class="sc"><label class="switch"><input
+                    class="artcheck scbg" type="checkbox" id="Artifact6" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>伊甸灵丹</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact65" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact65" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>急速沙漏</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact48" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact48" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>幻影时钟</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact13" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact13" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>禁忌卷轴</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact15" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact15" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>效忠指环</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact16" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact16" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>冰川之斧</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact14" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact14" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>神盾</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact12" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact12" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>沼泽手套</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact36" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact36" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>无限锤摆</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact27" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact27" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>大熊手套</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact39" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact39" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>巨人之矛</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact37" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact37" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>橡木杖</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact3" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact3" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>奥秘斗篷</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact8" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact8" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>猎人药膏</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact50" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact50" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>仙馔密酒</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact58" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact58" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>神秘权杖</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact68" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact68" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>千头的神秘豆</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact18" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact18" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>幸运之卵</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact21" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact21" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>圣杯</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact5" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact5" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>入侵者之盾</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact4" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact4" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>死亡之斧</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact54" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact54" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>狐仙精华</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact70" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact70" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>爱马仕之靴</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact74" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact74" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>测试管柱1</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact72" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact72" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>奥伯龙吊坠</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact69" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact69" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>铝登宵的幸运足</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact63" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact63" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>失落的王者面具</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact24" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact24" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>光辉之杖</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact71" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact71" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>Morgelai剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact49" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact49" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>大师之剑</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact80" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact80" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>放大镜</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact81" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact81" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>泰的宝藏</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact85" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact85" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>白矮星</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact57" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact57" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>亚兰之矛</label></div>
+            <div class="form-group col-12 col-md-6 col-lg-4"><label for="Artifact60" class="text-light"><label class="switch"><input
+                    class="artcheck maxbg text-dark" type="checkbox" id="Artifact60" checked="checked" onchange="storeValues();"><span
+                    class="slider round"></span></label>暗黑守卫</label></div>
+          </div>
+        </form>
+      </div>
+      <div class="tab-pane fade" id="artifacts" role="tabpanel" aria-labelledby="artifacts-tab">
+        <p></p>
+        <h2 class="h5">神器列表 <small class="d-inline-block ml-2"><small class="text-uppercase"><span id="owned_count">90</span>of
+              <span id="total_count">90</span>已拥有</small></small></h2>
+        <p>这块暂时没有翻译，神器的升级建议还是按照旧的版本来升级，这个确实不那么便捷。如果是我理解有问题，欢迎联系我指正。</p>
+        <p><small><em>以下是建议</em></small></p>
+        <div id="artifact_reccs_wrapper" class="dataTables_wrapper no-footer">
+          <div id="artifact_reccs_wrapper" class="dataTables_wrapper no-footer">
+            <table id="artifact_reccs" class="table table-dark table-sm table-striped compact responsive nowrap dataTable no-footer"
+              width="100%" role="grid" style="width: 100%;"></table>
+          </div>
+        </div>
+        <p class="mt-3">Based on your answers in the Options tab, this is the best distribution of your relics across
+          the non-maxable artifacts. It is presumed that you will max out any artifact that can be, which is why they
+          are not included in this view. It doesn't need to be 100% precise, but this is the general shape that is most
+          effective. At higher artifact levels, I find 1% to be the best way to get as close as possible to these
+          numbers.</p>
+        <p><small>NOTE: Recently switch builds or switch to this method of optimizing? Don't worry if they don't
+            exactly match for several prestiges. Over time it will smooth out and get on track. In the meantime just
+            get them as close as you can! I recommend that after you get BoS to the right level, you alternate each
+            prestige from starting at the top or bottom of the list. It's the fastest way to get back on track while
+            maintaining good balance.</small></p>
+      </div>
+      <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
+        <p class="mt-3">个性化生成技能树</p>
+        <div class="container bg-dark">
+          <div class="row">
+            <div class="col-6 col-md-3 col-lg-2 skillselfie">
+              <div class="row">
+                <div class="col-4" id="totalSP"></div>
+                <div class="col-4 redskill text-light" id="BranchRed_0"></div>
+                <div class="col-4" id="totalSPred"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 redskill text-light" id="BranchRed_1"></div>
+                <div class="col-4 redskill text-light" id="BranchRed_2"></div>
+                <div class="col-4 redskill text-light" id="BranchRed_3"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 redskill text-light" id="BranchRed_4"></div>
+                <div class="col-4 redskill text-light" id="BranchRed_5"></div>
+                <div class="col-4 redskill text-light" id="BranchRed_6"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 redskill text-light" id="BranchRed_7"></div>
+                <div class="col-4"></div>
+                <div class="col-4 redskill text-light" id="BranchRed_9"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 skillselfie">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_0"></div>
+                <div class="col-4" id="totalSPyellow"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_1"></div>
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_2"></div>
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_3"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_4"></div>
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_5"></div>
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_6"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_7"></div>
+                <div class="col-4"></div>
+                <div class="col-4 yellowskill text-dark" id="BranchYellow_9"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 skillselfie">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_0"></div>
+                <div class="col-4" id="totalSPblue"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 blueskill text-light" id="BranchBlue_1"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_2"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_3"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 blueskill text-light" id="BranchBlue_4"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_5"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_6"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 blueskill text-light" id="BranchBlue_7"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_8"></div>
+                <div class="col-4 blueskill text-light" id="BranchBlue_9"></div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3 col-lg-2 skillselfie">
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4 greenskill text-dark" id="BranchGreen_0"></div>
+                <div class="col-4" id="totalSPgreen"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 greenskill text-dark" id="BranchGreen_1"></div>
+                <div class="col-4 greenskill text-dark" id="BranchGreen_2"></div>
+                <div class="col-4 greenskill text-dark" id="BranchGreen_3"></div>
+              </div>
+              <div class="row">
+                <div class="col-4 greenskill text-dark" id="BranchGreen_4"></div>
+                <div class="col-4 greenskill text-dark" id="BranchGreen_5"></div>
+                <div class="col-4 greenskill text-dark" id="BranchGreen_6"></div>
+              </div>
+              <div class="row">
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+                <div class="col-4"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p class="mt-3" id="sp_next"><small><em>The next best skill to unlock is Dimensional Shift (78 SP)</em></small></p>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script src="./js/jquery.dataTables.min.js"></script>
+  <script src="./js/dataTables.responsive.min.js"></script>
+  <!-- Custom JS -->
+  <script src="./js/app.js"></script>
+
+
+</body>
+
+</html>

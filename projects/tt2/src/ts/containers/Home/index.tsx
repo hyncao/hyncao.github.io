@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Vision, ToolItem } from '../../components';
+import { homeList } from '../../config';
 import { hocLogger } from '../../hoc';
 import styles from './index.module.scss';
 
@@ -20,10 +21,7 @@ class Home extends Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
-      list: [
-        { name: '神器升级工具', url: 'https://fanwenkui.github.io/tt2-artifacts/' },
-        { name: 'ED等级计算器', url: '/ed' },
-      ]
+      list: homeList
     }
     this.handleJump = this.handleJump.bind(this);
   }

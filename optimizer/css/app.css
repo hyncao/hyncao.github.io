@@ -1,0 +1,142 @@
+.skillselfie div { padding: 5px; border-radius: 100%; text-align: center; }
+.redskill { background: red; }
+.yellowskill { background: yellow; }
+.blueskill { background: blue; }
+.greenskill { background: green; }
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+	top:3px;
+	margin-right:5px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #1d2124;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 2px;
+  right: 0;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(40px);
+  -ms-transform: translateX(40px);
+  transform: translateX(40px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 20px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+input:checked.bg-success + .slider {background: green; }
+input:checked.bg-secondary + .slider {background: #6c757d; }
+.csbg, input:checked.csbg + .slider { background: yellow; color: black; }
+.maxbg, input:checked.maxbg + .slider { background: #CCC; }
+.scbg, input:checked.scbg + .slider { background: orchid; }
+.petbg, input:checked.petbg + .slider { background: red; }
+.hsbg, input:checked.hsbg + .slider { background: cornflowerblue; }
+.hscsbg, input:checked.hscsbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(yellow)); color: black; }
+.hsscbg, input:checked.hsscbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(orchid));}
+.csgoldbg, input:checked.csgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(yellow), to(green)); color: black; }
+.scgoldbg, input:checked.scgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(orchid), to(green));}
+.petgoldbg, input:checked.petgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(red), to(green));}
+.hsgoldbg, input:checked.hsgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(green)); color: black; }
+.hscsgoldbg, input:checked.hscsgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(green)); color: black; }
+.hsscgoldbg, input:checked.hsscgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(green));}
+input:checked.csbg + .slider:before, input:checked.hscsbg +  .slider:before, input:checked.maxbg +  .slider:before { background-color: #333; }
+
+.cs { color: yellow; }
+.sc { color: orchid; }
+.pet { color: red; }
+.hs { color: cornflowerblue; }
+.hscs { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, cornflowerblue), color-stop(99%, yellow)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hssc { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, cornflowerblue ), color-stop(99%, orchid)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.csgold { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, yellow), color-stop(99%, green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.scgold { background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0%, orchid), color-stop(99%, green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.petgold { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, red), color-stop(99%, green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hsgold { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, cornflowerblue), color-stop(99%, green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hscsgold { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, cornflowerblue), color-stop(99%, green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hsscgold { background-image: -webkit-gradient(linear, left top, right bottom,color-stop(0%, cornflowerblue ), color-stop(99%, green)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+
+.pctart { color: black; position: relative; left: 15px; }
+.text-disabled { color: rgba(0,0,0,.2); -webkit-text-fill-color: rgba(0,0,0,.2); }
+
+.adsense {
+	width: 970px;
+	height: 90px;
+	display: block;
+	margin: 0 auto 20px;
+}
+.adsense ins	{ width: 100%; height: 100%; display: block; }
+
+.adsense {
+	position: relative;
+}
+
+@media screen and ( max-width: 64em ) /* <= 1024 */
+{
+	.adsense { width: 728px; height: 90px; }
+}
+
+@media screen and ( max-width: 50em ) /* <= 800 */
+{
+	.adsense { width: 468px; height: 60px; }
+}
+
+@media screen and ( max-width: 33.75em ) /* <= 540 */
+{
+	.adsense { width: 336px; height: 280px; }
+}
+
+@media screen and ( max-width: 26.25em ) /* <= 420 */
+{
+	.adsense { width: 250px; height: 250px; }
+}
+
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+display: block;     /* undo display:none          */
+height: 0;          /* height:0 is also invisible */
+overflow: hidden; /* no-overflow                */
+}
+.tab-content > .active,
+.pill-content > .active {
+height: auto;       /* let the content decide it  */
+}
+
+.tiny { line-height: 80%; margin-bottom: -.25rem; }
+
+table.dataTable tbody tr { background-color: inherit; }
+table.dataTable.compact tbody td { padding: 0; }
