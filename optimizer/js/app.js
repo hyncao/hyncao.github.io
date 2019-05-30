@@ -685,7 +685,7 @@ function buildSkillTree() {
                 }
               }
             } else {
-              sp_next = next.name + ' (' + next.cost + ' SP)' + ('' != next.name2 ? ' to unlock ' + next.name2 : '');
+              sp_next = next.name + ' (' + next.cost + ' SP)' + ('' != next.name2 ? ' 以解锁 ' + next.name2 : '');
             }
             break loop1;
           }
@@ -1122,7 +1122,7 @@ function updateSkillTree() {
   $('#totalSPblue').html(sp_trees.BranchBlue);
   $('#totalSPgreen').html(sp_trees.BranchGreen);
   if ('' != sp_next) {
-    $('#sp_next').html('<small><em>The next best skill to unlock is ' + sp_next + '</em></small>');
+    $('#sp_next').html('<small><em>接下来应该升级 ' + sp_next + '</em></small>');
   } else {
     $('#sp_next').empty();
   }
