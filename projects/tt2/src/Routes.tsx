@@ -12,6 +12,7 @@ export default () => (
     <Switch>
       <Route path={`/`} exact component={containers.Home} />
       <Route path={`/ed`} exact component={containers.Ed} />
+      <Route path={`/test`} exact component={containers.Test} />
       <Redirect path="*" to={`/`} />
     </Switch>
   </BrowserRouter>
