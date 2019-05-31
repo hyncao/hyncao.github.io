@@ -279,6 +279,9 @@ function adjustArtifacts() {
     }
   });
   relics_to_spread -= total_artifacts_purchase_cost;
+  if (relics_to_spread < 0) {
+    alert('神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数');
+  }
   var leftover_relics = relics_to_spread * ('pct' == unit ? .97 : 1);
   $.each(db.artifacts, function (k, a) { // and a third loop to get the running totals
     a.costpct = a.wcost / running_wcost;
