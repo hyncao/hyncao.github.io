@@ -166,7 +166,6 @@ function determineColor(item, text) {
 }
 
 function adjustArtifacts() {
-  $('#nanerror').hide();
   var hero_value = 0;
   var minimum_effect = 999999999;
   var counter = 0;
@@ -281,9 +280,6 @@ function adjustArtifacts() {
   });
   relics_to_spread -= total_artifacts_purchase_cost;
   var leftover_relics = relics_to_spread * ('pct' == unit ? .97 : 1);
-  if (0 > leftover_relics) {
-    $('#nanerror').show();
-  }
   $.each(db.artifacts, function (k, a) { // and a third loop to get the running totals
     a.costpct = a.wcost / running_wcost;
     if ('Artifact22' == a.id) { // Note: this relies on BoS being first in the list
@@ -298,9 +294,6 @@ function adjustArtifacts() {
         leftover_relics -= a.calcrelic;
       } else {
         a.disppct = 0;
-      }
-      if (0 > leftover_relics) {
-        $('#nanerror').show();
       }
     } else {
       a.calcrelic = leftover_relics * a.costpct;
