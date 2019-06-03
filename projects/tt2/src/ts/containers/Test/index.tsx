@@ -1,45 +1,51 @@
 import React, { Component } from 'react';
-import { observable, action, configure, autorun } from 'mobx';
+import { observable, action, configure, autorun, } from 'mobx';
+import { observer } from "mobx-react";
 import { hocLogger } from '../../hoc';
 
 configure({ enforceActions: 'observed' });
+
+class TestStore {
+  @observable num: number = 0;
+
+  @action.bound
+  add() {
+    this.num++;
+  }
+
+  @action.bound
+  min() {
+    this.num--;
+  }
+
+  constructor() {
+    autorun(() => console.log(this.num));
+  }
+}
+
+const testStore = new TestStore();
+
+function Add({ add }: { add: () => void }) {
+  return <button onClick={add}>加一</button>;
+}
+
+function Min({ min }: { min: () => void }) {
+  return <button onClick={min}>减一</button>;
+}
 
 interface IProps { }
 
 interface IState { }
 
+@observer
 class Test extends Component<IProps, IState> {
-
-  @observable time: number = 0;
-  t:any;
-
-  constructor(props: IProps) {
-    super(props);
-    this.t = 0;
-  }
-
-  @action.bound
-  add(){
-    this.time ++;
-  }
-  componentDidMount() {
-    this.t = setInterval(this.add, 1000);
-    
-    autorun(() => {
-      console.log(this.time);
-    });
-  }
-
-  @action.bound
-  clear(){
-    this.time = 0;
-    clearInterval(this.t);
-  }
-
   render() {
+    const { num, add, min } = testStore;
     return (
       <div>
-        <button onClick={this.clear}>点我</button>
+        <h3>{num}</h3>
+        <Add add={add} />
+        <Min min={min} />
       </div>
     )
   }
