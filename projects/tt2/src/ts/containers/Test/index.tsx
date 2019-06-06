@@ -1,51 +1,82 @@
-import React, { Component } from 'react';
-import { observable, action, configure, autorun, } from 'mobx';
+import React, { Component, KeyboardEvent } from 'react';
+import { observable, action, configure, autorun } from 'mobx';
 import { observer } from "mobx-react";
+import styles from './index.module.scss';
 import { hocLogger } from '../../hoc';
 
 configure({ enforceActions: 'observed' });
 
-class TestStore {
-  @observable num: number = 0;
+interface IItem {
+  id: number;
+  done: boolean;
+  text: string;
+}
+
+class TodoStore {
+  @observable list: Array<IItem> = [];
 
   @action.bound
-  add() {
-    this.num++;
+  add(text: string) {
+    const len = this.list.length;
+    const item = { id: len, done: false, text };
+    this.list.push(item);
   }
 
   @action.bound
-  min() {
-    this.num--;
+  doneFn(id: number) {
+    const list = this.list.map((i) => {
+      const item = i;
+      if (item.id === id) {
+        item.done = !item.done;
+      }
+      return item;
+    })
+    this.list = list;
   }
 
   constructor() {
-    autorun(() => console.log(this.num));
+    autorun(() => {
+      console.log(this.list.length);
+    });
   }
 }
 
-const testStore = new TestStore();
+const todoStore = new TodoStore();
 
-function Add({ add }: { add: () => void }) {
-  return <button onClick={add}>加一</button>;
+function Item({ item, store }: { item: IItem, store: TodoStore }) {
+  const { id, done, text } = item;
+  const { doneFn } = store;
+  return (
+    <div
+      className={done ? styles.done : ''}
+      onClick={() => doneFn(id)}
+    >{text}</div>
+  )
 }
-
-function Min({ min }: { min: () => void }) {
-  return <button onClick={min}>减一</button>;
-}
-
-interface IProps { }
-
-interface IState { }
 
 @observer
-class Test extends Component<IProps, IState> {
+class Test extends Component {
+  constructor(props: {}) {
+    super(props);
+    this.handleKeyDown = this.handleKeyDown.bind(this);
+  }
+
+  handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+    const { keyCode } = e;
+    const { value } = e.currentTarget;
+    const { add } = todoStore;
+    if (keyCode === 13) {
+      add(value);
+      e.currentTarget.value = '';
+    }
+  }
+
   render() {
-    const { num, add, min } = testStore;
+    const { list } = todoStore;
     return (
       <div>
-        <h3>{num}</h3>
-        <Add add={add} />
-        <Min min={min} />
+        <input onKeyDown={this.handleKeyDown} placeholder="Enter Todo" />
+        {list && list.map((i) => <Item key={i.id} item={i} store={todoStore} />)}
       </div>
     )
   }
