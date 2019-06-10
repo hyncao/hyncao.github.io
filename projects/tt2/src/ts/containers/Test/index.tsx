@@ -1,8 +1,9 @@
 import React, { Component, KeyboardEvent } from 'react';
-import { observable, action, configure, autorun } from 'mobx';
+import { observable, action, configure, autorun, runInAction, computed, reaction } from 'mobx';
 import { observer } from "mobx-react";
-import styles from './index.module.scss';
+import { delay } from '../../lib/utils';
 import { hocLogger } from '../../hoc';
+import styles from './index.module.scss';
 
 configure({ enforceActions: 'observed' });
 
@@ -15,11 +16,18 @@ interface IItem {
 class TodoStore {
   @observable list: Array<IItem> = [];
 
+  @computed get getLength():number{
+    return this.list.length;
+  }
+
   @action.bound
-  add(text: string) {
+  async add(text: string) {
     const len = this.list.length;
     const item = { id: len, done: false, text };
-    this.list.push(item);
+    await delay(1000);
+    runInAction(() => {
+      this.list.push(item);
+    })
   }
 
   @action.bound
@@ -34,11 +42,10 @@ class TodoStore {
     this.list = list;
   }
 
-  constructor() {
-    autorun(() => {
-      console.log(this.list.length);
-    });
-  }
+  reaction1 = reaction(
+    () => this.list.length,
+    length => this.list.forEach((i) => console.log(JSON.stringify(i)))
+  )
 }
 
 const todoStore = new TodoStore();
@@ -72,10 +79,11 @@ class Test extends Component {
   }
 
   render() {
-    const { list } = todoStore;
+    const { list, getLength } = todoStore;
     return (
       <div>
         <input onKeyDown={this.handleKeyDown} placeholder="Enter Todo" />
+        <div>{getLength}</div>
         {list && list.map((i) => <Item key={i.id} item={i} store={todoStore} />)}
       </div>
     )
