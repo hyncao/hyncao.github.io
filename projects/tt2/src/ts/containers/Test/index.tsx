@@ -1,5 +1,5 @@
 import React, { Component, KeyboardEvent } from 'react';
-import { observable, action, configure, autorun, runInAction, computed, reaction } from 'mobx';
+import { observable, action, configure, runInAction, computed, reaction } from 'mobx';
 import { observer } from "mobx-react";
 import { delay } from '../../lib/utils';
 import { hocLogger } from '../../hoc';
