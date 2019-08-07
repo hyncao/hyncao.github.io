@@ -31,7 +31,7 @@
             aria-controls="skills" aria-selected="false">技能加点</a>
         </li>
       </ul>
-      <h1 class="h4">TT2 优化器 <span class="badge badge-secondary">3.1.1</span></h1>
+      <h1 class="h4">TT2 优化器 <span class="badge badge-secondary">3.2.1</span></h1>
     </div>
     <div class="tab-content" id="tabContent">
       <div class="tab-pane fade active show" id="options" role="tabpanel" aria-labelledby="options-tab">
@@ -59,7 +59,30 @@
         <p>Author Discord: <strong class="text-warning">☂ juvia☂#0001</strong>. If there are any infringements or other
           problems, please contact me in time, I will delete related apps immediately. QQ -- 277148066</p>
         <form>
+          <div style="font-size: 1.5rem; text-shadow: 0 0;">填写信息用来生成——神器升级</div>
+          <string class="text-warning">*注意：还需在最下方勾选已拥有的神器*</string>
           <div class="form-row mb-4">
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="build">你用的伤害流派</label>
+              <select class="form-control" id="build" onchange="storeValues();">
+                <option value="cs">大船流</option>
+                <option value="hs">天堂流</option>
+                <option value="hscs">天堂 + 大船</option>
+                <option value="hssc">天堂 + 影分身</option>
+                <option value="pet">宠物流</option>
+                <option value="sc">影分身流</option>
+              </select>
+              <p><em><small>(天堂流会因为使用者的喜好而有两种混合流派)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="gold">你用的金钱流派</label>
+              <select class="form-control" id="gold" onchange="storeValues();">
+                <option value="phom">米心金 (pHoM)</option>
+                <option value="fairy">仙女金</option>
+                <option value="chest">宝箱金</option>
+                <option value="boss">头目金</option>
+              </select>
+            </div>
             <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="ltr">你的总圣物数是多少？</label>
               <div class="input-group">
@@ -68,12 +91,6 @@
                 <select id="ltr_factor" onchange="storeValues();"></select>
               </div>
               <p class="mb-0"><em><small>(总圣物数在统计数据最底部有显示)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="sp">总技能点</label>
-              <input type="tel" id="sp" class="form-control" placeholder="#" aria-label="total skill points" value="0"
-                onchange="storeValues();">
-              <p class="mb-0"><em><small>(根据输入的技能点生成个性化加点方案)</small></em></p>
             </div>
             <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="bospct">暗影之书所占比重</label>
@@ -118,6 +135,37 @@
                     5 个结合不同英雄伤害的神器，但是这将使你在飞升新的英雄时让推层变得更平稳。)</small></em></p>
             </div>
             <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="active">离线还是在线<br><label class="switch"><input type="checkbox" id="active"
+                    onchange="storeValues();" class="scbg"><span class="slider round"></span></label><span
+                  id="active_message">在线</span></label>
+              <p><em><small>(随个人喜好吧，不过冲比赛的时候还是建议在线)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="unit">升级圣物的单位<br><label class="switch"><input type="checkbox" id="unit"
+                    onchange="storeValues();" class="maxbg"><span class="slider round"></span></label><span
+                  id="unit_message">1%, 5%, or 25%
+                  Upgrades</span></label>
+              <p><em><small>(到中期圣物多起来了，建议改为%单位升级圣物)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="notation">是否用科学计数法<br><label class="switch"><input type="checkbox" id="notation"
+                    onchange="storeValues();" class="scbg"><span class="slider round"></span></label><span
+                  id="notation_message">^_^ Scientific
+                  Notation ^_^</span></label>
+              <p><em><small>(可以在右上角的设置里选择是否用科学计数法， <strong>*强烈推荐*</strong>
+                    使用科学计数法，数字更加直观，这个不是私货，原作者也是这么推荐的)</small></em></p>
+            </div>
+          </div>
+          <div style="font-size: 1.5rem; text-shadow: 0 0;">填写信息用来生成——技能加点</div>
+          <string class="text-warning">*注意：目前此功能有较大缺陷，结果仅供参考*</string>
+          <div class="form-row mb-4">
+            <div class="form-group col-12 col-md-6 col-lg-4">
+              <label for="sp">总技能点</label>
+              <input type="tel" id="sp" class="form-control" placeholder="#" aria-label="total skill points" value="0"
+                onchange="storeValues();">
+              <p class="mb-0"><em><small>(根据输入的技能点生成个性化加点方案)</small></em></p>
+            </div>
+            <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="allprob">来自劈砍装备的所有概率加成</label>
               <div class="input-group">
                 <input type="number" id="allprob" class="form-control" placeholder="#.##"
@@ -160,7 +208,7 @@
               <select class="form-control" id="spoils" onchange="storeValues();"></select>
               <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
             </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
+            <!-- <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="ip">威名赫赫技能等级</label>
               <div class="input-group">
                 <input type="tel" id="ip" class="form-control" placeholder="#" aria-label="current IP level"
@@ -181,7 +229,7 @@
                 </div>
               </div>
               <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
-            </div>
+            </div> -->
             <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="ms">你的极限层数</label>
               <select class="form-control" id="ms" onchange="storeValues();"></select>
@@ -197,7 +245,7 @@
               </div>
               <p><em><small>(在装备选项卡中的锻造界面的最下方)</small></em></p>
             </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
+            <!-- <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="warcry">你的战壕技能等级</label>
               <select class="form-control" id="warcry" onchange="storeValues();"></select>
               <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
@@ -206,41 +254,7 @@
               <label for="clone">你的影分身技能等级</label>
               <select class="form-control" id="clone" onchange="storeValues();"></select>
               <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="build">你用的伤害流派</label>
-              <select class="form-control" id="build" onchange="storeValues();">
-                <option value="cs">大船流</option>
-                <option value="hs">天堂流</option>
-                <option value="hscs">天堂 + 大船</option>
-                <option value="hssc">天堂 + 影分身</option>
-                <option value="pet">宠物流</option>
-                <option value="sc">影分身流</option>
-              </select>
-              <p><em><small>(天堂流会因为使用者的喜好而有两种混合流派)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="gold">你用的金钱流派</label>
-              <select class="form-control" id="gold" onchange="storeValues();">
-                <option value="phom">米心金 (pHoM)</option>
-                <option value="fairy">仙女金</option>
-                <option value="chest">宝箱金</option>
-                <option value="boss">头目金</option>
-              </select>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="active">离线还是在线<br><label class="switch"><input type="checkbox" id="active"
-                    onchange="storeValues();" class="scbg"><span class="slider round"></span></label><span
-                  id="active_message">在线</span></label>
-              <p><em><small>(随个人喜好吧，不过冲比赛的时候还是建议在线)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="unit">升级圣物的单位<br><label class="switch"><input type="checkbox" id="unit"
-                    onchange="storeValues();" class="maxbg"><span class="slider round"></span></label><span
-                  id="unit_message">1%, 5%, or 25%
-                  Upgrades</span></label>
-              <p><em><small>(到中期圣物多起来了，建议改为%单位升级圣物)</small></em></p>
-            </div>
+            </div> -->
             <div class="form-group col-12 col-md-6 col-lg-4">
               <label for="taps">每秒点击多少下</label>
               <div class="input-group">
@@ -268,14 +282,6 @@
                     id="greed" onchange="storeValues();" class="maxbg"><span class="slider round"></span></label><span
                   id="greed_message">存够技能点升级它</span></label>
               <p><em><small>(如果选择退而求其次，你将需要在今后频繁重置技能点以达到与优化器推荐的加点相匹配)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="notation">是否用科学计数法<br><label class="switch"><input type="checkbox" id="notation"
-                    onchange="storeValues();" class="scbg"><span class="slider round"></span></label><span
-                  id="notation_message">^_^ Scientific
-                  Notation ^_^</span></label>
-              <p><em><small>(可以在右上角的设置里选择是否用科学计数法， <strong>*强烈推荐*</strong>
-                    使用科学计数法，数字更加直观，这个不是私货，原作者也是这么推荐的)</small></em></p>
             </div>
           </div>
           <h2 class="h5">你凑齐了哪些装备套装</h2>
@@ -331,7 +337,7 @@
         </div>
       </div>
       <div class="tab-pane fade" id="skills" role="tabpanel" aria-labelledby="skills-tab">
-        <p class="mt-3">个性化生成技能树</p>
+        <p class="mt-3"><string class="text-warning">*注意：目前此功能有较大缺陷，结果仅供参考*</string></p>
         <div class="container bg-dark">
           <div class="row">
             <div class="col-6 col-md-3 col-lg-2 skillselfie">
