@@ -75,6 +75,9 @@ input:checked.bg-secondary + .slider {background: #6c757d; }
 .hscsgoldbg, input:checked.hscsgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(green)); color: black; }
 .hsscgoldbg, input:checked.hsscgoldbg + .slider { background-image: -webkit-gradient(linear, left top, right bottom, from(cornflowerblue), to(green));}
 input:checked.csbg + .slider:before, input:checked.hscsbg +  .slider:before, input:checked.maxbg +  .slider:before { background-color: #333; }
+.fumo{margin-left: 10px;}
+.fumo input:checked+span{color: #d3b443; text-shadow: 0 0;}
+.fumo input:checked+span:before, .fumo input:checked+span:after{content: '*';}
 
 .cs { color: yellow; }
 .sc { color: orchid; }

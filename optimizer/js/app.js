@@ -133,11 +133,14 @@ function insertArtifacts() { // drop the artifacts into the options tab to mark 
     arts += '<div class="form-group col-12 col-md-6 col-lg-4">';
     arts += '<label for="' + a.id + '" class="' + determineColor(a, true) + '">';
     arts += '<label class="switch">';
-    arts += '<input class="artcheck ' + determineColor(a, false) + '" type="checkbox" id="' + a.id + '" ' + (undefined !== artifact_statuses[a.id] && 1 == artifact_statuses[a.id] ? 'checked="checked"' : '') + ' onchange="storeValues();">';
+    arts += '<input class="artcheck ' + determineColor(a, false) + '" type="checkbox" id="' + a.id + '" ' + (undefined !== artifact_statuses[a.id] && 0 !== artifact_statuses[a.id] ? 'checked="checked"' : '') + ' onchange="storeValues();">';
     arts += '<span class="slider round"></span>';
     arts += '</label>';
     arts += '<img src="' + a.icon + '" height="21px;" alt="' + a.name + '" class="mr-2" />';
     arts += a.name + '</label>';
+    if (a.fumoef) {
+      arts += '<label class="fumo"><input type="checkbox" onchange="storeValues();" ' + (artifact_statuses[a.id] === 2 ? 'checked' : '') + ' /> <span>附魔</span></label>';
+    }
     arts += '</div>';
   })
   $('#artifacts_catalog').empty().html(arts);
@@ -269,7 +272,11 @@ function adjustArtifacts() {
     }
   });
   $.each(db.artifacts, function (k, a) { // unfortunately we have to loop through again to do the final calcs
-    a.weffect = Math.pow((a.effect + minimum_effect) / minimum_effect, 1 / 3);
+    var currentEffect = a.effect;
+    if (a.fumo === 1) {
+      currentEffect *= a.fumoef;
+    }
+    a.weffect = Math.pow((currentEffect + minimum_effect) / minimum_effect, 1 / 3);
     a.wcost = (a.weffect * a.gpeak * ('gold' == a.type ? a.reductions[gold] : a.reductions[build]) / a.texpo + a.adcalc) * (0 < a.max ? 0 : artifact_statuses[a.id]);
     running_wcost += a.wcost;
     if (0 < a.max && 1 == artifact_statuses[a.id]) { // if it's maxable and they own it
@@ -286,7 +293,7 @@ function adjustArtifacts() {
   $.each(db.artifacts, function (k, a) { // and a third loop to get the running totals
     a.costpct = a.wcost / running_wcost;
     if ('Artifact22' == a.id) { // Note: this relies on BoS being first in the list
-      if (1 == artifact_statuses[a.id]) {
+      if (0 !== artifact_statuses[a.id]) {
         if ('pct' == bosunit) {
           a.calcrelic = relics_to_spread * bospct;
           a.costpct = bospct;
@@ -1014,7 +1021,20 @@ function updateGlobals() {
   bosunit = $('#bosunit').val();
   bospct = parseFloat(('pct' == bosunit ? $('#bospct').val() / 100 : $('#bospct').val() + bosunit));
   $.each($('.artcheck'), function (k, a) {
-    artifact_statuses[a.id] = true == $(a).prop('checked') ? 1 : 0;
+    var flag = 0; // 0为未选中
+    if ($(a).prop('checked')) {
+      if ($(a).parents('div:first').find('.fumo').length && $(a).parents('div:first').find('.fumo input').prop('checked')) {
+        flag = 2; // 2为附魔
+      } else {
+        flag = 1; // 1为选中
+      }
+      $.each(db.artifacts, function (k, a) {
+        if (a.id === a.id && a.fumo === 0) {
+          a.fumo = flag - 1;
+        }
+      });
+    }
+    artifact_statuses[a.id] = flag;
   });
   allprob = parseFloat($('#allprob').val()) + .1;
   crit = parseFloat($('#crit').val()) / 100;
@@ -1138,7 +1158,20 @@ function storeValues() {
     window.localStorage.setItem('bospct', $('#bospct').val());
     window.localStorage.setItem('bosunit', $('#bosunit').val());
     $.each($('.artcheck'), function (k, a) {
-      artifact_statuses[a.id] = true == $(a).prop('checked') ? 1 : 0;
+      var flag = 0; // 0为未选中
+      if ($(a).prop('checked')) {
+        if ($(a).parents('div:first').find('.fumo').length && $(a).parents('div:first').find('.fumo input').prop('checked')) {
+          flag = 2; // 2为附魔
+        } else {
+          flag = 1; // 1为选中
+        }
+        $.each(db.artifacts, function (k, a) {
+          if (a.id === a.id && a.fumo === 0) {
+            a.fumo = flag - 1;
+          }
+        });
+      }
+      artifact_statuses[a.id] = flag;
     });
     window.localStorage.setItem('artifact_statuses', JSON.stringify(artifact_statuses));
     window.localStorage.setItem('allprob', $('#allprob').val());
@@ -1218,6 +1251,8 @@ function importOptions(datastring) {
   $('#bosunit').val(data['bosunit']);
   artifact_statuses = data['artifact_statuses'] || {};
   $.each(data['artifact_statuses'], function (k, a) {
+    var fumoEl = $('#' + k).parents('div:first').find('.fumo input');
+    fumoEl.prop('checked', a === 2);
     $('#' + k).prop('checked', a);
   });
   $('#allprob').val(data['allprob']);

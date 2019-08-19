@@ -43,7 +43,7 @@ class Home extends Component<IProps, IState> {
         </div>
         <Vision />
         <div className={styles.info}>
-          如果有疑问请联系我
+          优化器已增加神器附魔，如果有疑问请联系我
           <br />
           qq 277148066，敲门砖：tt2
         </div>
