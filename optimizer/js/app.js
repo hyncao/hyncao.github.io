@@ -1028,9 +1028,9 @@ function updateGlobals() {
       } else {
         flag = 1; // 1为选中
       }
-      $.each(db.artifacts, function (k, a) {
-        if (a.id === a.id && a.fumo === 0) {
-          a.fumo = flag - 1;
+      $.each(db.artifacts, function (k, item) {
+        if (item.id === a.id) {
+          item.fumo = flag - 1;
         }
       });
     }
@@ -1165,9 +1165,9 @@ function storeValues() {
         } else {
           flag = 1; // 1为选中
         }
-        $.each(db.artifacts, function (k, a) {
-          if (a.id === a.id && a.fumo === 0) {
-            a.fumo = flag - 1;
+        $.each(db.artifacts, function (k, item) {
+          if (item.id === a.id) {
+            item.fumo = flag - 1;
           }
         });
       }
