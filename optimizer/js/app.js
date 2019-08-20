@@ -273,9 +273,6 @@ function adjustArtifacts() {
   });
   $.each(db.artifacts, function (k, a) { // unfortunately we have to loop through again to do the final calcs
     var currentEffect = a.effect;
-    if (a.fumo === 1) {
-      currentEffect *= a.fumoef;
-    }
     a.weffect = Math.pow((currentEffect + minimum_effect) / minimum_effect, 1 / 3);
     a.wcost = (a.weffect * a.gpeak * ('gold' == a.type ? a.reductions[gold] : a.reductions[build]) / a.texpo + a.adcalc) * (0 < a.max ? 0 : artifact_statuses[a.id]);
     running_wcost += a.wcost;
