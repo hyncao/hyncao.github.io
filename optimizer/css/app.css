@@ -147,3 +147,5 @@ table.dataTable.compact tbody td { padding: 0; }
 .d-sm-none{font-size: .8rem;}
 
 #dataTextarea{display: block; margin: 1rem 0; width: 100%; height: 5rem; padding: .5rem;}
+
+.sorting_1 img{width: 25px; height: 25px;}
