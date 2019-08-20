@@ -1,8 +1,11 @@
 .content {
-  padding: .4rem;
+  height: 100%;
+  padding: 0 .4rem;
+  overflow: hidden;
 }
 
 .title {
+  margin-top: .4rem;
   font-size: .4rem;
   font-weight: bold;
 }

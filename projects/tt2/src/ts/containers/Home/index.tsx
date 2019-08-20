@@ -3,6 +3,7 @@ import { Vision, ToolItem } from '../../components';
 import { homeList } from '../../config';
 import { hocLogger } from '../../hoc';
 import styles from './index.module.scss';
+import bg from '../../../images/bg.png';
 
 interface IProps {
   history: any
@@ -37,7 +38,7 @@ class Home extends Component<IProps, IState> {
   render() {
     const { list } = this.state;
     return (
-      <div className={styles.content}>
+      <div className={styles.content} style={{ background: `#ccc url(${bg}) 20% 0% / cover no-repeat`, height: window.innerHeight }}>
         <div className={styles.title}>
           TT2工具集合
         </div>
