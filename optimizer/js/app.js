@@ -274,7 +274,11 @@ function adjustArtifacts() {
   $.each(db.artifacts, function (k, a) { // unfortunately we have to loop through again to do the final calcs
     var currentEffect = a.effect;
     a.weffect = Math.pow((currentEffect + minimum_effect) / minimum_effect, 1 / 3);
-    a.wcost = (a.weffect * a.gpeak * ('gold' == a.type ? a.reductions[gold] : a.reductions[build]) / a.texpo + a.adcalc) * (0 < a.max ? 0 : artifact_statuses[a.id]);
+    a.wcost = (a.weffect * a.gpeak * ('gold' == a.type ? a.reductions[gold] : a.reductions[build]) / a.texpo + a.adcalc) * (0 < a.max ? 0 : (artifact_statuses[a.id] == '2' ? 1 : artifact_statuses[a.id]));
+    if (a.name == '守护者的树叶') {
+      console.log('weffect', a.weffect);
+      console.log('wcost', a.wcost);
+    }
     running_wcost += a.wcost;
     if (0 < a.max && 1 == artifact_statuses[a.id]) { // if it's maxable and they own it
       var cost_to_max = a.tcoef * Math.pow(a.max, a.texpo);
