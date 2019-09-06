@@ -73,6 +73,7 @@ function initClipboard() {
 // init data for selects
 function initData() {
   initLtr_factor();
+  initBosunit();
   initHero();
   initSelect25();
   initMS();
@@ -89,7 +90,7 @@ function initLtr_factor() {
     ['e15', 'e15/aa'],
   ]
   var dom = [];
-  for (var i = 0; i < 108; i++) {
+  for (var i = 0; i < 190; i++) {
     var val = 'e' + (16 + i);
     arr.push([val, val]);
   }
@@ -97,6 +98,28 @@ function initLtr_factor() {
     dom.push('<option value="' + i[0] + '">' + i[1] + '</option>');
   })
   $('#ltr_factor').html(dom.join(''));
+}
+
+// init bosunit select
+function initBosunit() {
+  var arr = [
+    ['pct', '%'],
+    ['e0', '(&lt; 1000)'],
+    ['e3', 'K'],
+    ['e6', 'M'],
+    ['e9', 'B'],
+    ['e12', 'T'],
+    ['e15', 'e15/aa'],
+  ]
+  var dom = [];
+  for (var i = 1; i < 50; i++) {
+    var val = 'e' + (15 + i);
+    arr.push([val, val]);
+  }
+  $.each(arr, function (k, i) {
+    dom.push('<option value="' + i[0] + '">' + i[1] + '</option>');
+  })
+  $('#bosunit').html(dom.join(''));
 }
 
 // init heroes select
