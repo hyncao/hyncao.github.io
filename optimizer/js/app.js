@@ -89,7 +89,7 @@ function initLtr_factor() {
     ['e15', 'e15/aa'],
   ]
   var dom = [];
-  for (var i = 0; i < 90; i++) {
+  for (var i = 0; i < 108; i++) {
     var val = 'e' + (16 + i);
     arr.push([val, val]);
   }
