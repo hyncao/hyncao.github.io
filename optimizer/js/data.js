@@ -2312,6 +2312,8 @@ var db = {
       'inactive_adj': 0,
       'name': '皇家队之剑',
       'id': 'Artifact86',
+      'fumo': 0,
+      'fumoef': 1e12,
       'max': 0,
       'effect': 0.02,
       'gmax': 0.24,
