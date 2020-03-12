@@ -26,13 +26,13 @@
           <a class="nav-link text-light" id="artifacts-tab" data-toggle="tab" href="#artifacts" role="tab"
             aria-controls="artifacts" aria-selected="false">神器升级</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
           <a class="nav-link text-light" id="skills-tab" data-toggle="tab" href="#skills" role="tab"
             aria-controls="skills" aria-selected="false">技能加点</a>
-        </li>
+        </li> -->
       </ul>
       <h1 class="h4">
-        TT2 优化器 <span class="badge badge-secondary">3.2.2</span>
+        TT2 优化器 <span class="badge badge-secondary" style="background-color: #41754f;">3.8.0</span>
       </h1>
     </div>
     <div class="tab-content" id="tabContent">
@@ -137,161 +137,164 @@
                     使用科学计数法，数字更加直观，这个不是私货，原作者也是这么推荐的)</small></em></p>
             </div>
           </div>
-          <div style="font-size: 1.5rem; text-shadow: 0 0;">填写信息用来生成——技能加点</div>
-          <string class="text-warning">*注意：目前此功能有较大缺陷，结果仅供参考*</string>
-          <div class="form-row mb-4">
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="sp">总技能点</label>
-              <input type="tel" id="sp" class="form-control" placeholder="#" aria-label="total skill points" value="0"
-                onchange="storeValues();">
-              <p class="mb-0"><em><small>(根据输入的技能点生成个性化加点方案)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="allprob">来自劈砍装备的所有概率加成</label>
-              <div class="input-group">
-                <input type="number" id="allprob" class="form-control" placeholder="#.##"
-                  aria-label="all probability slash boost" onchange="storeValues();" step="0.01">
-                <div class="input-group-append">
-                  <span class="input-group-text">x (来自劈砍装备)</span>
-                </div>
-              </div>
-              <p class="mb-0"><em><small>(如果你的劈砍装备没有这项加成，请写1，有就写1.xx)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="crit">当前的暴击率</label>
-              <div class="input-group">
-                <input type="number" id="crit" class="form-control" placeholder="#.##" aria-label="critical chance stat"
-                  onchange="storeValues();" step="0.01">
-                <div class="input-group-append">
-                  <span class="input-group-text">%</span>
-                </div>
-              </div>
-              <p class="mb-0"><em><small>(统计数据界面为准)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="chesterson">当前的宝箱兽概率</label>
-              <div class="input-group">
-                <input type="number" id="chesterson" class="form-control" placeholder="#.##"
-                  aria-label="chesterson chance stat" onchange="storeValues();" step="0.01">
-                <div class="input-group-append">
-                  <span class="input-group-text">%</span>
-                </div>
-              </div>
-              <p class="mb-0"><em><small>(统计数据界面为准)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="cleaving">当前的劈砍技能等级（红3-1）</label>
-              <select class="form-control" id="cleaving" onchange="storeValues();"></select>
-              <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="spoils">当前的战利品技能等级（黄2-1）</label>
-              <select class="form-control" id="spoils" onchange="storeValues();"></select>
-              <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
-            </div>
-            <!-- <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="ip">威名赫赫技能等级</label>
-              <div class="input-group">
-                <input type="tel" id="ip" class="form-control" placeholder="#" aria-label="current IP level"
+          <!-- 因为算法缺失，暂时隐藏该功能 -->
+          <div style="display: none;">
+            <div style="font-size: 1.5rem; text-shadow: 0 0;">填写信息用来生成——技能加点</div>
+            <string class="text-warning">*注意：目前此功能有较大缺陷，结果仅供参考*</string>
+            <div class="form-row mb-4">
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="sp">总技能点</label>
+                <input type="tel" id="sp" class="form-control" placeholder="#" aria-label="total skill points" value="0"
                   onchange="storeValues();">
-                <div class="input-group-append">
-                  <span class="input-group-text">IP level</span>
-                </div>
+                <p class="mb-0"><em><small>(根据输入的技能点生成个性化加点方案)</small></em></p>
               </div>
-              <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="mi">神秘的冲击技能等级</label>
-              <div class="input-group">
-                <input type="tel" id="mi" class="form-control" placeholder="#" aria-label="current MI level"
-                  onchange="storeValues();">
-                <div class="input-group-append">
-                  <span class="input-group-text">MI level</span>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="allprob">来自劈砍装备的所有概率加成</label>
+                <div class="input-group">
+                  <input type="number" id="allprob" class="form-control" placeholder="#.##"
+                    aria-label="all probability slash boost" onchange="storeValues();" step="0.01">
+                  <div class="input-group-append">
+                    <span class="input-group-text">x (来自劈砍装备)</span>
+                  </div>
                 </div>
+                <p class="mb-0"><em><small>(如果你的劈砍装备没有这项加成，请写1，有就写1.xx)</small></em></p>
               </div>
-              <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
-            </div> -->
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="ms">你的极限层数</label>
-              <select class="form-control" id="ms" onchange="storeValues();"></select>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="crafting">锻造威力等级</label>
-              <div class="input-group">
-                <input type="tel" id="crafting" class="form-control" placeholder="#" aria-label="crafting power level"
-                  onchange="storeValues();">
-                <div class="input-group-append">
-                  <span class="input-group-text">锻造威力等级</span>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="crit">当前的暴击率</label>
+                <div class="input-group">
+                  <input type="number" id="crit" class="form-control" placeholder="#.##" aria-label="critical chance stat"
+                    onchange="storeValues();" step="0.01">
+                  <div class="input-group-append">
+                    <span class="input-group-text">%</span>
+                  </div>
                 </div>
+                <p class="mb-0"><em><small>(统计数据界面为准)</small></em></p>
               </div>
-              <p><em><small>(在装备选项卡中的锻造界面的最下方)</small></em></p>
-            </div>
-            <!-- <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="warcry">你的战壕技能等级</label>
-              <select class="form-control" id="warcry" onchange="storeValues();"></select>
-              <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="clone">你的影分身技能等级</label>
-              <select class="form-control" id="clone" onchange="storeValues();"></select>
-              <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
-            </div> -->
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="taps">每秒点击多少下</label>
-              <div class="input-group">
-                <input type="tel" id="taps" class="form-control" placeholder="#" aria-label="taps per second"
-                  onchange="storeValues();">
-                <div class="input-group-append">
-                  <span class="input-group-text">taps per second</span>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="chesterson">当前的宝箱兽概率</label>
+                <div class="input-group">
+                  <input type="number" id="chesterson" class="form-control" placeholder="#.##"
+                    aria-label="chesterson chance stat" onchange="storeValues();" step="0.01">
+                  <div class="input-group-append">
+                    <span class="input-group-text">%</span>
+                  </div>
                 </div>
+                <p class="mb-0"><em><small>(统计数据界面为准)</small></em></p>
               </div>
-              <p><em><small>(用来决定点击类流派的技能分配。如果你的流派不用点击[如：飞船流]，那么设为 0)</small></em></p>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="patience">为了杀一个头目，你最多期望用多久时间</label>
-              <div class="input-group">
-                <input type="tel" id="patience" class="form-control" placeholder="#"
-                  aria-label="time willing to wait for a titan kill" onchange="storeValues();">
-                <div class="input-group-append">
-                  <span class="input-group-text">seconds for a kill</span>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="cleaving">当前的劈砍技能等级（红3-1）</label>
+                <select class="form-control" id="cleaving" onchange="storeValues();"></select>
+                <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="spoils">当前的战利品技能等级（黄2-1）</label>
+                <select class="form-control" id="spoils" onchange="storeValues();"></select>
+                <p><em><small>(这里选择 *当前* 的劈砍技能等级，不是你的期望等级，如果你重置了技能，这里就填0)</small></em></p>
+              </div>
+              <!-- <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="ip">威名赫赫技能等级</label>
+                <div class="input-group">
+                  <input type="tel" id="ip" class="form-control" placeholder="#" aria-label="current IP level"
+                    onchange="storeValues();">
+                  <div class="input-group-append">
+                    <span class="input-group-text">IP level</span>
+                  </div>
                 </div>
+                <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
               </div>
-              <p><em><small>(用来决定闪电打击天赋的等级，并且有黑暗守卫神器(增加60秒头目时间)的玩家来说比较有价值，更渴望推高的可以填更多，渴望速刷的就填少一些)</small></em></p>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="mi">神秘的冲击技能等级</label>
+                <div class="input-group">
+                  <input type="tel" id="mi" class="form-control" placeholder="#" aria-label="current MI level"
+                    onchange="storeValues();">
+                  <div class="input-group-append">
+                    <span class="input-group-text">MI level</span>
+                  </div>
+                </div>
+                <p><em><small>(在人物选项卡中的被动技能里)</small></em></p>
+              </div> -->
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="ms">你的极限层数</label>
+                <select class="form-control" id="ms" onchange="storeValues();"></select>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="crafting">锻造威力等级</label>
+                <div class="input-group">
+                  <input type="tel" id="crafting" class="form-control" placeholder="#" aria-label="crafting power level"
+                    onchange="storeValues();">
+                  <div class="input-group-append">
+                    <span class="input-group-text">锻造威力等级</span>
+                  </div>
+                </div>
+                <p><em><small>(在装备选项卡中的锻造界面的最下方)</small></em></p>
+              </div>
+              <!-- <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="warcry">你的战壕技能等级</label>
+                <select class="form-control" id="warcry" onchange="storeValues();"></select>
+                <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="clone">你的影分身技能等级</label>
+                <select class="form-control" id="clone" onchange="storeValues();"></select>
+                <p><em><small>(因为有玩家蓝上限和回蓝能力不足，无法将技能升满，所以有此选项，新手玩家为了保证技能全开，会采取保持低等级技能的策略)</small></em></p>
+              </div> -->
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="taps">每秒点击多少下</label>
+                <div class="input-group">
+                  <input type="tel" id="taps" class="form-control" placeholder="#" aria-label="taps per second"
+                    onchange="storeValues();">
+                  <div class="input-group-append">
+                    <span class="input-group-text">taps per second</span>
+                  </div>
+                </div>
+                <p><em><small>(用来决定点击类流派的技能分配。如果你的流派不用点击[如：飞船流]，那么设为 0)</small></em></p>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="patience">为了杀一个头目，你最多期望用多久时间</label>
+                <div class="input-group">
+                  <input type="tel" id="patience" class="form-control" placeholder="#"
+                    aria-label="time willing to wait for a titan kill" onchange="storeValues();">
+                  <div class="input-group-append">
+                    <span class="input-group-text">seconds for a kill</span>
+                  </div>
+                </div>
+                <p><em><small>(用来决定闪电打击天赋的等级，并且有黑暗守卫神器(增加60秒头目时间)的玩家来说比较有价值，更渴望推高的可以填更多，渴望速刷的就填少一些)</small></em></p>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="greed">当你技能点不够用于点出下一个 <em>*收益最高的*</em> 技能时<br><label class="switch"><input type="checkbox"
+                      id="greed" onchange="storeValues();" class="maxbg"><span class="slider round"></span></label><span
+                    id="greed_message">存够技能点升级它</span></label>
+                <p><em><small>(如果选择退而求其次，你将需要在今后频繁重置技能点以达到与优化器推荐的加点相匹配)</small></em></p>
+              </div>
             </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="greed">当你技能点不够用于点出下一个 <em>*收益最高的*</em> 技能时<br><label class="switch"><input type="checkbox"
-                    id="greed" onchange="storeValues();" class="maxbg"><span class="slider round"></span></label><span
-                  id="greed_message">存够技能点升级它</span></label>
-              <p><em><small>(如果选择退而求其次，你将需要在今后频繁重置技能点以达到与优化器推荐的加点相匹配)</small></em></p>
-            </div>
-          </div>
-          <h2 class="h5">你凑齐了哪些装备套装</h2>
-          <p>凑齐了就选中，这里的翻译用游戏中的翻译</p>
-          <div class="form-row mb-4">
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="ancient"><label class="switch"><input type="checkbox" id="ancient" onchange="storeValues();"
-                    class="scbg"><span class="slider round"></span></label>古代的战士 (神话) </label>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="ruthless"><label class="switch"><input type="checkbox" id="ruthless" onchange="storeValues();"
-                    class="scbg"><span class="slider round"></span></label>无情死灵 (神话) </label>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="angelic"><label class="switch"><input type="checkbox" id="angelic" onchange="storeValues();"
-                    class="scbg"><span class="slider round"></span></label>守护天使 (神话) </label>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="emerald"><label class="switch"><input type="checkbox" id="emerald" onchange="storeValues();"
-                    class="maxbg"><span class="slider round"></span></label>腐败翡翠骑士 (传奇)
-              </label>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="chained"><label class="switch"><input type="checkbox" id="chained" onchange="storeValues();"
-                    class="scbg"><span class="slider round"></span></label>链发条 (传奇) </label>
-            </div>
-            <div class="form-group col-12 col-md-6 col-lg-4">
-              <label for="platinum"><label class="switch"><input type="checkbox" id="platinum" onchange="storeValues();"
-                    class="scbg"><span class="slider round"></span></label>周年白金 (传奇) </label>
+            <h2 class="h5">你凑齐了哪些装备套装</h2>
+            <p>凑齐了就选中，这里的翻译用游戏中的翻译</p>
+            <div class="form-row mb-4">
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="ancient"><label class="switch"><input type="checkbox" id="ancient" onchange="storeValues();"
+                      class="scbg"><span class="slider round"></span></label>古代的战士 (神话) </label>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="ruthless"><label class="switch"><input type="checkbox" id="ruthless" onchange="storeValues();"
+                      class="scbg"><span class="slider round"></span></label>无情死灵 (神话) </label>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="angelic"><label class="switch"><input type="checkbox" id="angelic" onchange="storeValues();"
+                      class="scbg"><span class="slider round"></span></label>守护天使 (神话) </label>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="emerald"><label class="switch"><input type="checkbox" id="emerald" onchange="storeValues();"
+                      class="maxbg"><span class="slider round"></span></label>腐败翡翠骑士 (传奇)
+                </label>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="chained"><label class="switch"><input type="checkbox" id="chained" onchange="storeValues();"
+                      class="scbg"><span class="slider round"></span></label>链发条 (传奇) </label>
+              </div>
+              <div class="form-group col-12 col-md-6 col-lg-4">
+                <label for="platinum"><label class="switch"><input type="checkbox" id="platinum" onchange="storeValues();"
+                      class="scbg"><span class="slider round"></span></label>周年白金 (传奇) </label>
+              </div>
             </div>
           </div>
           <h2 class="h5">你的神器</h2>
