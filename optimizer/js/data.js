@@ -20,18 +20,6 @@ var db = {
       'texpo': 3.5,
       'gpeak': 1.0862780491200215,
       'adcalc': 0.000062,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -70,18 +58,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1,
       'adcalc': 0.000172,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0.8,
-        'chest': 0.8,
-        'boss': 0.8
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -120,18 +96,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.000172,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 3.2,
-        'fairy': 3.2,
-        'chest': 3.2,
-        'boss': 3.2
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -170,18 +134,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.007989,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0.8,
-        'chest': 0.8,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -220,18 +172,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.002943,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0.8
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -272,18 +212,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.216552506059644,
       'adcalc': 0.000215,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0.8,
-        'chest': 0.8,
-        'boss': 0.8
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -322,18 +250,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.001083,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 1.6,
-        'fairy': 1.6,
-        'chest': 1.6,
-        'boss': 1.6
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -372,18 +288,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.001083,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0.8,
-        'chest': 0.8,
-        'boss': 0.8
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -422,18 +326,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.007989,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0.8,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -472,18 +364,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.006390,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -522,18 +402,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.001083,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0.8,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -572,18 +440,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.120714058089752,
       'adcalc': 0.001083,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0.8,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -624,18 +480,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1,
       'adcalc': 0.000026,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -674,18 +518,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.000026,
-      'reductions': {
-        'cs': 4,
-        'sc': 4,
-        'pet': 4,
-        'hs': 4,
-        'hscs': 4,
-        'hssc': 4,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 4,
         'sc': 4,
@@ -726,18 +558,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.216552506059644,
       'adcalc': 0.025619,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -778,18 +598,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.125,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -830,18 +638,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001064,
-      'reductions': {
-        'cs': 0,
-        'sc': 0.6,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 0.6,
-        'hssc': 0.76,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0.6,
@@ -880,18 +676,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.003247,
-      'reductions': {
-        'cs': 0,
-        'sc': 0.6,
-        'pet': 0,
-        'hs': 0.8,
-        'hscs': 0.48,
-        'hssc': 0.68,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0.6,
@@ -930,18 +714,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -980,18 +752,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.125,
-      'reductions': {
-        'cs': 1,
-        'sc': 1.2,
-        'pet': 1.5,
-        'hs': 1.5,
-        'hscs': 1.3,
-        'hssc': 1.32,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1.2,
@@ -1030,18 +790,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.008931,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -1080,18 +828,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001613,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -1130,18 +866,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001613,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -1180,18 +904,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001613,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -1230,18 +942,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001613,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -1280,18 +980,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001613,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -1330,18 +1018,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1832159566199232,
       'adcalc': 0.003247,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 1,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -1380,18 +1056,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.008931,
-      'reductions': {
-        'cs': 1,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0.4,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0,
@@ -1430,18 +1094,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.006390,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 0,
-        'hscs': 0.4,
-        'hssc': 0.6,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -1480,18 +1132,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 6,
-        'sc': 5.6,
-        'pet': 6,
-        'hs': 6,
-        'hscs': 6,
-        'hssc': 5.76,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 6,
         'sc': 5.6,
@@ -1530,18 +1170,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 1.6,
-        'fairy': 1.6,
-        'chest': 1.6,
-        'boss': 1.6
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -1580,18 +1208,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001064,
-      'reductions': {
-        'cs': 2,
-        'sc': 2,
-        'pet': 2,
-        'hs': 2,
-        'hscs': 2,
-        'hssc': 2,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2,
         'sc': 2,
@@ -1630,18 +1246,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001064,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 2,
-        'hscs': 2,
-        'hssc': 2,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -1680,18 +1284,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.001064,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -1730,18 +1322,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.125,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -1780,18 +1360,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.125,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -1830,18 +1398,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001289,
-      'reductions': {
-        'cs': 0,
-        'sc': 1.2,
-        'pet': 3,
-        'hs': 2,
-        'hscs': 1.2,
-        'hssc': 1.52,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 1.2,
@@ -1880,18 +1436,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001289,
-      'reductions': {
-        'cs': 3,
-        'sc': 1.2,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1.8,
-        'hssc': 1.12,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 3,
         'sc': 1.2,
@@ -1932,18 +1476,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001289,
-      'reductions': {
-        'cs': 0.8,
-        'sc': 1.8,
-        'pet': 0.8,
-        'hs': 1.8,
-        'hscs': 1.4,
-        'hssc': 1.8,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0.8,
         'sc': 1.8,
@@ -1982,18 +1514,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001289,
-      'reductions': {
-        'cs': 2.3,
-        'sc': 2.4000000000000004,
-        'pet': 2.4000000000000004,
-        'hs': 2.4000000000000004,
-        'hscs': 2.3600000000000003,
-        'hssc': 2.4000000000000004,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2.3,
         'sc': 2.4000000000000004,
@@ -2034,18 +1554,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1764352935882194,
       'adcalc': 0.001289,
-      'reductions': {
-        'cs': 4.8,
-        'sc': 4.4,
-        'pet': 4.3,
-        'hs': 3.6,
-        'hscs': 4.08,
-        'hssc': 4.08,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 4.8,
         'sc': 4.4,
@@ -2084,18 +1592,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.002600,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -2134,18 +1630,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.002600,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.8,
-        'hscs': 0.88,
-        'hssc': 0.68,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -2184,18 +1668,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.002600,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.8,
-        'fairy': 0.8,
-        'chest': 0.8,
-        'boss': 0.8
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -2234,18 +1706,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.002600,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -2284,18 +1744,6 @@ var db = {
       'texpo': 3,
       'gpeak': 1.1489125293076057,
       'adcalc': 0.002600,
-      'reductions': {
-        'cs': 1,
-        'sc': 1,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 1,
@@ -2336,18 +1784,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 2,
-        'sc': 1.6,
-        'pet': 1.5,
-        'hs': 1.5,
-        'hscs': 1.7,
-        'hssc': 1.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2,
         'sc': 1.6,
@@ -2386,18 +1822,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 2,
-        'sc': 1.2,
-        'pet': 1,
-        'hs': 1.3,
-        'hscs': 1.58,
-        'hssc': 1.2400000000000002,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2,
         'sc': 1.2,
@@ -2436,18 +1860,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 1.8,
-        'sc': 1.4,
-        'pet': 1.3,
-        'hs': 1.3,
-        'hscs': 1.5,
-        'hssc': 1.36,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1.8,
         'sc': 1.4,
@@ -2488,18 +1900,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 2,
-        'sc': 1.6,
-        'pet': 1.5,
-        'hs': 1.5,
-        'hscs': 1.7,
-        'hssc': 1.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2,
         'sc': 1.6,
@@ -2540,18 +1940,6 @@ var db = {
       'texpo': 3.2,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.001633,
-      'reductions': {
-        'cs': 2,
-        'sc': 1.6,
-        'pet': 1.5,
-        'hs': 1.5,
-        'hscs': 1.7,
-        'hssc': 1.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2,
         'sc': 1.6,
@@ -2590,18 +1978,6 @@ var db = {
       'texpo': 2.8,
       'gpeak': 1.1349008767288886,
       'adcalc': 0.000172,
-      'reductions': {
-        'cs': 2.3,
-        'sc': 3.6,
-        'pet': 2.9,
-        'hs': 3.9,
-        'hscs': 3.26,
-        'hssc': 3.72,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 2.3,
         'sc': 3.6,
@@ -2640,18 +2016,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 1,
-        'hscs': 1,
-        'hssc': 1,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -2690,18 +2054,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 0.5,
-        'sc': 0.6,
-        'pet': 0.6,
-        'hs': 0.6,
-        'hscs': 0.56,
-        'hssc': 0.6,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0.5,
         'sc': 0.6,
@@ -2740,18 +2092,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0.48,
-        'fairy': 0.48,
-        'chest': 0.8,
-        'boss': 0.8
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -2790,18 +2130,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 0,
-        'sc': 0.6,
-        'pet': 1,
-        'hs': 1,
-        'hscs': 0.6,
-        'hssc': 0.76,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0.6,
@@ -2840,18 +2168,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 1,
-        'sc': 0.6,
-        'pet': 0.5,
-        'hs': 0.5,
-        'hscs': 0.7,
-        'hssc': 0.56,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 1,
         'sc': 0.6,
@@ -2890,18 +2206,6 @@ var db = {
       'texpo': 2.7,
       'gpeak': 1.131370849898476,
       'adcalc': 0.000273,
-      'reductions': {
-        'cs': 0,
-        'sc': 1,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0.6,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 1,
@@ -2940,18 +2244,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.000976,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -2990,18 +2282,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.004078,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3040,18 +2320,6 @@ var db = {
       'texpo': 3.4,
       'gpeak': 1,
       'adcalc': 0.049659,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3090,18 +2358,6 @@ var db = {
       'texpo': 3.4,
       'gpeak': 1,
       'adcalc': 0.049659,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3140,18 +2396,6 @@ var db = {
       'texpo': 3.4,
       'gpeak': 1,
       'adcalc': 0.049659,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3190,18 +2434,6 @@ var db = {
       'texpo': 3.4,
       'gpeak': 1,
       'adcalc': 0.049659,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3240,18 +2472,6 @@ var db = {
       'texpo': 3.4,
       'gpeak': 1,
       'adcalc': 0.049659,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3290,18 +2510,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000948,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3340,18 +2548,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000529,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3390,18 +2586,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000529,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3440,18 +2624,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000529,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3490,18 +2662,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000529,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3540,18 +2700,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000529,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3590,18 +2738,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000529,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3640,18 +2776,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.058515,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3690,18 +2814,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.058515,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3740,18 +2852,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 1.480267,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3790,18 +2890,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.014362,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3840,18 +2928,6 @@ var db = {
       'texpo': 3.1,
       'gpeak': 1,
       'adcalc': 0.071318,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3890,18 +2966,6 @@ var db = {
       'texpo': 3.5,
       'gpeak': 1,
       'adcalc': 2.189783,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3940,18 +3004,6 @@ var db = {
       'texpo': 3.5,
       'gpeak': 1,
       'adcalc': 2.189783,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -3990,18 +3042,6 @@ var db = {
       'texpo': 3.5,
       'gpeak': 1,
       'adcalc': 2.189783,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4040,18 +3080,6 @@ var db = {
       'texpo': 3.5,
       'gpeak': 1,
       'adcalc': 2.189783,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4090,18 +3118,6 @@ var db = {
       'texpo': 3.5,
       'gpeak': 1,
       'adcalc': 2.189783,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4140,18 +3156,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.058515,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4190,18 +3194,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000255,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4240,18 +3232,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.000976,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4290,18 +3270,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000255,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4340,18 +3308,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000255,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4390,18 +3346,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000255,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4440,18 +3384,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 0.000255,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4490,18 +3422,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.058515,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4540,18 +3460,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 46.138649,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4590,18 +3498,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 46.138649,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4640,18 +3536,6 @@ var db = {
       'texpo': 4,
       'gpeak': 1,
       'adcalc': 46.138649,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4690,18 +3574,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.058515,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
@@ -4740,18 +3612,6 @@ var db = {
       'texpo': 3.6,
       'gpeak': 1,
       'adcalc': 0.058515,
-      'reductions': {
-        'cs': 0,
-        'sc': 0,
-        'pet': 0,
-        'hs': 0,
-        'hscs': 0,
-        'hssc': 0,
-        'phom': 0,
-        'fairy': 0,
-        'chest': 0,
-        'boss': 0
-      },
       'reductions_orig': {
         'cs': 0,
         'sc': 0,
