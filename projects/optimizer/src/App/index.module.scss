@@ -1,0 +1,53 @@
+@import '../index.scss';
+
+.container {
+  padding: 0 15px;
+
+  &.dark {
+    background-color: $bg-dark;
+  }
+
+  &.light {
+    background-color: $bg-light;
+  }
+}
+
+.header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 15px;
+  right: 15px;
+  height: 80px;
+  border-bottom: 1px solid #6c757d;
+}
+
+.tt2Title {
+  margin-top: 10px;
+}
+
+.title {
+  display: inline-block;
+  font-size: 20px;
+}
+
+.vision {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 14px;
+  background-color: #41754f;
+  border-radius: 4px;
+  margin-left: 7px;
+  vertical-align: middle;
+}
+
+.bold {
+  font-weight: bold;
+  color: #ffc107;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 14px;
+  line-height: 24px;
+}
