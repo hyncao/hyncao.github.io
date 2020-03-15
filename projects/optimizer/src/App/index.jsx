@@ -5,13 +5,14 @@ import { blue, grey } from '@material-ui/core/colors';
 import { TextField, MenuItem, Grid, Button } from '@material-ui/core';
 import { Input } from '../Components';
 import config from '../config';
+import { formList } from './config';
 import styles from './index.module.scss';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      themeType: 'dark',
+      themeType: 'light',
       tabIndex: 0
     };
 
@@ -41,10 +42,10 @@ class App extends React.Component {
         <div className={`${styles.container} ${styles[themeType]}`}>
           <div className={styles.header}>
             <div className={styles.tab}>
-              <Button variant="contained" color="primary">
+              <Button variant="contained" color="primary" style={{ marginRight: '10px'}}>
                 配置（优先填写）
               </Button>
-              <Button variant="text" color="secondary">
+              <Button variant="text" color="primary">
                 神器升级
               </Button>
             </div>
@@ -72,7 +73,13 @@ class App extends React.Component {
               are any infringements or other problems, please contact me in
               time, I will delete related apps immediately. QQ -- 277148066
             </p>
-            <Input />
+            <Grid container spacing={5}>
+              {formList.map(i => (
+                <Grid key={i.name} item xs={12} sm={4}>
+                  <Input {...i} />
+                </Grid>
+              ))}
+            </Grid>
           </div>
           <div hidden={tabIndex !== 1}>tab2</div>
         </div>
