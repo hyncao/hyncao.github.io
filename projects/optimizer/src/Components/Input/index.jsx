@@ -1,15 +1,21 @@
 import React from 'react';
-import {
-  fade,
-  ThemeProvider,
-  withStyles,
-  createMuiTheme
-} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import { blue, grey } from '@material-ui/core/colors';
 import { TextField, MenuItem, Grid } from '@material-ui/core';
 import styles from './index.module.scss';
 
 class Input extends React.Component {
+  handleChange() {
+    const {
+      name,
+      form: { validateFields }
+    } = this.props;
+    validateFields(name, (error, values) => {
+      console.log(error);
+      console.log(values);
+    });
+  }
+
   render() {
     const CssTextField = withStyles(theme => ({
       root: {
@@ -17,20 +23,41 @@ class Input extends React.Component {
         borderRadius: 4
       }
     }))(TextField);
-    const { name, options } = this.props;
+    const {
+      name,
+      defaultValue,
+      options,
+      label,
+      helperText,
+      form: { getFieldProps }
+    } = this.props;
     return (
       <CssTextField
         select={Boolean(options)}
-        name={name}
         variant="outlined"
-        label="伤害流派"
-        helperText="3.8版本中，混用天堂流并不强，不建议使用"
+        label={label}
+        helperText={helperText}
+        defaultValue={defaultValue}
+        {...getFieldProps(name, {
+          defaultValue,
+          rules: [
+            {
+              required: true,
+              message: `请填写${label}`
+            },
+            // {
+            //   pattern: /^1[3-9]\d{9}$/,
+            //   message: '请输入正确的手机号'
+            // }
+          ]
+        })}
       >
-        {options.map(i => (
-          <MenuItem key={i.value} value={i.value}>
-            {i.text}
-          </MenuItem>
-        ))}
+        {Boolean(options) &&
+          options.map(i => (
+            <MenuItem key={i.value} value={i.value}>
+              {i.text}
+            </MenuItem>
+          ))}
       </CssTextField>
     );
   }

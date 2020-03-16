@@ -1,4 +1,5 @@
 import React from 'react';
+import createForm from '../my-form';
 import { createMuiTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 import { blue, grey } from '@material-ui/core/colors';
@@ -17,13 +18,25 @@ class App extends React.Component {
     };
 
     this.tabChange = this.tabChange.bind(this);
+    this.calc = this.calc.bind(this);
   }
 
   tabChange(event, tabIndex) {
     this.setState({ tabIndex });
   }
 
+  calc() {
+    const {
+      form: { validateFields }
+    } = this.props;
+    validateFields((err, values) => {
+      console.log(err);
+      console.log(values);
+    });
+  }
+
   render() {
+    const { form } = this.props;
     const { themeType, tabIndex } = this.state;
 
     const theme = createMuiTheme({
@@ -42,10 +55,14 @@ class App extends React.Component {
         <div className={`${styles.container} ${styles[themeType]}`}>
           <div className={styles.header}>
             <div className={styles.tab}>
-              <Button variant="contained" color="primary" style={{ marginRight: '10px'}}>
+              <Button
+                variant="contained"
+                color="primary"
+                style={{ marginRight: '10px' }}
+              >
                 配置（优先填写）
               </Button>
-              <Button variant="text" color="primary">
+              <Button variant="text" color="primary" onClick={this.calc}>
                 神器升级
               </Button>
             </div>
@@ -76,7 +93,7 @@ class App extends React.Component {
             <Grid container spacing={5}>
               {formList.map(i => (
                 <Grid key={i.name} item xs={12} sm={4}>
-                  <Input {...i} />
+                  <Input {...i} form={form} />
                 </Grid>
               ))}
             </Grid>
@@ -88,4 +105,4 @@ class App extends React.Component {
   }
 }
 
-export default App;
+export default createForm()(App);

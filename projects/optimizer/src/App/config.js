@@ -1,7 +1,13 @@
+import { db } from '../config';
+
+const { heroes } = db;
+
 export const formList = [
   {
     name: 'build',
-    initValue: '',
+    label: '伤害流派',
+    defaultValue: 'cs',
+    helperText: '3.8版本中，混用天堂流并不强，不建议使用',
     options: [
       {
         value: 'cs',
@@ -31,7 +37,8 @@ export const formList = [
   },
   {
     name: 'gold',
-    initValue: '',
+    label: '金钱流派',
+    defaultValue: 'phom',
     options: [
       {
         value: 'phom',
@@ -50,5 +57,30 @@ export const formList = [
         text: '头目金'
       }
     ]
+  },
+  {
+    name: 'ltr',
+    label: '你的总圣物数',
+    defaultValue: '0',
+    helperText:
+      'K = e3, M = e6, B = e9, T = e12; 5K 填写 5e3, 8.42T 填写 8.48e12'
+  },
+  {
+    name: 'bospct',
+    label: '暗影之书所占比重',
+    defaultValue: '0',
+    helperText:
+      'K = e3, M = e6, B = e9, T = e12; 5K 填写 5e3, 8.42T 填写 8.48e12; 如果你想红书保持在固定百分比，请填写%，没全神器前，不建议超过50%'
+  },
+  {
+    name: 'hero',
+    label: '最强英雄是哪一个？',
+    defaultValue: '',
+    helperText:
+      '建议选择: 保持所有类型的英雄均衡发展, 因为有时候你无法确定哪个英雄是最强的，为了避免浪费圣物，就均衡升级',
+    options: heroes.map(i => ({
+      value: i.en,
+      text: i.cn
+    }))
   }
 ];
