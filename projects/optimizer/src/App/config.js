@@ -1,4 +1,5 @@
 import { db } from '../config';
+import { createUnitArr } from '../utils';
 
 const { heroes } = db;
 
@@ -62,15 +63,24 @@ export const formList = [
     name: 'ltr',
     label: '你的总圣物数',
     defaultValue: '0',
-    helperText:
-      'K = e3, M = e6, B = e9, T = e12; 5K 填写 5e3, 8.42T 填写 8.48e12'
+    helperText: '数据统计最下方可以查看',
+    extra: {
+      name: 'ltrFactor',
+      defaultValue: 'e0',
+      options: createUnitArr(220)
+    }
   },
   {
     name: 'bospct',
     label: '暗影之书所占比重',
     defaultValue: '0',
     helperText:
-      'K = e3, M = e6, B = e9, T = e12; 5K 填写 5e3, 8.42T 填写 8.48e12; 如果你想红书保持在固定百分比，请填写%，没全神器前，不建议超过50%'
+      '如果你想红书保持在固定百分比，请填写%，没全神器前，不建议超过50%',
+    extra: {
+      name: 'bosunit',
+      defaultValue: '%',
+      options: [{ value: '%', text: '%' }].concat(createUnitArr(220))
+    }
   },
   {
     name: 'hero',
@@ -82,5 +92,26 @@ export const formList = [
       value: i.en,
       text: i.cn
     }))
+  },
+  {
+    name: 'active',
+    label: '在线流派',
+    switchFlag: true,
+    defaultValue: true,
+    helperText: '3.8版本中离线流派为被动技能，全流派享有'
+  },
+  {
+    name: 'unit',
+    label: '使用%升级圣物',
+    switchFlag: true,
+    defaultValue: true,
+    helperText: '到中期圣物多起来了，建议改为%单位升级圣物'
+  },
+  {
+    name: 'notation',
+    label: '使用科学计数法',
+    switchFlag: true,
+    defaultValue: true,
+    helperText: '强*烈*建*议 使用科学计数法'
   }
 ];

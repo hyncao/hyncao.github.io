@@ -1,30 +1,53 @@
 import React from 'react';
 
-const createForm = () => {
-  const state = [];
+class CreateForm extends React.Component {
+  state = [];
+  constructor(props) {
+    super(props);
 
-  const getFieldProps = (name, options) => {
-    const newItem = {
-      name,
-      options,
-      value: options.defaultValue
-    };
-    state.push(newItem);
+    this.handleChange = this.handleChange.bind(this);
+    this.getFieldProps = this.getFieldProps.bind(this);
+    this.getFieldValue = this.getFieldValue.bind(this);
+    this.getFieldsValue = this.getFieldsValue.bind(this);
+    this.validateField = this.validateField.bind(this);
+    this.validateFields = this.validateFields.bind(this);
+    this.create = this.create.bind(this);
+  }
+
+  componentDidMount() {}
+
+  handleChange(name, e) {
+    let { state } = this;
+    const targetItem = state.find(i => i.name === name);
+    const value = e.target.value;
+    targetItem.value = value;
+  }
+
+  getFieldProps(name, options) {
+    const { state } = this;
+    if (!state.find(i => i.name === name)) {
+      const newItem = {
+        name,
+        options,
+        value: options.defaultValue
+      };
+      state.push(newItem);
+    }
     return {
       onChange: e => {
-        const value = e.currentTarget.value;
-        state.find(i => i.name === name).value = value;
+        this.handleChange(name, e);
       }
     };
-  };
+  }
 
-  const getFieldValue = name => {
+  getFieldValue(name) {
     if (typeof name !== 'string') {
       console.error(
         `'${name}' is not string, please check getFieldValue function.`
       );
       return null;
     }
+    const { state } = this;
     const find = state.find(i => i.name === name);
     if (find) {
       return find.value;
@@ -34,13 +57,15 @@ const createForm = () => {
       );
       return null;
     }
-  };
+  }
 
-  const getFieldsValue = arr => {
-    return state.map(i => getFieldValue(i.name));
-  };
+  getFieldsValue() {
+    const { state } = this;
+    return state.map(i => this.getFieldValue(i.name));
+  }
 
-  const validateField = name => {
+  validateField(name) {
+    const { state } = this;
     const item = state.find(i => i.name === name);
     if (!item) {
       console.error(
@@ -66,7 +91,7 @@ const createForm = () => {
       };
     }
     const patternWrongItem = patternArr.filter(i => !i.pattern.test(value));
-    if (patternWrongItem) {
+    if (patternWrongItem && patternWrongItem.length) {
       return {
         name,
         rules,
@@ -75,27 +100,36 @@ const createForm = () => {
       };
     }
     return result;
-  };
+  }
 
-  const validateFields = callback => {
-    let error = state.map(i => validateField(i.name));
-    if (!error.find(i => typeof i === 'object')) {
+  validateFields(callback) {
+    const { state } = this;
+    const values = {};
+    let error = state
+      .map(i => this.validateField(i.name))
+      .filter(i => i !== true);
+    if (error.length === 0) {
       error = undefined;
     }
-    const values = state.forEach(i => (state[i.name] = i.value));
+    state.forEach(i => (values[i.name] = i.value));
     callback(error, values);
-  };
+  }
 
-  return Component => {
+  create() {
     const form = {
-      getFieldProps,
-      getFieldValue,
-      getFieldsValue,
-      validateField,
-      validateFields
+      handleChange: this.handleChange,
+      getFieldProps: this.getFieldProps,
+      getFieldValue: this.getFieldValue,
+      getFieldsValue: this.getFieldsValue,
+      validateField: this.validateField,
+      validateFields: this.validateFields
     };
-    return () => <Component form={form} />;
-  };
-};
+    return Component => {
+      return () => <Component form={form} />;
+    };
+  }
+}
+
+const createForm = () => new CreateForm().create();
 
 export default createForm;
