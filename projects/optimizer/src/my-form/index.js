@@ -16,11 +16,14 @@ class CreateForm extends React.Component {
 
   componentDidMount() {}
 
-  handleChange(name, e) {
+  handleChange(name, e, extraCallback) {
     let { state } = this;
     const targetItem = state.find(i => i.name === name);
     const value = e.target.value;
     targetItem.value = value;
+    if (extraCallback) {
+      extraCallback();
+    }
   }
 
   getFieldProps(name, options) {
@@ -35,7 +38,7 @@ class CreateForm extends React.Component {
     }
     return {
       onChange: e => {
-        this.handleChange(name, e);
+        this.handleChange(name, e, options.extraCallback);
       }
     };
   }
@@ -61,7 +64,11 @@ class CreateForm extends React.Component {
 
   getFieldsValue() {
     const { state } = this;
-    return state.map(i => this.getFieldValue(i.name));
+    const result = {};
+    state.forEach(i => {
+      result[i.name] = this.getFieldValue(i.name);
+    });
+    return result;
   }
 
   validateField(name) {

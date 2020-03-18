@@ -1,3 +1,5 @@
+export const delay = t => new Promise(res => setTimeout(res, t));
+
 export const createUnitArr = max => {
   if (typeof max !== 'number') {
     console.error('argument of createUnitArr is not a Number');
@@ -42,4 +44,22 @@ export const createUnitArr = max => {
     extraArr.push({ value, text: value });
   }
   return baseArr.concat(extraArr);
+};
+
+export const getLS = key => {
+  const ls = window.localStorage;
+  if (ls.getItem(key)) {
+    return ls.getItem(key);
+  }
+  return '';
+};
+
+export const setLS = (key, value) => {
+  const ls = window.localStorage;
+  ls.setItem(key, value);
+};
+
+export const removeLS = key => {
+  const ls = window.localStorage;
+  ls.removeItem(key);
 };

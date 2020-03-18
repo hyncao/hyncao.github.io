@@ -3,13 +3,12 @@ export const vision = '3.8.0';
 export const db = {
   artifacts: {
     art1: {
-      icon: './images/icons/59.png',
+      icon: '59.png',
       type: 'damage',
       inactive_adj: 0,
       name: '暗影之书',
       id: 'Artifact22',
-      fumo: 0,
-      fumoef: 2,
+      enchant: true,
       max: 0,
       effect: 0.05,
       gmax: 0.12,
@@ -43,7 +42,7 @@ export const db = {
       nickname: 'BoS'
     },
     art95: {
-      icon: './images/icons/91.png',
+      icon: '91.png',
       type: 'gold',
       inactive_adj: 0,
       name: '签账卡',
@@ -81,7 +80,7 @@ export const db = {
       nickname: 'CC'
     },
     art2: {
-      icon: './images/icons/74.png',
+      icon: '74.png',
       type: 'gold',
       inactive_adj: 0,
       name: '瓦如恩之石',
@@ -119,7 +118,7 @@ export const db = {
       nickname: 'SotV'
     },
     art3: {
-      icon: './images/icons/77.png',
+      icon: '77.png',
       type: 'gold',
       inactive_adj: 0,
       name: '满足宝箱',
@@ -157,7 +156,7 @@ export const db = {
       nickname: 'CoC'
     },
     art4: {
-      icon: './images/icons/84.png',
+      icon: '84.png',
       type: 'gold',
       inactive_adj: 0,
       name: '英勇之盾',
@@ -195,13 +194,12 @@ export const db = {
       nickname: 'HSh'
     },
     art5: {
-      icon: './images/icons/52.png',
+      icon: '52.png',
       type: 'gold',
       inactive_adj: 0,
       name: '预言之书',
       id: 'Artifact20',
-      fumo: 0,
-      fumoef: 1e19,
+      enchant: true,
       max: 0,
       effect: 0.25,
       gmax: 0.4,
@@ -235,7 +233,7 @@ export const db = {
       nickname: 'BoP'
     },
     art6: {
-      icon: './images/icons/35.png',
+      icon: '35.png',
       type: 'gold',
       inactive_adj: 0.8,
       name: '点金之碗',
@@ -273,7 +271,7 @@ export const db = {
       nickname: 'KB'
     },
     art7: {
-      icon: './images/icons/42.png',
+      icon: '42.png',
       type: 'gold',
       inactive_adj: 0.8,
       name: '扎金索斯银币',
@@ -311,7 +309,7 @@ export const db = {
       nickname: 'ZC'
     },
     art8: {
-      icon: './images/icons/43.png',
+      icon: '43.png',
       type: 'gold',
       inactive_adj: 0,
       name: '崇高仙子徽章',
@@ -349,7 +347,7 @@ export const db = {
       nickname: 'GFM'
     },
     art9: {
-      icon: './images/icons/44.png',
+      icon: '44.png',
       type: 'gold',
       inactive_adj: 0,
       name: '招财猫像',
@@ -387,7 +385,7 @@ export const db = {
       nickname: 'NS'
     },
     art10: {
-      icon: './images/icons/17.png',
+      icon: '17.png',
       type: 'gold',
       inactive_adj: 0,
       name: '财神金币',
@@ -425,7 +423,7 @@ export const db = {
       nickname: 'CoE'
     },
     art11: {
-      icon: './images/icons/28.png',
+      icon: '28.png',
       type: 'gold',
       inactive_adj: 0,
       name: '金币罗盘',
@@ -463,13 +461,12 @@ export const db = {
       nickname: 'TBC'
     },
     art94: {
-      icon: './images/icons/92.png',
+      icon: '92.png',
       type: 'damage',
       inactive_adj: 0,
       name: '累积堆',
       id: 'Artifact94',
-      fumo: 0,
-      fumoef: 1e19,
+      enchant: true,
       max: 0,
       effect: 0.02,
       gmax: 0.24,
@@ -503,7 +500,7 @@ export const db = {
       nickname: 'ES'
     },
     art12: {
-      icon: './images/icons/03.png',
+      icon: '03.png',
       type: 'damage',
       inactive_adj: 0,
       name: '独奏长笛',
@@ -541,13 +538,12 @@ export const db = {
       nickname: 'FotS'
     },
     art13: {
-      icon: './images/icons/73.png',
+      icon: '73.png',
       type: 'damage',
       inactive_adj: 0,
       name: '天堂之剑',
       id: 'Artifact26',
-      fumo: 0,
-      fumoef: 1e19,
+      enchant: true,
       max: 0,
       effect: 0.05,
       gmax: 0.4,
@@ -581,13 +577,12 @@ export const db = {
       nickname: 'HSw'
     },
     art14: {
-      icon: './images/icons/89.png',
+      icon: '89.png',
       type: 'damage',
       inactive_adj: 0,
       name: '神圣报应',
       id: 'Artifact31',
-      fumo: 0,
-      fumoef: 1e13,
+      enchant: true,
       max: 0,
       effect: 0.1,
       gmax: 0.32,
@@ -621,13 +616,12 @@ export const db = {
       nickname: 'DR'
     },
     art15: {
-      icon: './images/icons/72.png',
+      icon: '72.png',
       type: 'damage',
       inactive_adj: 0,
       name: '醉汉榔头',
       id: 'Artifact29',
-      fumo: 0,
-      fumoef: 1e10,
+      enchant: true,
       max: 0,
       effect: 0.1,
       gmax: 0.4,
@@ -661,7 +655,7 @@ export const db = {
       nickname: 'DH'
     },
     art16: {
-      icon: './images/icons/37.png',
+      icon: '37.png',
       type: 'damage',
       inactive_adj: 0,
       name: '萨摩赛克之剑',
@@ -699,7 +693,7 @@ export const db = {
       nickname: 'SS'
     },
     art17: {
-      icon: './images/icons/11.png',
+      icon: '11.png',
       type: 'damage',
       inactive_adj: 0,
       name: '复仇者',
@@ -737,7 +731,7 @@ export const db = {
       nickname: 'Ret'
     },
     art18: {
-      icon: './images/icons/06.png',
+      icon: '06.png',
       type: 'damage',
       inactive_adj: 0,
       name: '宁静之剑',
@@ -775,7 +769,7 @@ export const db = {
       nickname: 'SP'
     },
     art19: {
-      icon: './images/icons/79.png',
+      icon: '79.png',
       type: 'damage',
       inactive_adj: 0,
       name: '英雄之刃',
@@ -813,7 +807,7 @@ export const db = {
       nickname: 'HB'
     },
     art20: {
-      icon: './images/icons/80.png',
+      icon: '80.png',
       type: 'hero',
       inactive_adj: 0,
       name: '风暴之剑',
@@ -851,7 +845,7 @@ export const db = {
       nickname: 'TSS'
     },
     art21: {
-      icon: './images/icons/86.png',
+      icon: '86.png',
       type: 'hero',
       inactive_adj: 0,
       name: '复仇女神之弓',
@@ -889,7 +883,7 @@ export const db = {
       nickname: 'FB'
     },
     art22: {
-      icon: './images/icons/75.png',
+      icon: '75.png',
       type: 'hero',
       inactive_adj: 0,
       name: '古代护身符',
@@ -927,7 +921,7 @@ export const db = {
       nickname: 'CotA'
     },
     art23: {
-      icon: './images/icons/04.png',
+      icon: '04.png',
       type: 'hero',
       inactive_adj: 0,
       name: '泰坦树苗',
@@ -965,7 +959,7 @@ export const db = {
       nickname: 'TTT'
     },
     art24: {
-      icon: './images/icons/31.png',
+      icon: '31.png',
       type: 'hero',
       inactive_adj: 0,
       name: '飞毛头盔',
@@ -1003,7 +997,7 @@ export const db = {
       nickname: 'HoH'
     },
     art25: {
-      icon: './images/icons/49.png',
+      icon: '49.png',
       type: 'damage',
       inactive_adj: 0,
       name: '伊甸之果',
@@ -1041,7 +1035,7 @@ export const db = {
       nickname: 'FoE'
     },
     art26: {
-      icon: './images/icons/87.png',
+      icon: '87.png',
       type: 'damage',
       inactive_adj: 0,
       name: '感化灵药',
@@ -1079,7 +1073,7 @@ export const db = {
       nickname: 'IE'
     },
     art27: {
-      icon: './images/icons/30.png',
+      icon: '30.png',
       type: 'damage',
       inactive_adj: 0,
       name: '星辰吊链',
@@ -1117,7 +1111,7 @@ export const db = {
       nickname: 'ORC'
     },
     art28: {
-      icon: './images/icons/40.png',
+      icon: '40.png',
       type: 'damage',
       inactive_adj: 0,
       name: '风暴之心',
@@ -1155,7 +1149,7 @@ export const db = {
       nickname: 'HoS'
     },
     art29: {
-      icon: './images/icons/38.png',
+      icon: '38.png',
       type: 'gold',
       inactive_adj: 0,
       name: '太阳神之石',
@@ -1193,7 +1187,7 @@ export const db = {
       nickname: 'AO'
     },
     art30: {
-      icon: './images/icons/33.png',
+      icon: '33.png',
       type: 'damage',
       inactive_adj: 0,
       name: '圣殿耳环',
@@ -1231,7 +1225,7 @@ export const db = {
       nickname: 'EoP'
     },
     art31: {
-      icon: './images/icons/55.png',
+      icon: '55.png',
       type: 'damage',
       inactive_adj: 0,
       name: '仙鸟之羽',
@@ -1269,7 +1263,7 @@ export const db = {
       nickname: 'AF'
     },
     art32: {
-      icon: './images/icons/45.png',
+      icon: '45.png',
       type: 'damage',
       inactive_adj: 0,
       name: '腐败符文之心',
@@ -1307,7 +1301,7 @@ export const db = {
       nickname: 'CRH'
     },
     art33: {
-      icon: './images/icons/15.png',
+      icon: '15.png',
       type: 'damage',
       inactive_adj: 0,
       name: '迪朗达尔之剑',
@@ -1345,7 +1339,7 @@ export const db = {
       nickname: 'DSw'
     },
     art34: {
-      icon: './images/icons/29.png',
+      icon: '29.png',
       type: 'damage',
       inactive_adj: 0,
       name: '冥界头骨',
@@ -1383,7 +1377,7 @@ export const db = {
       nickname: 'HSk'
     },
     art35: {
-      icon: './images/icons/26.png',
+      icon: '26.png',
       type: 'damage',
       inactive_adj: 0,
       name: '永守誓言',
@@ -1421,7 +1415,7 @@ export const db = {
       nickname: 'OB'
     },
     art36: {
-      icon: './images/icons/25.png',
+      icon: '25.png',
       type: 'damage',
       inactive_adj: 0,
       name: '群星王冠',
@@ -1459,13 +1453,12 @@ export const db = {
       nickname: 'CotC'
     },
     art37: {
-      icon: './images/icons/27.png',
+      icon: '27.png',
       type: 'damage',
       inactive_adj: 0,
       name: '仙后法杖',
       id: 'Artifact77',
-      fumo: 0,
-      fumoef: 1e10,
+      enchant: true,
       max: 0,
       effect: 0.02,
       gmax: 0.32,
@@ -1499,7 +1492,7 @@ export const db = {
       nickname: 'TSc'
     },
     art38: {
-      icon: './images/icons/24.png',
+      icon: '24.png',
       type: 'damage',
       inactive_adj: 1.8,
       name: '蛊惑手套',
@@ -1537,13 +1530,12 @@ export const db = {
       nickname: 'FG'
     },
     art39: {
-      icon: './images/icons/53.png',
+      icon: '53.png',
       type: 'damage',
       inactive_adj: 0,
       name: '卡利斯托之戒',
       id: 'Artifact40',
-      fumo: 0,
-      fumoef: 1e10,
+      enchant: true,
       max: 0,
       effect: 0.01,
       gmax: 0.32,
@@ -1577,7 +1569,7 @@ export const db = {
       nickname: 'RoC'
     },
     art40: {
-      icon: './images/icons/81.png',
+      icon: '81.png',
       type: 'damage',
       inactive_adj: 0,
       name: '达摩克利斯之剑',
@@ -1615,7 +1607,7 @@ export const db = {
       nickname: 'BoD'
     },
     art41: {
-      icon: './images/icons/51.png',
+      icon: '51.png',
       type: 'damage',
       inactive_adj: 0,
       name: '疯狂头盔',
@@ -1653,7 +1645,7 @@ export const db = {
       nickname: 'HoM'
     },
     art42: {
-      icon: './images/icons/66.png',
+      icon: '66.png',
       type: 'gold',
       inactive_adj: 0,
       name: '钛钢镀饰',
@@ -1691,7 +1683,7 @@ export const db = {
       nickname: 'TP'
     },
     art43: {
-      icon: './images/icons/08.png',
+      icon: '08.png',
       type: 'damage',
       inactive_adj: 0,
       name: '月光手镯',
@@ -1729,7 +1721,7 @@ export const db = {
       nickname: 'MB'
     },
     art44: {
-      icon: './images/icons/82.png',
+      icon: '82.png',
       type: 'damage',
       inactive_adj: 0,
       name: '紫晶之杖',
@@ -1767,13 +1759,12 @@ export const db = {
       nickname: 'AS'
     },
     art45: {
-      icon: './images/icons/20.png',
+      icon: '20.png',
       type: 'hero',
       inactive_adj: 0,
       name: '皇家队之剑',
       id: 'Artifact86',
-      fumo: 0,
-      fumoef: 1e12,
+      enchant: true,
       max: 0,
       effect: 0.02,
       gmax: 0.24,
@@ -1807,7 +1798,7 @@ export const db = {
       nickname: 'SotR'
     },
     art46: {
-      icon: './images/icons/19.png',
+      icon: '19.png',
       type: 'hero',
       inactive_adj: 0,
       name: 'Spearit的岗哨',
@@ -1845,7 +1836,7 @@ export const db = {
       nickname: 'SV'
     },
     art47: {
-      icon: './images/icons/21.png',
+      icon: '21.png',
       type: 'hero',
       inactive_adj: 0,
       name: '钴板',
@@ -1883,13 +1874,12 @@ export const db = {
       nickname: 'TCP'
     },
     art48: {
-      icon: './images/icons/14.png',
+      icon: '14.png',
       type: 'hero',
       inactive_adj: 0,
       name: '审判印记',
       id: 'Artifact89',
-      fumo: 0,
-      fumoef: 1e10,
+      enchant: true,
       max: 0,
       effect: 0.02,
       gmax: 0.24,
@@ -1923,13 +1913,12 @@ export const db = {
       nickname: 'SoJ'
     },
     art49: {
-      icon: './images/icons/10.png',
+      icon: '10.png',
       type: 'hero',
       inactive_adj: 0,
       name: '守护者的树叶',
       id: 'Artifact90',
-      fumo: 0,
-      fumoef: 1e12,
+      enchant: true,
       max: 0,
       effect: 0.02,
       gmax: 0.24,
@@ -1963,7 +1952,7 @@ export const db = {
       nickname: 'FotK'
     },
     art50: {
-      icon: './images/icons/46.png',
+      icon: '46.png',
       type: 'damage',
       inactive_adj: 0,
       name: '入侵者的海姆达尔之角',
@@ -2001,7 +1990,7 @@ export const db = {
       nickname: 'IG'
     },
     art51: {
-      icon: './images/icons/63.png',
+      icon: '63.png',
       type: 'damage',
       inactive_adj: 0,
       name: '巨人面具',
@@ -2039,7 +2028,7 @@ export const db = {
       nickname: 'TM'
     },
     art52: {
-      icon: './images/icons/54.png',
+      icon: '54.png',
       type: 'damage',
       inactive_adj: 0,
       name: '皇室毒物',
@@ -2077,7 +2066,7 @@ export const db = {
       nickname: 'RT'
     },
     art53: {
-      icon: './images/icons/90.png',
+      icon: '90.png',
       type: 'gold',
       inactive_adj: 0,
       name: '工人垂饰',
@@ -2115,7 +2104,7 @@ export const db = {
       nickname: 'LP'
     },
     art54: {
-      icon: './images/icons/56.png',
+      icon: '56.png',
       type: 'damage',
       inactive_adj: 0,
       name: '诸神黄昏使者',
@@ -2153,7 +2142,7 @@ export const db = {
       nickname: 'BoR'
     },
     art55: {
-      icon: './images/icons/68.png',
+      icon: '68.png',
       type: 'damage',
       inactive_adj: 0,
       name: '预知羊皮纸',
@@ -2191,7 +2180,7 @@ export const db = {
       nickname: 'PoF'
     },
     art56: {
-      icon: './images/icons/60.png',
+      icon: '60.png',
       type: 'damage',
       inactive_adj: 0,
       name: '伊甸灵丹',
@@ -2229,7 +2218,7 @@ export const db = {
       nickname: 'EoE'
     },
     art57: {
-      icon: './images/icons/01.png',
+      icon: '01.png',
       type: 'damage',
       inactive_adj: 0,
       name: '急躁沙漏',
@@ -2267,7 +2256,7 @@ export const db = {
       nickname: 'HotI'
     },
     art58: {
-      icon: './images/icons/47.png',
+      icon: '47.png',
       type: 'damage',
       inactive_adj: 0,
       name: '幻影时钟',
@@ -2305,7 +2294,7 @@ export const db = {
       nickname: 'PT'
     },
     art59: {
-      icon: './images/icons/85.png',
+      icon: '85.png',
       type: 'damage',
       inactive_adj: 0,
       name: '禁忌卷轴',
@@ -2343,7 +2332,7 @@ export const db = {
       nickname: 'FS'
     },
     art60: {
-      icon: './images/icons/58.png',
+      icon: '58.png',
       type: 'damage',
       inactive_adj: 0,
       name: '效忠指环',
@@ -2381,7 +2370,7 @@ export const db = {
       nickname: 'RoF'
     },
     art61: {
-      icon: './images/icons/70.png',
+      icon: '70.png',
       type: 'damage',
       inactive_adj: 0,
       name: '冰川之斧',
@@ -2419,7 +2408,7 @@ export const db = {
       nickname: 'GA'
     },
     art62: {
-      icon: './images/icons/88.png',
+      icon: '88.png',
       type: 'damage',
       inactive_adj: 0,
       name: '神盾',
@@ -2457,7 +2446,7 @@ export const db = {
       nickname: 'Aeg'
     },
     art63: {
-      icon: './images/icons/50.png',
+      icon: '50.png',
       type: 'damage',
       inactive_adj: 0,
       name: '沼泽手套',
@@ -2495,7 +2484,7 @@ export const db = {
       nickname: 'SG'
     },
     art64: {
-      icon: './images/icons/67.png',
+      icon: '67.png',
       type: 'damage',
       inactive_adj: 0,
       name: '无限摆锤',
@@ -2533,7 +2522,7 @@ export const db = {
       nickname: 'InfP'
     },
     art65: {
-      icon: './images/icons/76.png',
+      icon: '76.png',
       type: 'damage',
       inactive_adj: 0,
       name: '大熊手套',
@@ -2571,7 +2560,7 @@ export const db = {
       nickname: 'GoK'
     },
     art66: {
-      icon: './images/icons/78.png',
+      icon: '78.png',
       type: 'damage',
       inactive_adj: 0,
       name: '巨人之矛',
@@ -2609,7 +2598,7 @@ export const db = {
       nickname: 'TSp'
     },
     art67: {
-      icon: './images/icons/71.png',
+      icon: '71.png',
       type: 'damage',
       inactive_adj: 0,
       name: '橡木杖',
@@ -2647,7 +2636,7 @@ export const db = {
       nickname: 'OS'
     },
     art68: {
-      icon: './images/icons/83.png',
+      icon: '83.png',
       type: 'damage',
       inactive_adj: 0,
       name: '奥秘斗篷',
@@ -2685,7 +2674,7 @@ export const db = {
       nickname: 'TAC'
     },
     art69: {
-      icon: './images/icons/64.png',
+      icon: '64.png',
       type: 'damage',
       inactive_adj: 0,
       name: '猎人药膏',
@@ -2723,7 +2712,7 @@ export const db = {
       nickname: 'HO'
     },
     art70: {
-      icon: './images/icons/36.png',
+      icon: '36.png',
       type: 'damage',
       inactive_adj: 0,
       name: '仙馔密酒',
@@ -2761,7 +2750,7 @@ export const db = {
       nickname: 'AE'
     },
     art71: {
-      icon: './images/icons/07.png',
+      icon: '07.png',
       type: 'damage',
       inactive_adj: 0,
       name: '神秘权杖',
@@ -2799,7 +2788,7 @@ export const db = {
       nickname: 'MSt'
     },
     art72: {
-      icon: './images/icons/34.png',
+      icon: '34.png',
       type: 'damage',
       inactive_adj: 0,
       name: '仙人魔豆',
@@ -2837,7 +2826,7 @@ export const db = {
       nickname: 'MBoS'
     },
     art73: {
-      icon: './images/icons/57.png',
+      icon: '57.png',
       type: 'damage',
       inactive_adj: 0,
       name: '幸运之卵',
@@ -2875,7 +2864,7 @@ export const db = {
       nickname: 'EoF'
     },
     art74: {
-      icon: './images/icons/69.png',
+      icon: '69.png',
       type: 'damage',
       inactive_adj: 0,
       name: '圣杯',
@@ -2913,7 +2902,7 @@ export const db = {
       nickname: 'DC'
     },
     art75: {
-      icon: './images/icons/61.png',
+      icon: '61.png',
       type: 'damage',
       inactive_adj: 0,
       name: '入侵者之盾',
@@ -2951,7 +2940,7 @@ export const db = {
       nickname: 'IS'
     },
     art76: {
-      icon: './images/icons/65.png',
+      icon: '65.png',
       type: 'damage',
       inactive_adj: 0,
       name: '死亡之斧',
@@ -2989,7 +2978,7 @@ export const db = {
       nickname: 'AoM'
     },
     art77: {
-      icon: './images/icons/39.png',
+      icon: '39.png',
       type: 'damage',
       inactive_adj: 0,
       name: '狐仙精华',
@@ -3027,7 +3016,7 @@ export const db = {
       nickname: 'EotK'
     },
     art78: {
-      icon: './images/icons/23.png',
+      icon: '23.png',
       type: 'damage',
       inactive_adj: 0,
       name: '飞毛靴子',
@@ -3065,7 +3054,7 @@ export const db = {
       nickname: 'BoH'
     },
     art79: {
-      icon: './images/icons/02.png',
+      icon: '02.png',
       type: 'damage',
       inactive_adj: 0,
       name: '释能护手',
@@ -3103,7 +3092,7 @@ export const db = {
       nickname: 'UG'
     },
     art80: {
-      icon: './images/icons/05.png',
+      icon: '05.png',
       type: 'damage',
       inactive_adj: 0,
       name: '仙王项链',
@@ -3141,7 +3130,7 @@ export const db = {
       nickname: 'OP'
     },
     art81: {
-      icon: './images/icons/16.png',
+      icon: '16.png',
       type: 'damage',
       inactive_adj: 0,
       name: '幸运兔脚',
@@ -3179,7 +3168,7 @@ export const db = {
       nickname: 'LFA'
     },
     art82: {
-      icon: './images/icons/32.png',
+      icon: '32.png',
       type: 'damage',
       inactive_adj: 0,
       name: '王君面具',
@@ -3217,7 +3206,7 @@ export const db = {
       nickname: 'LKM'
     },
     art83: {
-      icon: './images/icons/62.png',
+      icon: '62.png',
       type: 'damage',
       inactive_adj: 0,
       name: '光辉之杖',
@@ -3255,7 +3244,7 @@ export const db = {
       nickname: 'SoR'
     },
     art84: {
-      icon: './images/icons/12.png',
+      icon: '12.png',
       type: 'damage',
       inactive_adj: 0,
       name: '重剑无锋',
@@ -3293,7 +3282,7 @@ export const db = {
       nickname: 'MSw'
     },
     art91: {
-      icon: './images/icons/93.png',
+      icon: '93.png',
       type: 'damage',
       inactive_adj: 0,
       name: '响石',
@@ -3331,7 +3320,7 @@ export const db = {
       nickname: 'MSw'
     },
     art92: {
-      icon: './images/icons/94.png',
+      icon: '94.png',
       type: 'damage',
       inactive_adj: 0,
       name: '滚动的鹅毛笔',
@@ -3369,7 +3358,7 @@ export const db = {
       nickname: 'MSw'
     },
     art93: {
-      icon: './images/icons/95.png',
+      icon: '95.png',
       type: 'damage',
       inactive_adj: 0,
       name: '老国王的邮票',
@@ -3407,7 +3396,7 @@ export const db = {
       nickname: 'MSw'
     },
     art85: {
-      icon: './images/icons/48.png',
+      icon: '48.png',
       type: 'damage',
       inactive_adj: 0,
       name: '大师之剑',
@@ -3445,7 +3434,7 @@ export const db = {
       nickname: 'TMS'
     },
     art86: {
-      icon: './images/icons/13.png',
+      icon: '13.png',
       type: 'damage',
       inactive_adj: 0,
       name: '能量倍增',
@@ -3483,7 +3472,7 @@ export const db = {
       nickname: 'Mag'
     },
     art87: {
-      icon: './images/icons/09.png',
+      icon: '09.png',
       type: 'damage',
       inactive_adj: 0,
       name: '金币倍增',
@@ -3521,7 +3510,7 @@ export const db = {
       nickname: 'TToF'
     },
     art88: {
-      icon: './images/icons/18.png',
+      icon: '18.png',
       type: 'damage',
       inactive_adj: 0,
       name: '矮人重锤',
@@ -3559,7 +3548,7 @@ export const db = {
       nickname: 'TWD'
     },
     art89: {
-      icon: './images/icons/22.png',
+      icon: '22.png',
       type: 'damage',
       inactive_adj: 0,
       name: '亚兰之矛',
@@ -3597,7 +3586,7 @@ export const db = {
       nickname: 'AS'
     },
     art90: {
-      icon: './images/icons/41.png',
+      icon: '41.png',
       type: 'damage',
       inactive_adj: 0,
       name: '暗黑守卫',

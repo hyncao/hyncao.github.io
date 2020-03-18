@@ -44,6 +44,19 @@
   vertical-align: middle;
 }
 
+.tabItem {
+  transition: all 0.5s;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+
+  &.show {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+  }
+}
+
 .bold {
   font-weight: bold;
   color: #ffc107;
@@ -59,4 +72,38 @@ p {
   margin-top: 40px;
   font-size: 20px;
   text-shadow: 0 0;
+}
+
+.artifactsItem {
+  margin-bottom: 20px;
+}
+
+.foot {
+  text-align: center;
+  margin: 50px;
+  color: #9b9d4d;
+}
+
+.loading {
+  height: 100%;
+  background-color: #8faca4;
+  animation: loading 2s infinite;
+}
+
+@keyframes loading {
+  0% {
+    background-color: #b34117;
+  }
+  25% {
+    background-color: #f1b30d;
+  }
+  50% {
+    background-color: #287db6;
+  }
+  75% {
+    background-color: #5cc34f;
+  }
+  100% {
+    background-color: #b34117;
+  }
 }

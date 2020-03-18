@@ -115,3 +115,5 @@ export const formList = [
     helperText: '强*烈*建*议 使用科学计数法'
   }
 ];
+
+export default { formList };

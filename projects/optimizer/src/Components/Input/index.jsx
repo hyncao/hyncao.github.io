@@ -14,7 +14,7 @@ class Input extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      switchValue: ''
+      switchValue: false
     };
     this.handleSwitchChange = this.handleSwitchChange.bind(this);
     this.renderInput = this.renderInput.bind(this);
@@ -27,14 +27,25 @@ class Input extends React.Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    if (
+      JSON.stringify(nextProps) !== JSON.stringify(this.props) ||
+      JSON.stringify(nextState) !== JSON.stringify(this.state)
+    ) {
+      return true;
+    }
+    return false;
+  }
+
   handleSwitchChange() {
     const { switchValue } = this.state;
     const {
       name,
+      handleChange: appHandleChange,
       form: { handleChange }
     } = this.props;
     this.setState({ switchValue: !switchValue });
-    handleChange(name, { target: { value: !switchValue } });
+    handleChange(name, { target: { value: !switchValue } }, appHandleChange);
   }
 
   renderInput() {
@@ -44,6 +55,7 @@ class Input extends React.Component {
         borderRadius: 4
       }
     }))(TextField);
+    const { switchValue } = this.state;
     const {
       name,
       defaultValue,
@@ -51,8 +63,9 @@ class Input extends React.Component {
       label,
       helperText,
       switchFlag,
+      handleChange,
       extra,
-      form: { getFieldProps, getFieldValue }
+      form: { getFieldProps }
     } = this.props;
     const mainInput = (
       <CssTextField
@@ -68,7 +81,8 @@ class Input extends React.Component {
               required: true,
               message: `请填写${label}`
             }
-          ]
+          ],
+          extraCallback: handleChange
         })}
       >
         {Boolean(options) &&
@@ -86,7 +100,7 @@ class Input extends React.Component {
           control={
             <Switch
               color="primary"
-              checked={getFieldValue(name)}
+              checked={switchValue}
               {...getFieldProps(name, {
                 switchFlag,
                 defaultValue,
@@ -95,7 +109,8 @@ class Input extends React.Component {
                     required: true,
                     message: `请填写${label}`
                   }
-                ]
+                ],
+                extraCallback: handleChange
               })}
               onChange={this.handleSwitchChange}
             />
@@ -126,7 +141,9 @@ class Input extends React.Component {
                     required: true,
                     message: `请填写`
                   }
-                ]
+                ],
+
+                extraCallback: handleChange
               })}
             >
               {Boolean(extra.options) &&
