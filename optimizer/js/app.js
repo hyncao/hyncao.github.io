@@ -299,11 +299,12 @@ function adjustArtifacts() {
     a.weffect = Math.pow((currentEffect + minimum_effect) / minimum_effect, 1 / 3);
     a.wcost = (a.weffect * a.gpeak * ('gold' == a.type ? a.reductions[gold] : a.reductions[build]) / a.texpo + a.adcalc) * (0 < a.max ? 0 : (artifact_statuses[a.id] == '2' ? 1 : artifact_statuses[a.id]));
     running_wcost += a.wcost;
-    if (0 < a.max && 1 == artifact_statuses[a.id]) { // if it's maxable and they own it
-      var cost_to_max = a.tcoef * Math.pow(a.max, a.texpo);
-      total_artifacts_purchase_cost += cost_to_max; // add the cost to max it
+    // TODO 对有上限神器，需要根据实际消耗等级数计算圣物数量，而不是默认升级满
+    // if (0 < a.max && 1 == artifact_statuses[a.id]) { // if it's maxable and they own it
+    //   var cost_to_max = a.tcoef * Math.pow(a.max, a.texpo);
+    //   total_artifacts_purchase_cost += cost_to_max; // add the cost to max it
 
-    }
+    // }
   });
   relics_to_spread -= total_artifacts_purchase_cost;
   if (relics_to_spread < 0) {
