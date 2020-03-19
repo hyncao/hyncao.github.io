@@ -61,12 +61,22 @@ class Input extends React.Component {
       defaultValue,
       options,
       label,
+      rules,
       helperText,
       switchFlag,
       handleChange,
       extra,
-      form: { getFieldProps }
+      form: { getFieldProps, validateField }
     } = this.props;
+    let myRules = [
+      {
+        required: true,
+        message: `请填写${label}`
+      }
+    ];
+    if (rules) {
+      myRules.concat(rules);
+    }
     const mainInput = (
       <CssTextField
         select={Boolean(options)}
@@ -76,12 +86,7 @@ class Input extends React.Component {
         defaultValue={defaultValue}
         {...getFieldProps(name, {
           defaultValue,
-          rules: [
-            {
-              required: true,
-              message: `请填写${label}`
-            }
-          ],
+          rules: myRules,
           extraCallback: handleChange
         })}
       >

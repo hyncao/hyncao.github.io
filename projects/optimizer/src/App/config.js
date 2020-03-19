@@ -1,5 +1,5 @@
 import { db } from '../config';
-import { createUnitArr } from '../utils';
+import { createUnitArr, reg } from '../utils';
 
 const { heroes } = db;
 
@@ -64,6 +64,12 @@ export const formList = [
     label: '你的总圣物数',
     defaultValue: '0',
     helperText: '数据统计最下方可以查看',
+    rules: [
+      {
+        pattern: reg.positiveNum,
+        message: '总圣物输入格式有误'
+      }
+    ],
     extra: {
       name: 'ltrFactor',
       defaultValue: 'e0',
@@ -84,7 +90,7 @@ export const formList = [
   },
   {
     name: 'hero',
-    label: '最强英雄是哪一个？',
+    label: '最强英雄是哪一个',
     defaultValue: '',
     helperText:
       '建议选择: 保持所有类型的英雄均衡发展, 因为有时候你无法确定哪个英雄是最强的，为了避免浪费圣物，就均衡升级',

@@ -1,7 +1,7 @@
 @import '../index.scss';
 
 .container {
-  padding: 0 15px;
+  padding: 15px;
 
   &.dark {
     background-color: $bg-dark;
@@ -17,9 +17,10 @@
   position: fixed;
   z-index: 1;
   top: 0;
-  left: 15px;
-  right: 15px;
-  height: 80px;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  padding: 15px;
   border-bottom: 1px solid #ccc;
   background-color: $bg-light;
 }
@@ -105,5 +106,40 @@ p {
   }
   100% {
     background-color: #b34117;
+  }
+}
+
+.calcLoading {
+  margin: 30% auto;
+  text-align: center;
+}
+
+.tableIcon {
+  width: 40px;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+
+.tableName {
+  vertical-align: middle;
+
+  &.damage {
+    color: #941010;
+  }
+
+  &.gold {
+    color: #906f10;
+  }
+}
+
+.tablePercent {
+  text-indent: 10px;
+
+  &.damage {
+    background-color: #ff7777;
+  }
+
+  &.gold {
+    background-color: #ffd661;
   }
 }
