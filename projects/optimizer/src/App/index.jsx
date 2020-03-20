@@ -2,7 +2,14 @@ import React from 'react';
 import createForm from '../my-form';
 import { withStyles } from '@material-ui/core/styles';
 import { Grid, Button, Backdrop, CircularProgress } from '@material-ui/core';
-import { delay, getLS, setLS, tips, getFontSize } from '../utils';
+import {
+  delay,
+  getLS,
+  setLS,
+  tips,
+  getFontSize,
+  displayTruncated
+} from '../utils';
 import { Input, Artifact, Table } from '../Components';
 import config from '../config';
 import { formList } from './config';
@@ -26,9 +33,9 @@ class App extends React.Component {
     this.state = {
       themeType: 'light',
       loading: true,
-      calcLoading: false,
       tabIndex: 0,
       fieldsValue: {},
+      formList: formList,
       artifactsList: Object.values(config.db.artifacts),
       artifactsStateList: [],
       dataSource: [],
@@ -38,7 +45,8 @@ class App extends React.Component {
 
     this.storeData = this.storeData.bind(this);
     this.tabChange = this.tabChange.bind(this);
-    this.calc = this.calc.bind(this);
+    this.adjustArtifacts = this.adjustArtifacts.bind(this);
+    this.beforeCalc = this.beforeCalc.bind(this);
     this.handleArtifactChange = this.handleArtifactChange.bind(this);
     this.allArtifact = this.allArtifact.bind(this);
     this.allEnchant = this.allEnchant.bind(this);
@@ -86,8 +94,26 @@ class App extends React.Component {
     if (fieldsValue) {
       try {
         fieldsValue = JSON.parse(fieldsValue);
+        let { formList } = this.state;
+        formList = formList.map(i => {
+          let { extra, defaultValue } = i;
+          if (fieldsValue[i.name] !== undefined) {
+            defaultValue = fieldsValue[i.name];
+          }
+          if (extra) {
+            if (fieldsValue[extra.name] !== undefined) {
+              extra.defaultValue = fieldsValue[extra.name];
+            }
+          }
+          return {
+            ...i,
+            extra,
+            defaultValue
+          };
+        });
         this.setState({
-          fieldsValue
+          fieldsValue,
+          formList
         });
       } catch (e) {
         console.warn(
@@ -104,182 +130,186 @@ class App extends React.Component {
     const { artifactsStateList } = this.state;
     setLS('artifactsStateList', JSON.stringify(artifactsStateList));
     setLS('fieldsValue', JSON.stringify(getFieldsValue()));
-    console.log(getFieldsValue());
   }
 
   tabChange(tabIndex) {
     if (tabIndex === 1) {
-      this.calc();
+      this.beforeCalc();
       return;
     }
     this.setState({ tabIndex });
   }
 
-  adjustArtifacts() {
-    var hero_value = 0;
-    var minimum_effect = 999999999;
-    $.each(db.artifacts, function(k, a) {
-      a.reductions = JSON.parse(JSON.stringify(a.reductions_orig));
-      if (0 < a.inactive_adj && true == active) {
-        if ('gold' == a.type) {
-          a.reductions[gold] -= a.inactive_adj;
+  adjustArtifacts(
+    { active, gold, build, hero, ltr, ltrFactor, unit, bospct, bosunit },
+    artifactsStateList
+  ) {
+    const heroObj = config.db.heroes.find(i => i.en === hero);
+    const { faction: heroFaction, type: heroType } = heroObj;
+    const { artifactsList } = this.state;
+    const calcBospct = parseFloat(
+      bosunit === '%' ? bospct / 100 : bospct + bosunit
+    );
+    let hero_value = 0;
+    let minimum_effect = 999999999;
+    let adjustArtifactsArr = []; // 最终的数据
+    artifactsList.forEach(i => {
+      const reductions = { ...i.reductions_orig };
+      const calcReductionsByHero = () => {
+        reductions.cs -= hero_value;
+        reductions.sc -= hero_value;
+        reductions.pet -= hero_value;
+        reductions.hs -= hero_value;
+        reductions.hscs -= hero_value;
+        reductions.hssc -= hero_value;
+      };
+      if (0 < i.inactive_adj && active) {
+        if (i.type === 'gold') {
+          reductions[gold] -= i.inactive_adj;
         } else {
-          a.reductions[build] -= a.inactive_adj;
+          reductions[build] -= i.inactive_adj;
         }
       }
-      if ('Artifact35' == a.id) {
-        // if this is the all hero artifact, snapshot the hero value; NOTE: this relies on that artifact coming before all the other hero artifacts
-        hero_value = a.reductions[build];
+      if (i.id === 'Artifact35') {
+        // 英雄之刃
+        hero_value = reductions[build];
       }
-      if ('Artifact77' == a.id || 'Artifact47' == a.id) {
-        // if this is Titania's Sceptre or the Horn
-        if ('fairy' == gold || 'phom' == gold) {
-          // and this is a fairy or pHoM build, take out the .4 gold power
-          a.reductions.cs -= db.gold_hom_adj;
-          a.reductions.sc -= db.gold_hom_adj;
-          a.reductions.pet -= db.gold_hom_adj;
-          a.reductions.hs -= db.gold_hom_adj;
-          a.reductions.hscs -= db.gold_hom_adj;
-          a.reductions.hssc -= db.gold_hom_adj;
+      if (i.id === 'Artifact77' || i.id === 'Artifact47') {
+        // 仙后法杖 | 入侵者的海姆达尔之角
+        if (gold === 'fairy' || gold === 'phom') {
+          reductions.cs -= config.db.gold_hom_adj;
+          reductions.sc -= config.db.gold_hom_adj;
+          reductions.pet -= config.db.gold_hom_adj;
+          reductions.hs -= config.db.gold_hom_adj;
+          reductions.hscs -= config.db.gold_hom_adj;
+          reductions.hssc -= config.db.gold_hom_adj;
         }
       }
-      if ('hero' == a.type) {
-        switch (a.id) {
+      if (i.type === 'hero') {
+        switch (i.id) {
           case 'Artifact32':
           case 'Artifact86':
-            if (false == hero_type.includes('melee')) {
-              a.reductions.cs -= hero_value;
-              a.reductions.sc -= hero_value;
-              a.reductions.pet -= hero_value;
-              a.reductions.hs -= hero_value;
-              a.reductions.hscs -= hero_value;
-              a.reductions.hssc -= hero_value;
+            if (!heroFaction.includes('melee')) {
+              calcReductionsByHero();
             }
             break;
           case 'Artifact33':
           case 'Artifact90':
-            if (false == hero_type.includes('ranged')) {
-              a.reductions.cs -= hero_value;
-              a.reductions.sc -= hero_value;
-              a.reductions.pet -= hero_value;
-              a.reductions.hs -= hero_value;
-              a.reductions.hscs -= hero_value;
-              a.reductions.hssc -= hero_value;
+            if (!heroFaction.includes('ranged')) {
+              calcReductionsByHero();
             }
             break;
           case 'Artifact34':
           case 'Artifact89':
-            if (false == hero_type.includes('spell')) {
-              a.reductions.cs -= hero_value;
-              a.reductions.sc -= hero_value;
-              a.reductions.pet -= hero_value;
-              a.reductions.hs -= hero_value;
-              a.reductions.hscs -= hero_value;
-              a.reductions.hssc -= hero_value;
+            if (!heroFaction.includes('spell')) {
+              calcReductionsByHero();
             }
             break;
           case 'Artifact61':
           case 'Artifact88':
-            if (false == hero_type.includes('ground')) {
-              a.reductions.cs -= hero_value;
-              a.reductions.sc -= hero_value;
-              a.reductions.pet -= hero_value;
-              a.reductions.hs -= hero_value;
-              a.reductions.hscs -= hero_value;
-              a.reductions.hssc -= hero_value;
+            if (!heroType.includes('ground')) {
+              calcReductionsByHero();
             }
             break;
           case 'Artifact62':
           case 'Artifact87':
-            if (false == hero_type.includes('flying')) {
-              a.reductions.cs -= hero_value;
-              a.reductions.sc -= hero_value;
-              a.reductions.pet -= hero_value;
-              a.reductions.hs -= hero_value;
-              a.reductions.hscs -= hero_value;
-              a.reductions.hssc -= hero_value;
+            if (!heroType.includes('flying')) {
+              calcReductionsByHero();
             }
             break;
+          default:
         }
       }
-      minimum_effect = Math.min(minimum_effect, a.effect); // update the minimum_effect if appropriate
+      minimum_effect = Math.min(minimum_effect, i.effect);
+
+      adjustArtifactsArr.push({
+        id: i.id,
+        name: i.name,
+        icon: i.icon,
+        type: i.type,
+        max: i.max,
+        inactive_adj: i.inactive_adj,
+        reductions
+      });
     });
     minimum_effect = 1 - minimum_effect;
-    var running_wcost = 0;
-    var total_artifacts_owned = 0;
-    $.each(artifact_statuses, function(k, s) {
-      total_artifacts_owned += s;
-    });
-    $('#owned_count').html(total_artifacts_owned);
-    var total_artifacts_purchase_cost = 0;
-    var relics_to_spread = ltr;
-    $.each(db.artifact_costs, function(k, c) {
-      if (parseInt(k) <= total_artifacts_owned) {
-        total_artifacts_purchase_cost += c;
-      }
-    });
-    $.each(db.artifacts, function(k, a) {
-      // unfortunately we have to loop through again to do the final calcs
-      var currentEffect = a.effect;
-      a.weffect = Math.pow(
-        (currentEffect + minimum_effect) / minimum_effect,
+    let runningWcost = 0;
+    const totalArtifactsOwned = artifactsStateList.length;
+    const totalArtifactsPurchaseCost = Object.values(config.db.artifact_costs)
+      .slice(0, totalArtifactsOwned + 1)
+      .reduce((prev, next) => prev + next);
+    let relics2Spread = parseFloat(ltr + ltrFactor);
+    adjustArtifactsArr = adjustArtifactsArr.map(i => {
+      const adjustArtifactsItem = artifactsList.find(item => item.id === i.id);
+      const { effect, gpeak, type, texpo, adcalc, max } = adjustArtifactsItem;
+      const weffect = Math.pow(
+        (effect + minimum_effect) / minimum_effect,
         1 / 3
       );
-      a.wcost =
-        ((a.weffect *
-          a.gpeak *
-          ('gold' == a.type ? a.reductions[gold] : a.reductions[build])) /
-          a.texpo +
-          a.adcalc) *
-        (0 < a.max
-          ? 0
-          : artifact_statuses[a.id] == '2'
-          ? 1
-          : artifact_statuses[a.id]);
-      running_wcost += a.wcost;
+      const wcost =
+        ((weffect *
+          gpeak *
+          (type === 'gold' ? i.reductions[gold] : i.reductions[build])) /
+          texpo +
+          adcalc) *
+        (0 < max ? 0 : 1);
+      runningWcost += wcost;
       // TODO 对有上限神器，需要根据实际消耗等级数计算圣物数量，而不是默认升级满
       // if (0 < a.max && 1 == artifact_statuses[a.id]) { // if it's maxable and they own it
       //   var cost_to_max = a.tcoef * Math.pow(a.max, a.texpo);
-      //   total_artifacts_purchase_cost += cost_to_max; // add the cost to max it
-
+      //   totalArtifactsPurchaseCost += cost_to_max; // add the cost to max it
       // }
+      return {
+        ...i,
+        weffect,
+        wcost
+      };
     });
-    relics_to_spread -= total_artifacts_purchase_cost;
-    if (relics_to_spread < 0) {
-      alert(
-        '神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数'
-      );
+    relics2Spread -= totalArtifactsPurchaseCost;
+    if (relics2Spread < 0) {
+      tips({
+        content:
+          '神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数'
+      });
     }
-    var leftover_relics = relics_to_spread * ('pct' == unit ? 0.97 : 1);
-    $.each(db.artifacts, function(k, a) {
-      // and a third loop to get the running totals
-      a.costpct = a.wcost / running_wcost;
-      if ('Artifact22' == a.id) {
-        // Note: this relies on BoS being first in the list
-        if (0 !== artifact_statuses[a.id]) {
-          if ('pct' == bosunit) {
-            a.calcrelic = relics_to_spread * bospct;
-            a.costpct = bospct;
-          } else {
-            a.calcrelic = a.tcoef * Math.pow(bospct, a.texpo);
-          }
-          a.disppct = a.calcrelic / relics_to_spread; // repurpose this for display purposes
-          leftover_relics -= a.calcrelic;
+    let leftoverRelics = relics2Spread * 1;
+    adjustArtifactsArr = adjustArtifactsArr.map(i => {
+      const adjustArtifactsItem = artifactsList.find(item => item.id === i.id);
+      const { tcoef, texpo } = adjustArtifactsItem;
+      let costpct = i.wcost / runningWcost;
+      let calcrelic;
+      let disppct;
+      if (i.id === 'Artifact22') {
+        // 红书优先级最高，最先计算
+        if (bosunit === '%') {
+          calcrelic = relics2Spread * calcBospct;
+          costpct = calcBospct;
         } else {
-          a.disppct = 0;
+          calcrelic = tcoef * Math.pow(calcBospct, texpo);
         }
+        disppct = calcrelic / relics2Spread; // repurpose this for display purposes
+        leftoverRelics -= calcrelic;
       } else {
-        a.calcrelic = leftover_relics * a.costpct;
-        a.disppct = a.calcrelic / relics_to_spread; // repurpose this for display purposes
+        calcrelic = leftoverRelics * costpct;
+        disppct = calcrelic / relics2Spread; // repurpose this for display purposes
       }
-      a.calclevel = Math.pow(a.calcrelic / a.tcoef, 1 / a.texpo);
+      const calclevel = Math.pow(calcrelic / tcoef, 1 / texpo);
+      return {
+        ...i,
+        costpct,
+        calcrelic,
+        disppct,
+        calclevel
+      };
     });
-    insertArtifacts();
-    updateArtifactSpread();
-    // adjustSkills();
+    this.setState({
+      dataSource: adjustArtifactsArr,
+      orderBy: 'artifact',
+      order: 'desc'
+    });
   }
 
-  calc() {
+  beforeCalc() {
     const {
       form: { validateFields }
     } = this.props;
@@ -288,48 +318,12 @@ class App extends React.Component {
         tips({ content: err[0].errorMsg });
         return;
       }
-
-      // 设置初始化table数据
-      const { artifactsList } = this.state;
-      const dataSource = artifactsList.map(i => {
-        const icon = require(`../icons/${i.icon}`);
-        return {
-          id: i.id,
-          artifact: (
-            <>
-              <img src={icon} alt={i.id} className={styles.tableIcon} />
-              <span
-                style={{ fontSize: getFontSize(i.name) }}
-                className={`${styles.tableName} ${
-                  i.type === 'gold' ? styles.gold : styles.damage
-                }`}
-              >
-                {i.name}
-              </span>
-            </>
-          ),
-          level: '2.22e11',
-          percent: (
-            <div
-              className={`${styles.tablePercent} ${
-                i.type === 'gold' ? styles.gold : styles.damage
-              }`}
-              style={{ width: '5%' }}
-            >
-              5%
-            </div>
-          )
-        };
-      });
+      const { artifactsStateList } = this.state;
+      this.adjustArtifacts(values, artifactsStateList);
 
       this.setState({
-        calcLoading: true,
-        tabIndex: 1,
-        dataSource,
-        orderBy: 'artifact',
-        order: 'asc'
+        tabIndex: 1
       });
-      console.log(values);
     });
   }
 
@@ -366,23 +360,53 @@ class App extends React.Component {
   }
 
   handleSort(name) {
-    console.log(name);
+    const { orderBy, order, dataSource, artifactsList } = this.state;
+    let positive = 'desc'; // 正序
+    if (orderBy === name) {
+      positive = order === 'desc' ? 'asc' : 'desc';
+    }
+    dataSource.sort((j, k) => {
+      let prev;
+      let next;
+      switch (name) {
+        case 'artifact':
+          prev = artifactsList.findIndex(i => i.id === j.id);
+          next = artifactsList.findIndex(i => i.id === k.id);
+          break;
+        case 'level':
+          prev = j.calclevel;
+          next = k.calclevel;
+          break;
+        case 'percent':
+          prev = j.disppct;
+          next = k.disppct;
+          break;
+        default:
+      }
+      const delta = prev - next;
+      return positive === 'desc' ? delta : -delta;
+    });
+    this.setState({ dataSource, orderBy: name, order: positive });
   }
 
   render() {
-    const { form } = this.props;
+    const {
+      form,
+      form: { getFieldValue }
+    } = this.props;
     const {
       loading,
-      calcLoading,
       themeType,
       tabIndex,
-      fieldsValue,
+      formList,
       artifactsList,
       artifactsStateList,
       dataSource,
       orderBy,
       order
     } = this.state;
+
+    const notation = tabIndex === 1 ? getFieldValue('notation') : 0;
 
     const columns = [
       {
@@ -408,6 +432,52 @@ class App extends React.Component {
         </div>
       );
     }
+
+    const renderDataSource = dataSource.map(i => {
+      const icon = require(`../icons/${i.icon}`);
+      const renderStyle = i => {
+        const isMaxable = i.max > 0;
+        const isMatchBuild =
+          i.type === 'gold'
+            ? i.reductions[getFieldValue('gold')] === 0
+            : i.reductions[getFieldValue('build')] === 0;
+        if (i.id === 'Artifact22') {
+          return styles.damage;
+        }
+        if (isMaxable) {
+          return styles.disabled;
+        }
+        if (isMatchBuild) {
+          return styles.disabled;
+        }
+        return i.type === 'gold' ? styles.gold : styles.damage;
+      };
+      return {
+        id: i.id,
+        artifact: (
+          <>
+            <img src={icon} alt={i.id} className={styles.tableIcon} />
+            <span
+              style={{ fontSize: getFontSize(i.name) }}
+              className={`${styles.tableName} ${renderStyle(i)}`}
+            >
+              {i.name}
+            </span>
+          </>
+        ),
+        level: displayTruncated(i.calclevel, notation),
+        percent: (
+          <div
+            className={`${styles.tablePercent} ${
+              i.type === 'gold' ? styles.gold : styles.damage
+            }`}
+            style={{ width: `${(i.disppct * 100).toFixed(6)}%` }}
+          >
+            {(i.disppct * 100).toFixed(6)}%
+          </div>
+        )
+      };
+    });
     return (
       <div className={`${styles.container} ${styles[themeType]}`}>
         <div className={styles.header}>
@@ -457,16 +527,7 @@ class App extends React.Component {
           <Grid container spacing={3}>
             {formList.map(i => (
               <Grid key={i.name} item xs={12} sm={4}>
-                <Input
-                  {...i}
-                  defaultValue={
-                    fieldsValue[i.name] !== undefined
-                      ? fieldsValue[i.name]
-                      : i.defaultValue
-                  }
-                  form={form}
-                  handleChange={this.storeData}
-                />
+                <Input {...i} form={form} handleChange={this.storeData} />
               </Grid>
             ))}
           </Grid>
@@ -516,17 +577,12 @@ class App extends React.Component {
         <div
           className={`${styles.tabItem} ${tabIndex === 1 ? styles.show : ''}`}
         >
-          {calcLoading && (
-            <div className={styles.calcLoading}>
-              <CircularProgress color="primary" />
-            </div>
-          )}
           <p>
             个人使用建议：选择<strong className={styles.bold}> 1% </strong>
             为单位，从上到下，按照建议列表升级神器，数值差不多就行，不用特别精细。这样升级可以节省大量的时间，而且太精细的升级不见得会带来更好的提升。
           </p>
           <Table
-            dataSource={dataSource}
+            dataSource={renderDataSource}
             columns={columns}
             handleSort={this.handleSort}
             orderBy={orderBy}

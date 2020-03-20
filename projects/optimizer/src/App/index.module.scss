@@ -130,6 +130,10 @@ p {
   &.gold {
     color: #906f10;
   }
+
+  &.disabled{
+    color: #aaa;
+  }
 }
 
 .tablePercent {

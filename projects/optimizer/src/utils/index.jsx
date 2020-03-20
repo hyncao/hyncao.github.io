@@ -159,4 +159,69 @@ export const getFontSize = string => {
   return `${fontSize}px`;
 };
 
+export const letters = [
+  '_',
+  'a',
+  'b',
+  'c',
+  'd',
+  'e',
+  'f',
+  'g',
+  'h',
+  'i',
+  'j',
+  'k',
+  'l',
+  'm',
+  'n',
+  'o',
+  'p',
+  'q',
+  'r',
+  's',
+  't',
+  'u',
+  'v',
+  'w',
+  'x',
+  'y',
+  'z'
+];
+
+export const displayTruncated = (value, notation) => {
+  if (value > 999999999999999) {
+    if (notation) {
+      value = value.toExponential(2);
+      value = value.replace(/\+/, '').replace(/\.?0+e/, 'e');
+    } else {
+      let letterExpo = '';
+      const expo = value.toExponential(3).replace(/\d+\.\d+e\+(\d+)/, '$1');
+      const expoAdj = Math.floor(expo / 3) - 4;
+      letterExpo += 'a' + letters[expoAdj];
+      value = value.toExponential(10).replace(/e\+\d+/, '');
+      value *= 0 !== expo % 3 ? Math.pow(10, expo % 3) : 1;
+      value = value.toFixed(2);
+      value = value + letterExpo;
+    }
+  } else {
+    if (value > 999999999999) {
+      value = (value / 1000000000000).toFixed(2).replace(/\.?0+$/, '');
+      value += 'T';
+    } else if (value > 999999999) {
+      value = (value / 1000000000).toFixed(2).replace(/\.?0+$/, '');
+      value += 'B';
+    } else if (value > 999999) {
+      value = (value / 1000000).toFixed(2).replace(/\.?0+$/, '');
+      value += 'M';
+    } else if (value > 999) {
+      value = (value / 1000).toFixed(2).replace(/\.?0+$/, '');
+      value += 'K';
+    } else {
+      value = Math.floor(value);
+    }
+  }
+  return value;
+};
+
 export { default as reg } from './reg';
