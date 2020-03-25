@@ -19,7 +19,7 @@ class Artifact extends React.Component {
     super(props);
 
     this.state = {
-      icon: require(`../../icons/${props.icon}`)
+      icon: require(`../../icons/artifacts/${props.icon}`)
     };
   }
 

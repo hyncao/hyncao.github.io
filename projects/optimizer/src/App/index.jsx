@@ -434,7 +434,7 @@ class App extends React.Component {
     }
 
     const renderDataSource = dataSource.map(i => {
-      const icon = require(`../icons/${i.icon}`);
+      const icon = require(`../icons/artifacts/${i.icon}`);
       const renderStyle = i => {
         const isMaxable = i.max > 0;
         const isMatchBuild =
