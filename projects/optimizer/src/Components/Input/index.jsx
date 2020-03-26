@@ -66,7 +66,7 @@ class Input extends React.Component {
       switchFlag,
       handleChange,
       extra,
-      form: { getFieldProps, validateField }
+      form: { getFieldProps }
     } = this.props;
     let myRules = [
       {
@@ -75,7 +75,7 @@ class Input extends React.Component {
       }
     ];
     if (rules) {
-      myRules.concat(rules);
+      myRules = myRules.concat(rules);
     }
     const mainInput = (
       <CssTextField

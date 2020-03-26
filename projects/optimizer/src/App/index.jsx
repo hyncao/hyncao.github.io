@@ -10,7 +10,7 @@ import {
   getFontSize,
   displayTruncated
 } from '../utils';
-import { Input, Artifact, Table } from '../Components';
+import { Input, Artifact, Table, SkillTree } from '../Components';
 import config from '../config';
 import { formList } from './config';
 import styles from './index.module.scss';
@@ -146,7 +146,8 @@ class App extends React.Component {
   ) {
     const heroObj = config.db.heroes.find(i => i.en === hero);
     const { faction: heroFaction, type: heroType } = heroObj;
-    const { artifactsList } = this.state;
+    let { artifactsList } = this.state;
+    artifactsList = artifactsList.filter(i => artifactsStateList.find(owned => owned.id === i.id && owned.checked));
     const calcBospct = parseFloat(
       bosunit === '%' ? bospct / 100 : bospct + bosunit
     );
@@ -234,7 +235,7 @@ class App extends React.Component {
     });
     minimum_effect = 1 - minimum_effect;
     let runningWcost = 0;
-    const totalArtifactsOwned = artifactsStateList.length;
+    const totalArtifactsOwned = artifactsStateList.filter(i => i.checked).length;
     const totalArtifactsPurchaseCost = Object.values(config.db.artifact_costs)
       .slice(0, totalArtifactsOwned + 1)
       .reduce((prev, next) => prev + next);
@@ -269,8 +270,9 @@ class App extends React.Component {
     if (relics2Spread < 0) {
       tips({
         content:
-          '神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数'
+          '神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数。'
       });
+      return;
     }
     let leftoverRelics = relics2Spread * 1;
     adjustArtifactsArr = adjustArtifactsArr.map(i => {
@@ -483,19 +485,28 @@ class App extends React.Component {
         <div className={styles.header}>
           <div className={styles.tab}>
             <Button
+              className={styles.tabBtn}
               variant={tabIndex === 0 ? 'contained' : 'outlined'}
               color="primary"
-              style={{ marginRight: '10px' }}
               onClick={() => this.tabChange(0)}
             >
               配置（优先填写）
             </Button>
             <Button
+              className={styles.tabBtn}
               variant={tabIndex === 1 ? 'contained' : 'outlined'}
               color="primary"
               onClick={() => this.tabChange(1)}
             >
               神器升级
+            </Button>
+            <Button
+              className={styles.tabBtn}
+              variant={tabIndex === 2 ? 'contained' : 'outlined'}
+              color="primary"
+              onClick={() => this.tabChange(2)}
+            >
+              技能树
             </Button>
           </div>
           <div className={styles.tt2Title}>
@@ -588,6 +599,11 @@ class App extends React.Component {
             orderBy={orderBy}
             order={order}
           />
+        </div>
+        <div
+          className={`${styles.tabItem} ${tabIndex === 2 ? styles.show : ''} ${styles.skillTree}`}
+        >
+          <SkillTree />
         </div>
 
         {/* <div className={styles.foot}>* HAVE FUN *</div> */}

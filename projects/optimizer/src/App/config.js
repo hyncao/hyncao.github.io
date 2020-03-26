@@ -82,6 +82,12 @@ export const formList = [
     defaultValue: '0',
     helperText:
       '如果你想红书保持在固定百分比，请填写%，没全神器前，不建议超过50%',
+    rules: [
+      {
+        pattern: reg.positiveNum,
+        message: '暗影之书所占比重输入格式有误'
+      }
+    ],
     extra: {
       name: 'bosunit',
       defaultValue: '%',

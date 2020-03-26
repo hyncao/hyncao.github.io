@@ -1,0 +1,33 @@
+.content {
+  position: relative;
+
+  .Knight,
+  .Warload,
+  .Sorcerer,
+  .Rogue {
+    text-shadow: 0 0;
+  }
+
+  .Knight {
+    color: #dd6415;
+  }
+
+  .Warload {
+    color: #f2a10c;
+  }
+
+  .Sorcerer {
+    color: #175b89;
+  }
+
+  .Rogue {
+    color: #74a259;
+  }
+
+  .btnBox {
+    position: absolute;
+    width: 100px;
+    left: 10px;
+    top: 20px;
+  }
+}

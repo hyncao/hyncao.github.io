@@ -103,7 +103,7 @@ class CreateForm extends React.Component {
         name,
         rules,
         value,
-        errorMsg: patternWrongItem.message
+        errorMsg: patternWrongItem[0].message
       };
     }
     return result;

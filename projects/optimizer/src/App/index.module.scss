@@ -15,7 +15,7 @@
 
 .header {
   position: fixed;
-  z-index: 1;
+  z-index: 100;
   top: 0;
   left: 0;
   width: 100%;
@@ -23,6 +23,10 @@
   padding: 15px;
   border-bottom: 1px solid #ccc;
   background-color: $bg-light;
+
+  .tabBtn {
+    margin-right: 10px;
+  }
 }
 
 .tt2Title {
@@ -46,15 +50,22 @@
 }
 
 .tabItem {
-  transition: all 0.5s;
+  position: relative;
+  z-index: -1;
+  transition: all 0.2s;
   opacity: 0;
   height: 0;
   overflow: hidden;
 
   &.show {
+    z-index: 1;
     opacity: 1;
     height: auto;
     overflow: visible;
+
+    &.skillTree {
+      padding: 30px;
+    }
   }
 }
 
@@ -131,7 +142,7 @@ p {
     color: #906f10;
   }
 
-  &.disabled{
+  &.disabled {
     color: #aaa;
   }
 }

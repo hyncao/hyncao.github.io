@@ -4287,7 +4287,7 @@ export const db = {
     },
     {
       id: 'red42',
-      name: '野蛮之怒',
+      name: '闪电穿梭',
       type: 'Knight',
       icon: 'red42.png',
       tier: 4,
@@ -4754,10 +4754,10 @@ export const db = {
       ]
     },
     {
-      id: 'red41',
+      id: 'yellow41',
       name: '灵魂觉醒',
-      type: 'Knight',
-      icon: 'red41.png',
+      type: 'Warload',
+      icon: 'yellow41.png',
       tier: 4,
       column: 1,
       need: 50,
@@ -4781,10 +4781,10 @@ export const db = {
       ]
     },
     {
-      id: 'red42',
+      id: 'yellow42',
       name: '锚定射击',
-      type: 'Knight',
-      icon: 'red42.png',
+      type: 'Warload',
+      icon: 'yellow42.png',
       tier: 4,
       column: 3,
       need: 50,
