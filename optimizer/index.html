@@ -303,8 +303,11 @@
           </div>
           <h2 class="h5">你的神器</h2>
           <p>这里请勾选你已经 <string>*拥有*</string> 的神器，而不是躺在你的打捞池里的神器</p>
-          <div class="btn btn-sm btn-secondary mb-3" onclick="shoppingSpree();">
+          <div class="btn btn-sm btn-secondary mb-3"  onclick="shoppingSpree(true);">
             全选神器
+          </div>
+          <div class="btn btn-sm btn-secondary mb-3" style="margin-left: 30px;" onclick="shoppingSpree(false);">
+            全不选神器
           </div>
           <div class="form-row mb-4" id="artifacts_catalog"></div>
         </form>
@@ -431,7 +434,7 @@
   <script src="./js/dataTables.responsive.min.js"></script>
   <!-- Custom JS -->
   <script src="./js/data.js?v=20200316"></script>
-  <script src="./js/app.js?v=20200318"></script>
+  <script src="./js/app.js?v=20200330"></script>
 
 
 </body>

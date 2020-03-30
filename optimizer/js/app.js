@@ -1298,10 +1298,10 @@ function importOptions(datastring) {
   loadValues();
 }
 
-function shoppingSpree() {
+function shoppingSpree(own) {
   $.each(db.artifacts, function (k, a) {
-    $('#' + a.id).prop('checked', true)
-    artifact_statuses[a.id] = 1;
+    $('#' + a.id).prop('checked', own)
+    artifact_statuses[a.id] = own - 0;
   });
   storeValues();
 }
