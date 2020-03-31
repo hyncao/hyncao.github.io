@@ -5,8 +5,8 @@ interface IhomeList{
 
 const homeList: Array<IhomeList> = [
   {
-    name: '神器升级工具',
-    url: 'https://fanwenkui.github.io/tt2-artifacts/'
+    name: '全新版本优化器, 内含技能树模拟器',
+    url: 'http://www.hyncao.com/new-optimizer/'
   },
   {
     name: '优化器',
