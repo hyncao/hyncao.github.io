@@ -505,7 +505,7 @@ class App extends React.Component {
               color="primary"
               onClick={() => this.tabChange(0)}
             >
-              配置（优先填写）
+              配置(优先填写)
             </Button>
             <Button
               className={styles.tabBtn}
