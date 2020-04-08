@@ -8,7 +8,7 @@ import {
   setLS,
   tips,
   getFontSize,
-  displayTruncated
+  displayTruncated,
 } from '../utils';
 import { Input, Artifact, Table, SkillTree } from '../Components';
 import config from '../config';
@@ -17,14 +17,14 @@ import styles from './index.module.scss';
 
 const ArtifactItem = withStyles(() => ({
   item: {
-    marginTop: '20px'
-  }
+    marginTop: '20px',
+  },
 }))(Grid);
 
 const MyBackdrop = withStyles(() => ({
   root: {
-    zIndex: 1
-  }
+    zIndex: 1,
+  },
 }))(Backdrop);
 
 class App extends React.Component {
@@ -40,7 +40,7 @@ class App extends React.Component {
       artifactsStateList: [],
       dataSource: [],
       orderBy: 'artifact',
-      order: 'asc'
+      order: 'asc',
     };
 
     this.storeData = this.storeData.bind(this);
@@ -65,25 +65,33 @@ class App extends React.Component {
 
   async componentDidMount() {
     const { artifactsList } = this.state;
-    const artifactsStateList = artifactsList.map(i => ({
+    const artifactsStateList = artifactsList.map((i) => ({
       id: i.id,
       checked: false,
-      enchantFlag: false
+      enchantFlag: false,
     }));
     // TODO 是否显示动画，显示则打开并且添加动画时间
     // await delay(1000);
-    this.setState({ artifactsStateList, loading: false });
-    this.loadData();
+    this.setState({ artifactsStateList, loading: false }, this.loadData);
   }
 
   loadData() {
+    const { artifactsStateList: state } = this.state;
     let artifactsStateList = getLS('artifactsStateList');
     let fieldsValue = getLS('fieldsValue');
     if (artifactsStateList) {
       try {
         artifactsStateList = JSON.parse(artifactsStateList);
+        artifactsStateList = state.map((i) => {
+          const target = artifactsStateList.find((item) => item.id === i.id);
+          return {
+            ...i,
+            checked: target ? i.checked : target.checked,
+            enchantFlag: target ? i.enchantFlag : target.enchantFlag,
+          };
+        });
         this.setState({
-          artifactsStateList
+          artifactsStateList,
         });
       } catch (e) {
         console.warn(
@@ -95,7 +103,7 @@ class App extends React.Component {
       try {
         fieldsValue = JSON.parse(fieldsValue);
         let { formList } = this.state;
-        formList = formList.map(i => {
+        formList = formList.map((i) => {
           let { extra, defaultValue } = i;
           if (fieldsValue[i.name] !== undefined) {
             defaultValue = fieldsValue[i.name];
@@ -108,12 +116,12 @@ class App extends React.Component {
           return {
             ...i,
             extra,
-            defaultValue
+            defaultValue,
           };
         });
         this.setState({
           fieldsValue,
-          formList
+          formList,
         });
       } catch (e) {
         console.warn(
@@ -125,7 +133,7 @@ class App extends React.Component {
 
   storeData() {
     const {
-      form: { getFieldsValue }
+      form: { getFieldsValue },
     } = this.props;
     const { artifactsStateList } = this.state;
     setLS('artifactsStateList', JSON.stringify(artifactsStateList));
@@ -144,17 +152,19 @@ class App extends React.Component {
     { active, gold, build, hero, ltr, ltrFactor, unit, bospct, bosunit },
     artifactsStateList
   ) {
-    const heroObj = config.db.heroes.find(i => i.en === hero);
+    const heroObj = config.db.heroes.find((i) => i.en === hero);
     const { faction: heroFaction, type: heroType } = heroObj;
     let { artifactsList } = this.state;
-    artifactsList = artifactsList.filter(i => artifactsStateList.find(owned => owned.id === i.id && owned.checked));
+    artifactsList = artifactsList.filter((i) =>
+      artifactsStateList.find((owned) => owned.id === i.id && owned.checked)
+    );
     const calcBospct = parseFloat(
       bosunit === '%' ? bospct / 100 : bospct + bosunit
     );
     let hero_value = 0;
     let minimum_effect = 999999999;
     let adjustArtifactsArr = []; // 最终的数据
-    artifactsList.forEach(i => {
+    artifactsList.forEach((i) => {
       const reductions = { ...i.reductions_orig };
       const calcReductionsByHero = () => {
         reductions.cs -= hero_value;
@@ -230,18 +240,21 @@ class App extends React.Component {
         type: i.type,
         max: i.max,
         inactive_adj: i.inactive_adj,
-        reductions
+        reductions,
       });
     });
     minimum_effect = 1 - minimum_effect;
     let runningWcost = 0;
-    const totalArtifactsOwned = artifactsStateList.filter(i => i.checked).length;
+    const totalArtifactsOwned = artifactsStateList.filter((i) => i.checked)
+      .length;
     const totalArtifactsPurchaseCost = Object.values(config.db.artifact_costs)
       .slice(0, totalArtifactsOwned + 1)
       .reduce((prev, next) => prev + next);
     let relics2Spread = parseFloat(ltr + ltrFactor);
-    adjustArtifactsArr = adjustArtifactsArr.map(i => {
-      const adjustArtifactsItem = artifactsList.find(item => item.id === i.id);
+    adjustArtifactsArr = adjustArtifactsArr.map((i) => {
+      const adjustArtifactsItem = artifactsList.find(
+        (item) => item.id === i.id
+      );
       const { effect, gpeak, type, texpo, adcalc, max } = adjustArtifactsItem;
       const weffect = Math.pow(
         (effect + minimum_effect) / minimum_effect,
@@ -263,20 +276,22 @@ class App extends React.Component {
       return {
         ...i,
         weffect,
-        wcost
+        wcost,
       };
     });
     relics2Spread -= totalArtifactsPurchaseCost;
     if (relics2Spread < 0) {
       tips({
         content:
-          '神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数。'
+          '神器升级生成失败，请核对你的总圣物数和已拥有的神器，当前总圣物无法支撑当前拥有的神器数。',
       });
       return;
     }
     let leftoverRelics = relics2Spread * 1;
-    adjustArtifactsArr = adjustArtifactsArr.map(i => {
-      const adjustArtifactsItem = artifactsList.find(item => item.id === i.id);
+    adjustArtifactsArr = adjustArtifactsArr.map((i) => {
+      const adjustArtifactsItem = artifactsList.find(
+        (item) => item.id === i.id
+      );
       const { tcoef, texpo } = adjustArtifactsItem;
       let costpct = i.wcost / runningWcost;
       let calcrelic;
@@ -301,19 +316,19 @@ class App extends React.Component {
         costpct,
         calcrelic,
         disppct,
-        calclevel
+        calclevel,
       };
     });
     this.setState({
       dataSource: adjustArtifactsArr,
       orderBy: 'artifact',
-      order: 'desc'
+      order: 'desc',
     });
   }
 
   beforeCalc() {
     const {
-      form: { validateFields }
+      form: { validateFields },
     } = this.props;
     validateFields((err, values) => {
       if (err) {
@@ -324,18 +339,18 @@ class App extends React.Component {
       this.adjustArtifacts(values, artifactsStateList);
 
       this.setState({
-        tabIndex: 1
+        tabIndex: 1,
       });
     });
   }
 
   handleArtifactChange(id, name) {
     let { artifactsStateList } = this.state;
-    artifactsStateList = artifactsStateList.map(i => {
+    artifactsStateList = artifactsStateList.map((i) => {
       if (i.id === id) {
         return {
           ...i,
-          [name]: !i[name]
+          [name]: !i[name],
         };
       }
       return i;
@@ -345,18 +360,18 @@ class App extends React.Component {
 
   allArtifact() {
     const { artifactsStateList } = this.state;
-    const temp = artifactsStateList.map(i => ({
+    const temp = artifactsStateList.map((i) => ({
       ...i,
-      checked: true
+      checked: true,
     }));
     this.setState({ artifactsStateList: temp }, this.storeData);
   }
 
   allEnchant() {
     const { artifactsStateList } = this.state;
-    const temp = artifactsStateList.map(i => ({
+    const temp = artifactsStateList.map((i) => ({
       ...i,
-      enchantFlag: true
+      enchantFlag: true,
     }));
     this.setState({ artifactsStateList: temp }, this.storeData);
   }
@@ -372,8 +387,8 @@ class App extends React.Component {
       let next;
       switch (name) {
         case 'artifact':
-          prev = artifactsList.findIndex(i => i.id === j.id);
-          next = artifactsList.findIndex(i => i.id === k.id);
+          prev = artifactsList.findIndex((i) => i.id === j.id);
+          next = artifactsList.findIndex((i) => i.id === k.id);
           break;
         case 'level':
           prev = j.calclevel;
@@ -394,7 +409,7 @@ class App extends React.Component {
   render() {
     const {
       form,
-      form: { getFieldValue }
+      form: { getFieldValue },
     } = this.props;
     const {
       loading,
@@ -405,7 +420,7 @@ class App extends React.Component {
       artifactsStateList,
       dataSource,
       orderBy,
-      order
+      order,
     } = this.state;
 
     const notation = tabIndex === 1 ? getFieldValue('notation') : 0;
@@ -413,16 +428,16 @@ class App extends React.Component {
     const columns = [
       {
         id: 'artifact',
-        title: '神器'
+        title: '神器',
       },
       {
         id: 'level',
-        title: '等级'
+        title: '等级',
       },
       {
         id: 'percent',
-        title: '百分比'
-      }
+        title: '百分比',
+      },
     ];
 
     if (loading) {
@@ -435,9 +450,9 @@ class App extends React.Component {
       );
     }
 
-    const renderDataSource = dataSource.map(i => {
+    const renderDataSource = dataSource.map((i) => {
       const icon = require(`../icons/artifacts/${i.icon}`);
-      const renderStyle = i => {
+      const renderStyle = (i) => {
         const isMaxable = i.max > 0;
         const isMatchBuild =
           i.type === 'gold'
@@ -477,7 +492,7 @@ class App extends React.Component {
           >
             {(i.disppct * 100).toFixed(6)}%
           </div>
-        )
+        ),
       };
     });
     return (
@@ -536,7 +551,7 @@ class App extends React.Component {
             I will delete related apps immediately. QQ -- 277148066
           </p>
           <Grid container spacing={3}>
-            {formList.map(i => (
+            {formList.map((i) => (
               <Grid key={i.name} item xs={12} sm={4}>
                 <Input {...i} form={form} handleChange={this.storeData} />
               </Grid>
@@ -565,7 +580,7 @@ class App extends React.Component {
             </Button>
           </div>
           <Grid container spacing={3}>
-            {artifactsList.map(i => (
+            {artifactsList.map((i) => (
               <ArtifactItem key={i.name} item xs={12} md={3} sm={6}>
                 <Artifact
                   id={i.id}
@@ -573,10 +588,10 @@ class App extends React.Component {
                   enchant={i.enchant}
                   icon={i.icon}
                   checked={
-                    artifactsStateList.find(item => item.id === i.id).checked
+                    artifactsStateList.find((item) => item.id === i.id).checked
                   }
                   enchantFlag={
-                    artifactsStateList.find(item => item.id === i.id)
+                    artifactsStateList.find((item) => item.id === i.id)
                       .enchantFlag
                   }
                   handleChange={this.handleArtifactChange}
@@ -601,7 +616,9 @@ class App extends React.Component {
           />
         </div>
         <div
-          className={`${styles.tabItem} ${tabIndex === 2 ? styles.show : ''} ${styles.skillTree}`}
+          className={`${styles.tabItem} ${tabIndex === 2 ? styles.show : ''} ${
+            styles.skillTree
+          }`}
         >
           <SkillTree />
         </div>
