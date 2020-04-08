@@ -86,8 +86,8 @@ class App extends React.Component {
           const target = artifactsStateList.find((item) => item.id === i.id);
           return {
             ...i,
-            checked: target ? i.checked : target.checked,
-            enchantFlag: target ? i.enchantFlag : target.enchantFlag,
+            checked: target ? target.checked : i.checked,
+            enchantFlag: target ? target.enchantFlag : i.enchantFlag,
           };
         });
         this.setState({
@@ -358,22 +358,22 @@ class App extends React.Component {
     this.setState({ artifactsStateList }, this.storeData);
   }
 
-  allArtifact() {
+  checkAll(name) {
     const { artifactsStateList } = this.state;
+    const flag = artifactsStateList.every(i => i[name]);
     const temp = artifactsStateList.map((i) => ({
       ...i,
-      checked: true,
+      [name]: !flag,
     }));
     this.setState({ artifactsStateList: temp }, this.storeData);
   }
 
+  allArtifact() {
+    this.checkAll('checked');
+  }
+
   allEnchant() {
-    const { artifactsStateList } = this.state;
-    const temp = artifactsStateList.map((i) => ({
-      ...i,
-      enchantFlag: true,
-    }));
-    this.setState({ artifactsStateList: temp }, this.storeData);
+    this.checkAll('enchantFlag');
   }
 
   handleSort(name) {
