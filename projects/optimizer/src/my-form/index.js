@@ -35,6 +35,17 @@ class CreateForm extends React.Component {
         value: options.defaultValue
       };
       state.push(newItem);
+    } else {
+      this.state = state.map(i => {
+        if (i.name === name) {
+          return {
+            name,
+            options,
+            value: options.defaultValue
+          };
+        }
+        return i;
+      });
     }
     return {
       onChange: e => {
