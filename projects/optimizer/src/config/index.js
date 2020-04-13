@@ -1203,7 +1203,7 @@ export const db = {
       ccoef: 0.7,
       cexpo: 2.2,
       tcoef: 0.2,
-      texpo: 2.8,
+      texpo: 3.2,
       gpeak: 0.8,
       adcalc: 0.001633,
       reductions_orig: {
@@ -1241,7 +1241,7 @@ export const db = {
       ccoef: 0.7,
       cexpo: 2.2,
       tcoef: 0.2,
-      texpo: 2.8,
+      texpo: 3.2,
       gpeak: 1.1,
       adcalc: 0.001633,
       reductions_orig: {
