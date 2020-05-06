@@ -2037,6 +2037,7 @@ export const db = {
       inactive_adj: 0,
       name: '入侵者的海姆达尔之角',
       id: 'Artifact47',
+      enchant: true,
       max: 0,
       effect: 0.02,
       gmax: 0.36,
