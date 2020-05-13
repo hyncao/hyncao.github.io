@@ -1,4 +1,4 @@
-export const vision = '3.9.0';
+export const vision = '3.10.0';
 
 export const db = {
   artifacts: {

@@ -6,7 +6,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-  TableSortLabel
+  TableSortLabel,
 } from '@material-ui/core';
 
 class Table extends React.Component {
@@ -20,14 +20,19 @@ class Table extends React.Component {
 
   renderThead() {
     const { columns, handleSort, orderBy, order } = this.props;
+    const artifactHeadStyle = {
+      width: '20%',
+      minWidth: '140px'
+    }
     return (
       <TableHead>
         <TableRow>
-          {columns.map(headCell => (
+          {columns.map((headCell) => (
             <TableCell
               key={headCell.id}
               align="left"
               sortDirection={orderBy === headCell.id ? order : false}
+              style={headCell.id === 'artifact' ? artifactHeadStyle : {}}
             >
               <TableSortLabel
                 active={orderBy === headCell.id}
@@ -47,10 +52,12 @@ class Table extends React.Component {
     const { dataSource, columns } = this.props;
     return (
       <TableBody>
-        {dataSource.map(data => (
+        {dataSource.map((data) => (
           <TableRow key={data.id} hover>
-            {columns.map(headCell => (
-              <TableCell padding="none" key={headCell.id}>{data[headCell.id]}</TableCell>
+            {columns.map((headCell) => (
+              <TableCell padding="none" key={headCell.id}>
+                {data[headCell.id]}
+              </TableCell>
             ))}
           </TableRow>
         ))}
