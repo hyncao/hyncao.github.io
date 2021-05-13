@@ -10,7 +10,7 @@ const homeList: Array<IhomeList> = [
   },
   {
     name: '优化器',
-    url: 'http://www.hyncao.com/optimizer/'
+    url: 'http://www.hyncao.com/new-optimizer/'
   },
   {
     name: 'ED等级计算器',

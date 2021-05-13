@@ -8,7 +8,7 @@ export const formList = [
     name: 'build',
     label: '伤害流派',
     defaultValue: 'cs',
-    helperText: '3.8版本中，混用天堂流并不强，不建议使用',
+    // helperText: '3.8版本中，混用天堂流并不强，不建议使用',
     options: [
       {
         value: 'cs',
