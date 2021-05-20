@@ -1,5 +1,6 @@
 import React from 'react';
 import { Grid, Button } from '@material-ui/core';
+import cn from 'classnames';
 import SkillBox from './SkillBox';
 import config from '../../config';
 import styles from './index.module.scss';
@@ -168,9 +169,9 @@ class SkillTree extends React.Component {
           <div className={styles.iconBox}>
             <img src={selectedIcon} alt="icon" />
             <div
-              className={`${styles.upgrade} ${
-                this.canUpgrade() ? '' : styles.disabled
-              }`}
+              className={cn(styles.upgrade, {
+                [styles.disabled]: !this.canUpgrade(),
+              })}
               onClick={this.upgrade}
             >
               {selectedMax === selectedLevel
