@@ -1,7 +1,8 @@
 import React from 'react';
-import { Grid, Button } from '@material-ui/core';
+import { Grid, Button, Modal } from '@material-ui/core';
 import cn from 'classnames';
 import SkillBox from './SkillBox';
+import Preview from './Preview';
 import config from '../../config';
 import styles from './index.module.scss';
 
@@ -22,11 +23,14 @@ class SkillTree extends React.Component {
         column: i.column,
         tier: i.tier,
         need: i.need,
+        costs: i.costs,
+        icon: i.icon,
         level: 0,
       })),
       selectedId: 'red11',
       selectedItem: {},
       selectedLevel: 0,
+      modalShow: false,
     };
 
     this.updateSelected = this.updateSelected.bind(this);
@@ -69,12 +73,19 @@ class SkillTree extends React.Component {
 
   decline() {
     if (!this.canDecline()) return;
-    const { selectedId, skillTree } = this.state;
+    const { selectedId, skillTree, selectedItem } = this.state;
     const currentLevel = skillTree.find((i) => i.id === selectedId).level;
-    const { type, tier, column, costs } = db.skills.find(
-      (i) => i.id === selectedId
-    );
-    const total = this.calcTotal();
+    const { type, tier, column, costs } = selectedItem;
+    const total = skillTree
+      .filter((i) => i.type === type && i.column <= column && i.tier <= tier)
+      .map((i) => {
+        const cost = [...i.costs].slice(0, i.level);
+        if (cost.length) {
+          return cost.reduce((a, b) => a + b);
+        }
+        return 0;
+      })
+      .reduce((a, b) => a + b);
     const currentTotal = total - costs[currentLevel - 1];
     let temp = skillTree.map((i) => {
       let level = i.level;
@@ -173,7 +184,7 @@ class SkillTree extends React.Component {
   }
 
   render() {
-    const { skillTree } = this.state;
+    const { skillTree, modalShow } = this.state;
     const { selectedItem, selectedLevel } = this.state;
     if (!selectedItem.costs) return null;
     const selectedMax = selectedItem.costs.length;
@@ -181,6 +192,22 @@ class SkillTree extends React.Component {
 
     return (
       <div className={styles.content}>
+        <Modal
+          open={modalShow}
+          onClose={() => this.setState({ modalShow: false })}
+          closeAfterTransition
+        >
+          <Preview closeFn={() => this.setState({ modalShow: false })} data={skillTree} />
+        </Modal>
+        <div
+          className={styles.fixed}
+          onClick={() => this.setState({ modalShow: true })}
+        >
+          <span />
+          <span />
+          <span />
+          <span />
+        </div>
         <Grid
           className={styles.totalBox}
           container
@@ -255,14 +282,14 @@ class SkillTree extends React.Component {
               </>
             )}
           </div>
-          {/* <div
+          <div
             className={cn(styles.decline, {
               [styles.disabled]: !this.canDecline(),
             })}
             onClick={this.decline}
           >
             -
-          </div> */}
+          </div>
         </div>
       </div>
     );
