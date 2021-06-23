@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "60f0f237e973c21b90b1a9ce006653ae",
+    "revision": "d1546886535c9f06cbac11be14cf04e5",
     "url": "./index.html"
   },
   {
-    "revision": "b49913809ae93cc8e497",
-    "url": "./static/css/main.ca83a378.chunk.css"
+    "revision": "c8b4f9b615f1c46656cd",
+    "url": "./static/css/main.55679c73.chunk.css"
   },
   {
-    "revision": "508d2d6a5a25435ee44c",
-    "url": "./static/js/2.9d9225d4.chunk.js"
+    "revision": "899af37fc799810321bf",
+    "url": "./static/js/2.b0bfaa16.chunk.js"
   },
   {
     "revision": "76bfec4b1b5205d13d4e6d1550d5b8f7",
-    "url": "./static/js/2.9d9225d4.chunk.js.LICENSE.txt"
+    "url": "./static/js/2.b0bfaa16.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b49913809ae93cc8e497",
-    "url": "./static/js/main.1cf7c9e5.chunk.js"
+    "revision": "c8b4f9b615f1c46656cd",
+    "url": "./static/js/main.d0b71ace.chunk.js"
   },
   {
     "revision": "6f9881e0d43b0b7a5949",
@@ -412,163 +412,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "./static/media/97.954c92f3.png"
   },
   {
-    "revision": "744f64863daf6e0d58e36b514d03b436",
-    "url": "./static/media/blue11.744f6486.png"
-  },
-  {
-    "revision": "6947a22919bdc30df099ae44b577d63e",
-    "url": "./static/media/blue21.6947a229.png"
-  },
-  {
-    "revision": "0f803bcc18a3a02b8b38201709b1e5e6",
-    "url": "./static/media/blue22.0f803bcc.png"
-  },
-  {
-    "revision": "509fb1ed6bf6958d67348c707619f6fd",
-    "url": "./static/media/blue23.509fb1ed.png"
-  },
-  {
-    "revision": "d9ceeb8963c0ba1def18123cd369d3b1",
-    "url": "./static/media/blue31.d9ceeb89.png"
-  },
-  {
-    "revision": "fbc326235b11945fe43e56a3aa0f4ee9",
-    "url": "./static/media/blue32.fbc32623.png"
-  },
-  {
-    "revision": "b9336566a075f997f454930f8910de71",
-    "url": "./static/media/blue33.b9336566.png"
-  },
-  {
-    "revision": "c387ef4d632ddbd1bae6066bbe5c6a13",
-    "url": "./static/media/blue41.c387ef4d.png"
-  },
-  {
-    "revision": "0c8c89118fee140190b8f650f4523fb8",
-    "url": "./static/media/blue42.0c8c8911.png"
-  },
-  {
-    "revision": "f641218ec1893f25455b229f17e70ba9",
-    "url": "./static/media/blue43.f641218e.png"
-  },
-  {
-    "revision": "d3db24d2b7acebe3ee2e3e4aab0616da",
-    "url": "./static/media/green11.d3db24d2.png"
-  },
-  {
-    "revision": "cd93bffd9ace26a9a01da88d25880e25",
-    "url": "./static/media/green21.cd93bffd.png"
-  },
-  {
-    "revision": "d167e0f8aecdaf0c1df303665475cbfc",
-    "url": "./static/media/green22.d167e0f8.png"
-  },
-  {
-    "revision": "4f947d5050826d400d9ea7f82e5a49e4",
-    "url": "./static/media/green23.4f947d50.png"
-  },
-  {
-    "revision": "eab18b2eb79a67619d5ca964568cbd26",
-    "url": "./static/media/green31.eab18b2e.png"
-  },
-  {
-    "revision": "dd217c081d0ebe900a2f5331e7f04ea2",
-    "url": "./static/media/green32.dd217c08.png"
-  },
-  {
-    "revision": "6e38f33efc48ccaf51121f24e53c0cb6",
-    "url": "./static/media/green33.6e38f33e.png"
-  },
-  {
-    "revision": "29bdd0aafce13ae9956bcaa7af08ae1f",
-    "url": "./static/media/green41.29bdd0aa.png"
-  },
-  {
-    "revision": "078098a2f551e8d5afbf6e0df2ee7c10",
-    "url": "./static/media/green42.078098a2.png"
-  },
-  {
-    "revision": "e25daeedc86eceaba5482772575c960e",
-    "url": "./static/media/green43.e25daeed.png"
-  },
-  {
-    "revision": "4c0ea3194f37a9bb15c276dfc9d1d5f3",
-    "url": "./static/media/red11.4c0ea319.png"
-  },
-  {
-    "revision": "3313a38a0f848867efbcc781d79980f6",
-    "url": "./static/media/red21.3313a38a.png"
-  },
-  {
-    "revision": "bfc7fe2738369322c88395131defe2d5",
-    "url": "./static/media/red22.bfc7fe27.png"
-  },
-  {
-    "revision": "f2c53153a4bff682a138137233e8c77b",
-    "url": "./static/media/red23.f2c53153.png"
-  },
-  {
-    "revision": "323864d6073fdc3e983ffb453f0aeae5",
-    "url": "./static/media/red31.323864d6.png"
-  },
-  {
-    "revision": "cd2b5260c22ef74cc2a66a995b3f5200",
-    "url": "./static/media/red32.cd2b5260.png"
-  },
-  {
-    "revision": "872df864b5e76e4808cadfd1e966f10b",
-    "url": "./static/media/red33.872df864.png"
-  },
-  {
-    "revision": "8b142e6b847215704574b7bb19ce929e",
-    "url": "./static/media/red41.8b142e6b.png"
-  },
-  {
-    "revision": "8cfd8dda89c3c93abfc46b9f2acaa14c",
-    "url": "./static/media/red42.8cfd8dda.png"
-  },
-  {
-    "revision": "f3d249289ae528ac3d16cfcfc71c4caf",
-    "url": "./static/media/red43.f3d24928.png"
-  },
-  {
-    "revision": "128259bd224dff8e636e10e84ce7c8a3",
-    "url": "./static/media/yellow11.128259bd.png"
-  },
-  {
-    "revision": "eaa66089c520538812a2e533282d1fd2",
-    "url": "./static/media/yellow21.eaa66089.png"
-  },
-  {
-    "revision": "58846b1462e5a5235b8f7b685736790a",
-    "url": "./static/media/yellow22.58846b14.png"
-  },
-  {
-    "revision": "6e73efffb77211ea64ff5af33370b814",
-    "url": "./static/media/yellow23.6e73efff.png"
-  },
-  {
-    "revision": "1cbd553903ac0c22609e203bc63c4700",
-    "url": "./static/media/yellow31.1cbd5539.png"
-  },
-  {
-    "revision": "1327edbd0fa6d7e8d12eb3ccddaff39d",
-    "url": "./static/media/yellow32.1327edbd.png"
-  },
-  {
-    "revision": "144154ea6e0f331dd53a7f96989b2f34",
-    "url": "./static/media/yellow33.144154ea.png"
-  },
-  {
-    "revision": "58560630b86f3e2d24ee12feac1dc327",
-    "url": "./static/media/yellow41.58560630.png"
-  },
-  {
-    "revision": "d4066112c94eb6d8de4808394f058d02",
-    "url": "./static/media/yellow42.d4066112.png"
-  },
-  {
-    "revision": "2c6daee394c7b6286774d35314655e7f",
-    "url": "./static/media/yellow43.2c6daee3.png"
+    "revision": "758295981783a762622b8cef7d518294",
+    "url": "./static/media/green42.75829598.png"
   }
 ]);

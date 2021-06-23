@@ -1,4 +1,4 @@
-export const vision = '5.4.0';
+export const vision = '5.6.0';
 
 export const db = {
   artifacts: {
@@ -31,7 +31,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -39,7 +39,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'BoS'
+      nickname: 'BoS',
     },
     art95: {
       icon: '91.png',
@@ -70,7 +70,7 @@ export const db = {
         phom: 0.8,
         fairy: 0.8,
         chest: 0.8,
-        boss: 0.8
+        boss: 0.8,
       },
       weffect: 0,
       wcost: 0,
@@ -78,7 +78,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'CC'
+      nickname: 'CC',
     },
     art2: {
       icon: '74.png',
@@ -108,7 +108,7 @@ export const db = {
         phom: 3.2,
         fairy: 3.2,
         chest: 3.2,
-        boss: 3.2
+        boss: 3.2,
       },
       weffect: 0,
       wcost: 0,
@@ -116,7 +116,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SotV'
+      nickname: 'SotV',
     },
     art3: {
       icon: '77.png',
@@ -146,7 +146,7 @@ export const db = {
         phom: 0,
         fairy: 0.8,
         chest: 0.8,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -154,7 +154,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'CoC'
+      nickname: 'CoC',
     },
     art4: {
       icon: '84.png',
@@ -185,7 +185,7 @@ export const db = {
         phom: 0.8,
         fairy: 0,
         chest: 0,
-        boss: 0.8
+        boss: 0.8,
       },
       weffect: 0,
       wcost: 0,
@@ -193,7 +193,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HSh'
+      nickname: 'HSh',
     },
     art5: {
       icon: '52.png',
@@ -224,7 +224,7 @@ export const db = {
         phom: 0.8,
         fairy: 0.8,
         chest: 0.8,
-        boss: 0.8
+        boss: 0.8,
       },
       weffect: 0,
       wcost: 0,
@@ -232,7 +232,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'BoP'
+      nickname: 'BoP',
     },
     art6: {
       icon: '35.png',
@@ -262,7 +262,7 @@ export const db = {
         phom: 1.6,
         fairy: 1.6,
         chest: 1.6,
-        boss: 1.6
+        boss: 1.6,
       },
       weffect: 0,
       wcost: 0,
@@ -270,7 +270,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'KB'
+      nickname: 'KB',
     },
     art7: {
       icon: '42.png',
@@ -300,7 +300,7 @@ export const db = {
         phom: 0.8,
         fairy: 0.8,
         chest: 0.8,
-        boss: 0.8
+        boss: 0.8,
       },
       weffect: 0,
       wcost: 0,
@@ -308,7 +308,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'ZC'
+      nickname: 'ZC',
     },
     art8: {
       icon: '43.png',
@@ -338,7 +338,7 @@ export const db = {
         phom: 0,
         fairy: 0.8,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -346,7 +346,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'GFM'
+      nickname: 'GFM',
     },
     art9: {
       icon: '44.png',
@@ -376,7 +376,7 @@ export const db = {
         phom: 0.8,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -384,7 +384,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'NS'
+      nickname: 'NS',
     },
     art10: {
       icon: '17.png',
@@ -414,7 +414,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0.8,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -422,7 +422,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'CoE'
+      nickname: 'CoE',
     },
     art11: {
       icon: '28.png',
@@ -452,7 +452,7 @@ export const db = {
         phom: 0.8,
         fairy: 0.8,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -460,7 +460,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TBC'
+      nickname: 'TBC',
     },
     art94: {
       icon: '92.png',
@@ -491,7 +491,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -499,7 +499,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'ES'
+      nickname: 'ES',
     },
     art12: {
       icon: '03.png',
@@ -529,7 +529,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -537,7 +537,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'FotS'
+      nickname: 'FotS',
     },
     art13: {
       icon: '73.png',
@@ -568,7 +568,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -576,7 +576,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HSw'
+      nickname: 'HSw',
     },
     art14: {
       icon: '89.png',
@@ -607,7 +607,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -615,7 +615,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'DR'
+      nickname: 'DR',
     },
     art15: {
       icon: '72.png',
@@ -646,7 +646,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -654,7 +654,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'DH'
+      nickname: 'DH',
     },
     art16: {
       icon: '37.png',
@@ -684,7 +684,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -692,7 +692,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SS'
+      nickname: 'SS',
     },
     art17: {
       icon: '11.png',
@@ -722,7 +722,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -730,7 +730,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'Ret'
+      nickname: 'Ret',
     },
     art18: {
       icon: '06.png',
@@ -760,7 +760,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -768,7 +768,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SP'
+      nickname: 'SP',
     },
     art19: {
       icon: '79.png',
@@ -798,7 +798,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -806,7 +806,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HB'
+      nickname: 'HB',
     },
     art20: {
       icon: '80.png',
@@ -836,7 +836,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -844,7 +844,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TSS'
+      nickname: 'TSS',
     },
     art21: {
       icon: '86.png',
@@ -874,7 +874,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -882,7 +882,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'FB'
+      nickname: 'FB',
     },
     art22: {
       icon: '75.png',
@@ -912,7 +912,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -920,7 +920,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'CotA'
+      nickname: 'CotA',
     },
     art23: {
       icon: '04.png',
@@ -950,7 +950,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -958,7 +958,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TTT'
+      nickname: 'TTT',
     },
     art24: {
       icon: '31.png',
@@ -988,7 +988,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -996,7 +996,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HoH'
+      nickname: 'HoH',
     },
     art25: {
       icon: '49.png',
@@ -1026,7 +1026,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1034,7 +1034,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'FoE'
+      nickname: 'FoE',
     },
     art26: {
       icon: '87.png',
@@ -1064,7 +1064,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1072,7 +1072,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'IE'
+      nickname: 'IE',
     },
     art27: {
       icon: '30.png',
@@ -1102,7 +1102,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1110,7 +1110,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'ORC'
+      nickname: 'ORC',
     },
     art28: {
       icon: '40.png',
@@ -1140,7 +1140,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1148,7 +1148,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HoS'
+      nickname: 'HoS',
     },
     art29: {
       icon: '38.png',
@@ -1178,7 +1178,7 @@ export const db = {
         phom: 1.6,
         fairy: 1.6,
         chest: 1.6,
-        boss: 1.6
+        boss: 1.6,
       },
       weffect: 0,
       wcost: 0,
@@ -1186,7 +1186,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'AO'
+      nickname: 'AO',
     },
     art96: {
       icon: '96.png',
@@ -1216,7 +1216,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1224,7 +1224,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SF'
+      nickname: 'SF',
     },
     art97: {
       icon: '97.png',
@@ -1254,7 +1254,7 @@ export const db = {
         phom: 1,
         fairy: 1,
         chest: 1,
-        boss: 1
+        boss: 1,
       },
       weffect: 0,
       wcost: 0,
@@ -1262,7 +1262,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HO'
+      nickname: 'HO',
     },
     art30: {
       icon: '33.png',
@@ -1292,7 +1292,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1300,7 +1300,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'EoP'
+      nickname: 'EoP',
     },
     art31: {
       icon: '55.png',
@@ -1330,7 +1330,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1338,7 +1338,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'AF'
+      nickname: 'AF',
     },
     art32: {
       icon: '45.png',
@@ -1368,7 +1368,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1376,7 +1376,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'CRH'
+      nickname: 'CRH',
     },
     art33: {
       icon: '15.png',
@@ -1407,7 +1407,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1415,7 +1415,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'DSw'
+      nickname: 'DSw',
     },
     art34: {
       icon: '29.png',
@@ -1446,7 +1446,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1454,7 +1454,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HSk'
+      nickname: 'HSk',
     },
     art35: {
       icon: '26.png',
@@ -1484,7 +1484,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1492,7 +1492,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'OB'
+      nickname: 'OB',
     },
     art36: {
       icon: '25.png',
@@ -1522,7 +1522,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1530,7 +1530,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'CotC'
+      nickname: 'CotC',
     },
     art37: {
       icon: '27.png',
@@ -1561,7 +1561,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1569,7 +1569,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TSc'
+      nickname: 'TSc',
     },
     art38: {
       icon: '24.png',
@@ -1599,7 +1599,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1607,7 +1607,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'FG'
+      nickname: 'FG',
     },
     art39: {
       icon: '53.png',
@@ -1638,7 +1638,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1646,7 +1646,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'RoC'
+      nickname: 'RoC',
     },
     art40: {
       icon: '81.png',
@@ -1676,7 +1676,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1684,7 +1684,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'BoD'
+      nickname: 'BoD',
     },
     art41: {
       icon: '51.png',
@@ -1714,7 +1714,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1722,7 +1722,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HoM'
+      nickname: 'HoM',
     },
     art42: {
       icon: '66.png',
@@ -1752,7 +1752,7 @@ export const db = {
         phom: 0.8,
         fairy: 0.8,
         chest: 0.8,
-        boss: 0.8
+        boss: 0.8,
       },
       weffect: 0,
       wcost: 0,
@@ -1760,7 +1760,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TP'
+      nickname: 'TP',
     },
     art43: {
       icon: '08.png',
@@ -1790,7 +1790,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1798,7 +1798,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MB'
+      nickname: 'MB',
     },
     art44: {
       icon: '82.png',
@@ -1828,7 +1828,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1836,7 +1836,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'AS'
+      nickname: 'AS',
     },
     art45: {
       icon: '20.png',
@@ -1867,7 +1867,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1875,7 +1875,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SotR'
+      nickname: 'SotR',
     },
     art46: {
       icon: '19.png',
@@ -1905,7 +1905,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1913,7 +1913,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SV'
+      nickname: 'SV',
     },
     art47: {
       icon: '21.png',
@@ -1943,7 +1943,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1951,7 +1951,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TCP'
+      nickname: 'TCP',
     },
     art48: {
       icon: '14.png',
@@ -1982,7 +1982,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -1990,7 +1990,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SoJ'
+      nickname: 'SoJ',
     },
     art49: {
       icon: '10.png',
@@ -2021,7 +2021,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2029,7 +2029,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'FotK'
+      nickname: 'FotK',
     },
     art50: {
       icon: '46.png',
@@ -2060,7 +2060,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2068,7 +2068,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'IG'
+      nickname: 'IG',
     },
     art51: {
       icon: '63.png',
@@ -2098,7 +2098,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2106,7 +2106,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TM'
+      nickname: 'TM',
     },
     art52: {
       icon: '54.png',
@@ -2136,7 +2136,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2144,7 +2144,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'RT'
+      nickname: 'RT',
     },
     art53: {
       icon: '90.png',
@@ -2174,7 +2174,7 @@ export const db = {
         phom: 0.48,
         fairy: 0.48,
         chest: 0.8,
-        boss: 0.8
+        boss: 0.8,
       },
       weffect: 0,
       wcost: 0,
@@ -2182,7 +2182,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'LP'
+      nickname: 'LP',
     },
     art54: {
       icon: '56.png',
@@ -2212,7 +2212,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2220,7 +2220,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'BoR'
+      nickname: 'BoR',
     },
     art55: {
       icon: '68.png',
@@ -2250,7 +2250,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2258,7 +2258,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'PoF'
+      nickname: 'PoF',
     },
     art56: {
       icon: '60.png',
@@ -2288,7 +2288,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2296,7 +2296,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'EoE'
+      nickname: 'EoE',
     },
     art57: {
       icon: '01.png',
@@ -2326,7 +2326,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2334,7 +2334,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HotI'
+      nickname: 'HotI',
     },
     art58: {
       icon: '47.png',
@@ -2364,7 +2364,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2372,7 +2372,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'PT'
+      nickname: 'PT',
     },
     art59: {
       icon: '85.png',
@@ -2402,7 +2402,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2410,7 +2410,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'FS'
+      nickname: 'FS',
     },
     art60: {
       icon: '58.png',
@@ -2440,7 +2440,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2448,7 +2448,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'RoF'
+      nickname: 'RoF',
     },
     art61: {
       icon: '70.png',
@@ -2478,7 +2478,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2486,7 +2486,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'GA'
+      nickname: 'GA',
     },
     art62: {
       icon: '88.png',
@@ -2516,7 +2516,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2524,7 +2524,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'Aeg'
+      nickname: 'Aeg',
     },
     art63: {
       icon: '50.png',
@@ -2554,7 +2554,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2562,7 +2562,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SG'
+      nickname: 'SG',
     },
     art64: {
       icon: '67.png',
@@ -2592,7 +2592,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2600,7 +2600,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'InfP'
+      nickname: 'InfP',
     },
     art65: {
       icon: '76.png',
@@ -2630,7 +2630,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2638,7 +2638,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'GoK'
+      nickname: 'GoK',
     },
     art66: {
       icon: '78.png',
@@ -2668,7 +2668,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2676,7 +2676,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TSp'
+      nickname: 'TSp',
     },
     art67: {
       icon: '71.png',
@@ -2706,7 +2706,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2714,7 +2714,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'OS'
+      nickname: 'OS',
     },
     art68: {
       icon: '83.png',
@@ -2744,7 +2744,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2752,7 +2752,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TAC'
+      nickname: 'TAC',
     },
     art69: {
       icon: '64.png',
@@ -2782,7 +2782,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2790,7 +2790,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'HO'
+      nickname: 'HO',
     },
     art70: {
       icon: '36.png',
@@ -2820,7 +2820,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2828,7 +2828,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'AE'
+      nickname: 'AE',
     },
     art71: {
       icon: '07.png',
@@ -2858,7 +2858,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2866,7 +2866,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MSt'
+      nickname: 'MSt',
     },
     art72: {
       icon: '34.png',
@@ -2896,7 +2896,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2904,7 +2904,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MBoS'
+      nickname: 'MBoS',
     },
     art73: {
       icon: '57.png',
@@ -2934,7 +2934,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2942,7 +2942,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'EoF'
+      nickname: 'EoF',
     },
     art74: {
       icon: '69.png',
@@ -2972,7 +2972,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -2980,7 +2980,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'DC'
+      nickname: 'DC',
     },
     art75: {
       icon: '61.png',
@@ -3010,7 +3010,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3018,7 +3018,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'IS'
+      nickname: 'IS',
     },
     art76: {
       icon: '65.png',
@@ -3048,7 +3048,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3056,7 +3056,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'AoM'
+      nickname: 'AoM',
     },
     art77: {
       icon: '39.png',
@@ -3086,7 +3086,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3094,7 +3094,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'EotK'
+      nickname: 'EotK',
     },
     art78: {
       icon: '23.png',
@@ -3124,7 +3124,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3132,7 +3132,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'BoH'
+      nickname: 'BoH',
     },
     art79: {
       icon: '02.png',
@@ -3162,7 +3162,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3170,7 +3170,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'UG'
+      nickname: 'UG',
     },
     art80: {
       icon: '05.png',
@@ -3200,7 +3200,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3208,7 +3208,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'OP'
+      nickname: 'OP',
     },
     art81: {
       icon: '16.png',
@@ -3238,7 +3238,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3246,7 +3246,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'LFA'
+      nickname: 'LFA',
     },
     art82: {
       icon: '32.png',
@@ -3276,7 +3276,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3284,7 +3284,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'LKM'
+      nickname: 'LKM',
     },
     art83: {
       icon: '62.png',
@@ -3314,7 +3314,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3322,7 +3322,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'SoR'
+      nickname: 'SoR',
     },
     art84: {
       icon: '12.png',
@@ -3352,7 +3352,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3360,7 +3360,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MSw'
+      nickname: 'MSw',
     },
     art91: {
       icon: '93.png',
@@ -3390,7 +3390,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3398,7 +3398,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MSw'
+      nickname: 'MSw',
     },
     art92: {
       icon: '94.png',
@@ -3428,7 +3428,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3436,7 +3436,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MSw'
+      nickname: 'MSw',
     },
     art93: {
       icon: '95.png',
@@ -3466,7 +3466,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3474,7 +3474,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'MSw'
+      nickname: 'MSw',
     },
     art85: {
       icon: '48.png',
@@ -3504,7 +3504,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3512,7 +3512,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TMS'
+      nickname: 'TMS',
     },
     art86: {
       icon: '13.png',
@@ -3542,7 +3542,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3550,7 +3550,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'Mag'
+      nickname: 'Mag',
     },
     art87: {
       icon: '09.png',
@@ -3580,7 +3580,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3588,7 +3588,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TToF'
+      nickname: 'TToF',
     },
     art88: {
       icon: '18.png',
@@ -3618,7 +3618,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3626,7 +3626,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'TWD'
+      nickname: 'TWD',
     },
     art89: {
       icon: '22.png',
@@ -3656,7 +3656,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3664,7 +3664,7 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'AS'
+      nickname: 'AS',
     },
     art90: {
       icon: '41.png',
@@ -3694,7 +3694,7 @@ export const db = {
         phom: 0,
         fairy: 0,
         chest: 0,
-        boss: 0
+        boss: 0,
       },
       weffect: 0,
       wcost: 0,
@@ -3702,103 +3702,103 @@ export const db = {
       adpct: 0,
       calcrelic: 0,
       calclevel: 0,
-      nickname: 'WotD'
-    }
+      nickname: 'WotD',
+    },
   },
   artifact_count: 95,
   artifact_costs: {
-    '0': -1,
-    '1': 1,
-    '2': 3,
-    '3': 6,
-    '4': 11,
-    '5': 19,
-    '6': 30,
-    '7': 46,
-    '8': 69,
-    '9': 102,
-    '10': 148,
-    '11': 214,
-    '12': 306,
-    '13': 434,
-    '14': 613,
-    '15': 861,
-    '16': 1203,
-    '17': 1675,
-    '18': 2323,
-    '19': 3212,
-    '20': 4430,
-    '21': 6094,
-    '22': 8363,
-    '23': 11454,
-    '24': 15657,
-    '25': 21365,
-    '26': 29108,
-    '27': 39599,
-    '28': 53796,
-    '29': 72990,
-    '30': 98914,
-    '31': 133897,
-    '32': 181063,
-    '33': 244605,
-    '34': 330143,
-    '35': 445208,
-    '36': 599886,
-    '37': 807680,
-    '38': 1086657,
-    '39': 1460982,
-    '40': 1962961,
-    '41': 2801512,
-    '42': 4271796,
-    '43': 6546742,
-    '44': 10084102,
-    '45': 15611565,
-    '46': 24291381,
-    '47': 37988598,
-    '48': 59710114,
-    '49': 94326541,
-    '50': 149764436,
-    '51': 238984254,
-    '52': 383276658,
-    '53': 617780678,
-    '54': 1000762985,
-    '55': 1629292101,
-    '56': 2665833882,
-    '57': 4383580899,
-    '58': 7244059100,
-    '59': 12030591779,
-    '60': 20078853673,
-    '61': 33676929221,
-    '62': 56762601881,
-    '63': 96144140647,
-    '64': 163647145909,
-    '65': 279906771691,
-    '66': 3840000000000,
-    '67': 53170000000000,
-    '68': 738330000000000,
-    '69': 10300000000000000,
-    '70': 144000000000000000,
-    '71': 2030000000000000000,
-    '72': 28800000000000000000,
-    '73': 409000000000000000000,
-    '74': 5.85e21,
-    '75': 8.42e22,
-    '76': 1.21e24,
-    '77': 1.76e25,
-    '78': 2.56e26,
-    '79': 3.74e27,
-    '80': 5.5e28,
-    '81': 8.12e29,
-    '82': 1.2e31,
-    '83': 1.78e32,
-    '84': 2.69e33,
-    '85': 4.04e34,
-    '86': 6.11e35,
-    '87': 9.27e36,
-    '88': 1.41e38,
-    '89': 2.17e39,
-    '90': 3.33e40,
-    '91': -1
+    0: -1,
+    1: 1,
+    2: 3,
+    3: 6,
+    4: 11,
+    5: 19,
+    6: 30,
+    7: 46,
+    8: 69,
+    9: 102,
+    10: 148,
+    11: 214,
+    12: 306,
+    13: 434,
+    14: 613,
+    15: 861,
+    16: 1203,
+    17: 1675,
+    18: 2323,
+    19: 3212,
+    20: 4430,
+    21: 6094,
+    22: 8363,
+    23: 11454,
+    24: 15657,
+    25: 21365,
+    26: 29108,
+    27: 39599,
+    28: 53796,
+    29: 72990,
+    30: 98914,
+    31: 133897,
+    32: 181063,
+    33: 244605,
+    34: 330143,
+    35: 445208,
+    36: 599886,
+    37: 807680,
+    38: 1086657,
+    39: 1460982,
+    40: 1962961,
+    41: 2801512,
+    42: 4271796,
+    43: 6546742,
+    44: 10084102,
+    45: 15611565,
+    46: 24291381,
+    47: 37988598,
+    48: 59710114,
+    49: 94326541,
+    50: 149764436,
+    51: 238984254,
+    52: 383276658,
+    53: 617780678,
+    54: 1000762985,
+    55: 1629292101,
+    56: 2665833882,
+    57: 4383580899,
+    58: 7244059100,
+    59: 12030591779,
+    60: 20078853673,
+    61: 33676929221,
+    62: 56762601881,
+    63: 96144140647,
+    64: 163647145909,
+    65: 279906771691,
+    66: 3840000000000,
+    67: 53170000000000,
+    68: 738330000000000,
+    69: 10300000000000000,
+    70: 144000000000000000,
+    71: 2030000000000000000,
+    72: 28800000000000000000,
+    73: 409000000000000000000,
+    74: 5.85e21,
+    75: 8.42e22,
+    76: 1.21e24,
+    77: 1.76e25,
+    78: 2.56e26,
+    79: 3.74e27,
+    80: 5.5e28,
+    81: 8.12e29,
+    82: 1.2e31,
+    83: 1.78e32,
+    84: 2.69e33,
+    85: 4.04e34,
+    86: 6.11e35,
+    87: 9.27e36,
+    88: 1.41e38,
+    89: 2.17e39,
+    90: 3.33e40,
+    91: -1,
   },
   artifact_lookup: {
     Artifact22: 'art1',
@@ -3895,7 +3895,7 @@ export const db = {
     Artifact94: 'art94',
     Artifact93: 'art93',
     Artifact92: 'art92',
-    Artifact91: 'art91'
+    Artifact91: 'art91',
   },
   skills: [
     {
@@ -3907,31 +3907,8 @@ export const db = {
       column: 0,
       need: 0,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.2 点击伤害',
@@ -3958,8 +3935,8 @@ export const db = {
         '×36.5B 点击伤害',
         '×815M 点击伤害',
         '×25T 点击伤害',
-        '×1.19e015 点击伤害'
-      ]
+        '×1.19e015 点击伤害',
+      ],
     },
     {
       id: 'red21',
@@ -3970,31 +3947,8 @@ export const db = {
       column: 1,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '+0.04% 来自英雄的点击伤害加成',
@@ -4021,8 +3975,8 @@ export const db = {
         '+121.00M% 来自英雄的点击伤害加成',
         '+2.13B% 来自英雄的点击伤害加成',
         '+54.70B% 来自英雄的点击伤害加成',
-        '+2.42T% 来自英雄的点击伤害加成'
-      ]
+        '+2.42T% 来自英雄的点击伤害加成',
+      ],
     },
     {
       id: 'red22',
@@ -4033,31 +3987,8 @@ export const db = {
       column: 2,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.5 宠物伤害',
@@ -4084,8 +4015,8 @@ export const db = {
         '×93.30B 宠物伤害;-12 激活宠物攻击所需点击次数',
         '×2.31T 宠物伤害;-13 激活宠物攻击所需点击次数',
         '×80.70T 宠物伤害;-14 激活宠物攻击所需点击次数',
-        '×4.50e015 宠物伤害;-15 激活宠物攻击所需点击次数'
-      ]
+        '×4.50e015 宠物伤害;-15 激活宠物攻击所需点击次数',
+      ],
     },
     {
       id: 'red23',
@@ -4096,31 +4027,8 @@ export const db = {
       column: 3,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.8 头目金币',
@@ -4147,8 +4055,8 @@ export const db = {
         '×14.40T 头目金币;-24秒 点金之心冷却时间',
         '×558.00T 头目金币;-26秒 点金之心冷却时间',
         '×3.14e016 头目金币;-28秒 点金之心冷却时间',
-        '×2.92e018 头目金币;-30秒 点金之心冷却时间'
-      ]
+        '×2.92e018 头目金币;-30秒 点金之心冷却时间',
+      ],
     },
     {
       id: 'red31',
@@ -4159,31 +4067,8 @@ export const db = {
       column: 1,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '×1.6 最高暴击伤害;-1% 暴击几率',
@@ -4210,8 +4095,8 @@ export const db = {
         '×5.86T 最高暴击伤害;-22% 暴击几率',
         '×239.00T 最高暴击伤害;-23% 暴击几率',
         '×1.57e016 最高暴击伤害;-24% 暴击几率',
-        '×1.67e018 最高暴击伤害;-25% 暴击几率'
-      ]
+        '×1.67e018 最高暴击伤害;-25% 暴击几率',
+      ],
     },
     {
       id: 'red32',
@@ -4222,31 +4107,8 @@ export const db = {
       column: 2,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '×1.6 烈焰火剑伤害;+1秒 烈焰火剑持续时间',
@@ -4273,8 +4135,8 @@ export const db = {
         '×3.87T 烈焰火剑伤害;+376秒 烈焰火剑持续时间',
         '×149.00T 烈焰火剑伤害;+454秒 烈焰火剑持续时间',
         '×9.32e015 烈焰火剑伤害;+550秒 烈焰火剑持续时间',
-        '×9.32e017 烈焰火剑伤害;+664秒 烈焰火剑持续时间'
-      ]
+        '×9.32e017 烈焰火剑伤害;+664秒 烈焰火剑持续时间',
+      ],
     },
     {
       id: 'red33',
@@ -4285,31 +4147,8 @@ export const db = {
       column: 3,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '×1.5 每次点击叠加的宠物伤害;+2 闪电攻击点击溅射数目',
@@ -4336,8 +4175,8 @@ export const db = {
         '×3.04T 每次点击叠加的宠物伤害;+51 闪电攻击点击溅射数目',
         '×128.00T 每次点击叠加的宠物伤害;+54 闪电攻击点击溅射数目',
         '×8.99e015 每次点击叠加的宠物伤害;+57 闪电攻击点击溅射数目',
-        '×1.04e018 每次点击叠加的宠物伤害;+60 闪电攻击点击溅射数目'
-      ]
+        '×1.04e018 每次点击叠加的宠物伤害;+60 闪电攻击点击溅射数目',
+      ],
     },
     {
       id: 'red41',
@@ -4363,8 +4202,8 @@ export const db = {
         '×96.20T 主动点击伤害;+21 每秒额外点击数',
         '×2.09e017 主动点击伤害;+24 每秒额外点击数',
         '×2.63e021 主动点击伤害;+27 每秒额外点击数',
-        '×3.21e026 主动点击伤害;+30 每秒额外点击数'
-      ]
+        '×3.21e026 主动点击伤害;+30 每秒额外点击数',
+      ],
     },
     {
       id: 'red42',
@@ -4390,8 +4229,8 @@ export const db = {
         '×5.08K 每多播火剑的伤害;+3 火剑多播',
         '×38.90K 每多播火剑的伤害;+3 火剑多播',
         '×475.00K 每多播火剑的伤害;+3 火剑多播',
-        '×10.60M 每多播火剑的伤害;+3 火剑多播'
-      ]
+        '×10.60M 每多播火剑的伤害;+3 火剑多播',
+      ],
     },
     {
       id: 'red43',
@@ -4417,8 +4256,8 @@ export const db = {
         '×186.00T 已充能的宠物伤害;×0.58 宠物技能冷却',
         '×4.85e017 已充能的宠物伤害;×0.545 宠物技能冷却',
         '×7.48e021 已充能的宠物伤害;×0.51 宠物技能冷却',
-        '×1.15e027 已充能的宠物伤害;×0.475 宠物技能冷却'
-      ]
+        '×1.15e027 已充能的宠物伤害;×0.475 宠物技能冷却',
+      ],
     },
     {
       id: 'yellow11',
@@ -4429,31 +4268,8 @@ export const db = {
       column: 0,
       need: 0,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.5 所有英雄伤害',
@@ -4480,8 +4296,8 @@ export const db = {
         '×36.50B 所有英雄伤害',
         '×815.00B 所有英雄伤害',
         '×25.00T 所有英雄伤害',
-        '×1.19e015 所有英雄伤害'
-      ]
+        '×1.19e015 所有英雄伤害',
+      ],
     },
     {
       id: 'yellow21',
@@ -4492,31 +4308,8 @@ export const db = {
       column: 1,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.8 宝箱怪金币数量;+1% 宝箱怪出现几率',
@@ -4543,8 +4336,8 @@ export const db = {
         '×14.40T 宝箱怪金币数量;+22% 宝箱怪出现几率',
         '×558.00T 宝箱怪金币数量;+23% 宝箱怪出现几率',
         '×3.14e016 宝箱怪金币数量;+24% 宝箱怪出现几率',
-        '×2.92e018 宝箱怪金币数量;+25% 宝箱怪出现几率'
-      ]
+        '×2.92e018 宝箱怪金币数量;+25% 宝箱怪出现几率',
+      ],
     },
     {
       id: 'yellow22',
@@ -4555,31 +4348,8 @@ export const db = {
       column: 2,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.5 战争怒嚎伤害;+1 收鼓舞的英雄数量',
@@ -4606,8 +4376,8 @@ export const db = {
         '×69.00B 战争怒嚎伤害;+24 收鼓舞的英雄数量',
         '×1.72T 战争怒嚎伤害;+26 收鼓舞的英雄数量',
         '×60.70T 战争怒嚎伤害;+28 收鼓舞的英雄数量',
-        '×3.43e015 战争怒嚎伤害;+30 收鼓舞的英雄数量'
-      ]
+        '×3.43e015 战争怒嚎伤害;+30 收鼓舞的英雄数量',
+      ],
     },
     {
       id: 'yellow23',
@@ -4618,31 +4388,8 @@ export const db = {
       column: 3,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.5 部落战舰伤害;+1 部落战舰溅射数目',
@@ -4669,8 +4416,8 @@ export const db = {
         '×33.59B 部落战舰伤害;+28 部落战舰溅射数目',
         '×776.00B 部落战舰伤害;+30 部落战舰溅射数目',
         '×25.20T 部落战舰伤害;+32 部落战舰溅射数目',
-        '×1.30e015 部落战舰伤害;+35 部落战舰溅射数目'
-      ]
+        '×1.30e015 部落战舰伤害;+35 部落战舰溅射数目',
+      ],
     },
     {
       id: 'yellow31',
@@ -4681,31 +4428,8 @@ export const db = {
       column: 1,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '×0.25% 英雄技能加成类别：乘法;+2% 英雄技能加成类别：加法',
@@ -4732,8 +4456,8 @@ export const db = {
         '×19.55% 英雄技能加成类别：乘法;+33.5% 英雄技能加成类别：加法',
         '×22.35% 英雄技能加成类别：乘法;+35% 英雄技能加成类别：加法',
         '×25.6% 英雄技能加成类别：乘法;+36.5% 英雄技能加成类别：加法',
-        '×29.33% 英雄技能加成类别：乘法;+38% 英雄技能加成类别：加法'
-      ]
+        '×29.33% 英雄技能加成类别：乘法;+38% 英雄技能加成类别：加法',
+      ],
     },
     {
       id: 'yellow32',
@@ -4744,31 +4468,8 @@ export const db = {
       column: 2,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '+0.75% 受鼓舞的伤害增幅;+1秒 战争怒嚎持续时间',
@@ -4795,8 +4496,8 @@ export const db = {
         '+496.00B% 受鼓舞的伤害增幅;+376秒 战争怒嚎持续时间',
         '+22.10T% 受鼓舞的伤害增幅;+454秒 战争怒嚎持续时间',
         '+1.67e015% 受鼓舞的伤害增幅;+550秒 战争怒嚎持续时间',
-        '+2.11e017% 受鼓舞的伤害增幅;+664秒 战争怒嚎持续时间'
-      ]
+        '+2.11e017% 受鼓舞的伤害增幅;+664秒 战争怒嚎持续时间',
+      ],
     },
     {
       id: 'yellow33',
@@ -4807,31 +4508,8 @@ export const db = {
       column: 3,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '×1.8 有效的总计英雄伤害',
@@ -4858,8 +4536,8 @@ export const db = {
         '×5.33T 有效的总计英雄伤害;-24秒 协同进攻冷却时间',
         '×230.00T 有效的总计英雄伤害;-26秒 协同进攻冷却时间',
         '×1.65e016 有效的总计英雄伤害;-28秒 协同进攻冷却时间',
-        '×1.96e018 有效的总计英雄伤害;-30秒 协同进攻冷却时间'
-      ]
+        '×1.96e018 有效的总计英雄伤害;-30秒 协同进攻冷却时间',
+      ],
     },
     {
       id: 'yellow41',
@@ -4885,8 +4563,8 @@ export const db = {
         '×712 每激活一次叠加的全部英雄伤害',
         '×3.41K 每激活一次叠加的全部英雄伤害',
         '×23.40K 每激活一次叠加的全部英雄伤害',
-        '×256.00K 每激活一次叠加的全部英雄伤害'
-      ]
+        '×256.00K 每激活一次叠加的全部英雄伤害',
+      ],
     },
     {
       id: 'yellow42',
@@ -4912,8 +4590,8 @@ export const db = {
         '×5.08K 每多播呐喊的伤害;+3 呐喊多播',
         '×38.90K 每多播呐喊的伤害;+3 呐喊多播',
         '×475.00K 每多播呐喊的伤害;+3 呐喊多播',
-        '×10.60M 每多播呐喊的伤害;+3 呐喊多播'
-      ]
+        '×10.60M 每多播呐喊的伤害;+3 呐喊多播',
+      ],
     },
     {
       id: 'yellow43',
@@ -4939,8 +4617,8 @@ export const db = {
         '×4.28e015 重击伤害;+1.9秒 重击持续时间',
         '×1.73e019K 重击伤害;+2秒 重击持续时间',
         '×4.34e023 重击伤害;+2.1秒 重击持续时间',
-        '×1.13e029 重击伤害;+2.2秒 重击持续时间'
-      ]
+        '×1.13e029 重击伤害;+2.2秒 重击持续时间',
+      ],
     },
     {
       id: 'blue11',
@@ -4951,31 +4629,8 @@ export const db = {
       column: 0,
       need: 0,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '+5 魔法容量;+0.1 魔法恢复',
@@ -5002,8 +4657,8 @@ export const db = {
         '+1.52K 魔法容量;+13.2 魔法恢复',
         '+1.87K 魔法容量;+15.14 魔法恢复',
         '+2.29K 魔法容量;+17.35 魔法恢复',
-        '+2.81K 魔法容量;+19.86 魔法恢复'
-      ]
+        '+2.81K 魔法容量;+19.86 魔法恢复',
+      ],
     },
     {
       id: 'blue21',
@@ -5014,31 +4669,8 @@ export const db = {
       column: 1,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.8 点金之手金币数量;×1.2 仙女金币数量',
@@ -5065,8 +4697,8 @@ export const db = {
         '×6.01T 点金之手金币数量;×316.99K 仙女金币数量',
         '×210.00T 点金之手金币数量;×1.79M 仙女金币数量',
         '×1.05e016 点金之手金币数量;×12.50M 仙女金币数量',
-        '×8.64e017 点金之手金币数量;×119.00M 仙女金币数量'
-      ]
+        '×8.64e017 点金之手金币数量;×119.00M 仙女金币数量',
+      ],
     },
     {
       id: 'blue22',
@@ -5077,31 +4709,8 @@ export const db = {
       column: 2,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×2 天堂圣击伤害',
@@ -5128,8 +4737,8 @@ export const db = {
         '×532.00B 天堂圣击伤害;+51 天堂圣击溅射数目',
         '×15.40T 天堂圣击伤害;+54 天堂圣击溅射数目',
         '×635.00T 天堂圣击伤害;+57 天堂圣击溅射数目',
-        '×4.25e016 天堂圣击伤害;+60 天堂圣击溅射数目'
-      ]
+        '×4.25e016 天堂圣击伤害;+60 天堂圣击溅射数目',
+      ],
     },
     {
       id: 'blue23',
@@ -5140,31 +4749,8 @@ export const db = {
       column: 3,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.5 幻影分身伤害;+0.1 幻影分身每秒攻击次数',
@@ -5191,8 +4777,8 @@ export const db = {
         '×83.90B 幻影分身伤害;+4.74 幻影分身每秒攻击次数',
         '×2.40T 幻影分身伤害;+5.14 幻影分身每秒攻击次数',
         '×99.09T 幻影分身伤害;+5.57 幻影分身每秒攻击次数',
-        '×6.81e015 幻影分身伤害;+6.02 幻影分身每秒攻击次数'
-      ]
+        '×6.81e015 幻影分身伤害;+6.02 幻影分身每秒攻击次数',
+      ],
     },
     {
       id: 'blue31',
@@ -5214,7 +4800,7 @@ export const db = {
         '+176% 多重仙女几率;-44.2秒 仙女再生冷却时间',
         '+221% 多重仙女几率;-51.8秒 仙女再生冷却时间',
         '+275% 多重仙女几率;-60秒 仙女再生冷却时间',
-      ]
+      ],
     },
     {
       id: 'blue32',
@@ -5225,31 +4811,8 @@ export const db = {
       column: 2,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '0.05% 每次点击恢复的魔法量',
@@ -5276,8 +4839,8 @@ export const db = {
         '3.66% 每次点击恢复的魔法量',
         '4.28% 每次点击恢复的魔法量',
         '5.01% 每次点击恢复的魔法量',
-        '5.84% 每次点击恢复的魔法量'
-      ]
+        '5.84% 每次点击恢复的魔法量',
+      ],
     },
     {
       id: 'blue33',
@@ -5288,31 +4851,8 @@ export const db = {
       column: 3,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '+2秒 幻影分身持续时间',
@@ -5339,8 +4879,8 @@ export const db = {
         '+752秒 幻影分身持续时间;+68 幻影分身溅射跳过数量',
         '+908秒 幻影分身持续时间;+78 幻影分身溅射跳过数量',
         '+1.10K秒 幻影分身持续时间;+89 幻影分身溅射跳过数量',
-        '+1.32K秒 幻影分身持续时间;+101 幻影分身溅射跳过数量'
-      ]
+        '+1.32K秒 幻影分身持续时间;+101 幻影分身溅射跳过数量',
+      ],
     },
     {
       id: 'blue41',
@@ -5349,24 +4889,8 @@ export const db = {
       icon: 'blue41.png',
       tier: 4,
       column: 1,
-      need: 20,
-      costs: [
-        3,
-        4,
-        5,
-        7,
-        9,
-        12,
-        16,
-        21,
-        27,
-        35,
-        46,
-        60,
-        78,
-        101,
-        131,
-      ],
+      need: 50,
+      costs: [3, 4, 5, 7, 9, 12, 16, 21, 27, 35, 46, 60, 78, 101, 131],
       effects: [
         '+2 已恢复魔法',
         '+4 已恢复魔法',
@@ -5383,7 +4907,7 @@ export const db = {
         '+162 已恢复魔法',
         '+212.5 已恢复魔法',
         '+278 已恢复魔法',
-      ]
+      ],
     },
     {
       id: 'blue42',
@@ -5392,24 +4916,8 @@ export const db = {
       icon: 'blue42.png',
       tier: 4,
       column: 2,
-      need: 20,
-      costs: [
-        3,
-        4,
-        5,
-        7,
-        9,
-        12,
-        16,
-        21,
-        27,
-        35,
-        46,
-        60,
-        78,
-        101,
-        131,
-      ],
+      need: 50,
+      costs: [3, 4, 5, 7, 9, 12, 16, 21, 27, 35, 46, 60, 78, 101, 131],
       effects: [
         '+10% 泰坦生命值减免;93.8% 闪电伤害效率',
         '+15.32% 泰坦生命值减免;94.1% 闪电伤害效率',
@@ -5426,7 +4934,7 @@ export const db = {
         '+83.79% 泰坦生命值减免;97.4% 闪电伤害效率',
         '+88.09% 泰坦生命值减免;97.7% 闪电伤害效率',
         '+91.47% 泰坦生命值减免;98% 闪电伤害效率',
-      ]
+      ],
     },
     {
       id: 'blue43',
@@ -5435,24 +4943,8 @@ export const db = {
       icon: 'blue43.png',
       tier: 4,
       column: 3,
-      need: 20,
-      costs: [
-        3,
-        4,
-        5,
-        7,
-        9,
-        12,
-        16,
-        21,
-        27,
-        35,
-        46,
-        60,
-        78,
-        101,
-        131,
-      ],
+      need: 50,
+      costs: [3, 4, 5, 7, 9, 12, 16, 21, 27, 35, 46, 60, 78, 101, 131],
       effects: [
         '×1.31 幻影分身首要主动技能效果;×1.042 技能激活持续时间',
         '×1.7 幻影分身首要主动技能效果;×1.087 技能激活持续时间',
@@ -5469,7 +4961,61 @@ export const db = {
         '×112.99K 幻影分身首要主动技能效果;×2.222 技能激活持续时间',
         '×1.77M 幻影分身首要主动技能效果;×2.5 技能激活持续时间',
         '×53.90M 幻影分身首要主动技能效果;×2.857 技能激活持续时间',
-      ]
+      ],
+    },
+    {
+      id: 'blue52',
+      name: '神圣至上',
+      type: 'Sorcerer',
+      icon: 'blue52.png',
+      tier: 5,
+      column: 2,
+      need: 50,
+      costs: [3, 4, 5, 7, 9, 12, 16, 21, 27, 35, 46, 60, 78, 101, 131],
+      effects: [
+        '×1.27 每层多重施法跳斩伤害;+1 跳斩多重施法次数',
+        '×1.62 每层多重施法跳斩伤害;+1 跳斩多重施法次数',
+        '×2.14 每层多重施法跳斩伤害;+1 跳斩多重施法次数',
+        '×3.04 每层多重施法跳斩伤害;+1 跳斩多重施法次数',
+        '×4.63 每层多重施法跳斩伤害;+1 跳斩多重施法次数',
+        '×7.76 每层多重施法跳斩伤害;+2 跳斩多重施法次数',
+        '×14.6 每层多重施法跳斩伤害;+2 跳斩多重施法次数',
+        '×31.7 每层多重施法跳斩伤害;+2 跳斩多重施法次数',
+        '×80.1 每层多重施法跳斩伤害;+2 跳斩多重施法次数',
+        '×245 每层多重施法跳斩伤害;+2 跳斩多重施法次数',
+        '×960 每层多重施法跳斩伤害;+3 跳斩多重施法次数',
+        '×5.08K 每层多重施法跳斩伤害;+3 跳斩多重施法次数',
+        '×38.90K 每层多重施法跳斩伤害;+3 跳斩多重施法次数',
+        '×475.00K 每层多重施法跳斩伤害;+3 跳斩多重施法次数',
+        '×10.60M 每层多重施法跳斩伤害;+3 跳斩多重施法次数',
+      ],
+    },
+    {
+      id: 'blue53',
+      name: '幻影霸主',
+      type: 'Sorcerer',
+      icon: 'blue53.png',
+      tier: 5,
+      column: 3,
+      need: 50,
+      costs: [3, 4, 5, 7, 9, 12, 16, 21, 27, 35, 46, 60, 78, 101, 131],
+      effects: [
+        '×1.27 每层多重施法伤害;+1 多重施法次数',
+        '×1.62 每层多重施法伤害;+1 多重施法次数',
+        '×2.14 每层多重施法伤害;+1 多重施法次数',
+        '×3.04 每层多重施法伤害;+1 多重施法次数',
+        '×4.63 每层多重施法伤害;+1 多重施法次数',
+        '×7.76 每层多重施法伤害;+2 多重施法次数',
+        '×14.6 每层多重施法伤害;+2 多重施法次数',
+        '×31.7 每层多重施法伤害;+2 多重施法次数',
+        '×80.1 每层多重施法伤害;+2 多重施法次数',
+        '×245 每层多重施法伤害;+2 多重施法次数',
+        '×960 每层多重施法伤害;+3 多重施法次数',
+        '×5.08K 每层多重施法伤害;+3 多重施法次数',
+        '×38.90K 每层多重施法伤害;+3 多重施法次数',
+        '×475.00K 每层多重施法伤害;+3 多重施法次数',
+        '×10.60M 每层多重施法伤害;+3 多重施法次数',
+      ],
     },
     {
       id: 'green11',
@@ -5480,31 +5026,8 @@ export const db = {
       column: 0,
       need: 0,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.6 全部金币;×1.2 后台金币',
@@ -5531,8 +5054,8 @@ export const db = {
         '×470.00B 全部金币;×541.00K 后台金币',
         '×12.30T 全部金币;×2.86M 后台金币',
         '×450.00T 全部金币;×17.30M 后台金币',
-        '×2.63e016 全部金币;×125.00M 后台金币'
-      ]
+        '×2.63e016 全部金币;×125.00M 后台金币',
+      ],
     },
     {
       id: 'green21',
@@ -5543,31 +5066,8 @@ export const db = {
       column: 1,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.6 致命攻击伤害;+2秒 致命攻击持续时间',
@@ -5594,8 +5094,8 @@ export const db = {
         '×86.00T 致命攻击伤害;+752秒 致命攻击持续时间',
         '×5.60e015 致命攻击伤害;+908秒 致命攻击持续时间',
         '×5.73e017 致命攻击伤害;+1.10K秒 致命攻击持续时间',
-        '×1.10e020 致命攻击伤害;+1.32K秒 致命攻击持续时间'
-      ]
+        '×1.10e020 致命攻击伤害;+1.32K秒 致命攻击持续时间',
+      ],
     },
     {
       id: 'green22',
@@ -5606,31 +5106,8 @@ export const db = {
       column: 2,
       need: 3,
       costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50
+        1, 2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28,
+        33, 38, 43, 50,
       ],
       effects: [
         '×1.6 匕首伤害',
@@ -5657,8 +5134,8 @@ export const db = {
         '×936.00B 匕首伤害',
         '×30.90T 匕首伤害',
         '×1.46e015 匕首伤害',
-        '×1.14e017 匕首伤害'
-      ]
+        '×1.14e017 匕首伤害',
+      ],
     },
     {
       id: 'green23',
@@ -5668,18 +5145,7 @@ export const db = {
       tier: 2,
       column: 3,
       need: 3,
-      costs: [
-        1,
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-      ],
+      costs: [1, 2, 2, 3, 3, 3, 4, 5, 5, 6],
       effects: [
         '+1 最大多重泰坦数量;+1% 多重泰坦出现几率',
         '+2 最大多重泰坦数量;+1.6% 多重泰坦出现几率',
@@ -5691,7 +5157,7 @@ export const db = {
         '+14 最大多重泰坦数量;+15.1% 多重泰坦出现几率',
         '+16 最大多重泰坦数量;+21.3% 多重泰坦出现几率',
         '+20 最大多重泰坦数量;+30% 多重泰坦出现几率',
-      ]
+      ],
     },
     {
       id: 'green31',
@@ -5702,31 +5168,8 @@ export const db = {
       column: 1,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '×1 同伴致命一击伤害;+3% 1000X黄金机会',
@@ -5753,8 +5196,8 @@ export const db = {
         '×3.25M 同伴致命一击伤害;+13.5% 1000X黄金机会',
         '×18.3M 同伴致命一击伤害;+14% 1000X黄金机会',
         '×123M 同伴致命一击伤害;+14.5% 1000X黄金机会',
-        '×960M 同伴致命一击伤害;+15% 1000X黄金机会'
-      ]
+        '×960M 同伴致命一击伤害;+15% 1000X黄金机会',
+      ],
     },
     {
       id: 'green32',
@@ -5765,31 +5208,8 @@ export const db = {
       column: 2,
       need: 20,
       costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-        16,
-        19,
-        22,
-        25,
-        28,
-        33,
-        38,
-        43,
-        50,
-        57
+        2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14, 16, 19, 22, 25, 28, 33,
+        38, 43, 50, 57,
       ],
       effects: [
         '+150% 匕首毒药升压;+1 匕首计数',
@@ -5816,8 +5236,8 @@ export const db = {
         '+1.96e016% 匕首毒药升压;+6 匕首计数',
         '+1.03e018% 匕首毒药升压;+6 匕首计数',
         '+8.84e019% 匕首毒药升压;+6 匕首计数',
-        '+1.22e022% 匕首毒药升压;+7 匕首计数'
-      ]
+        '+1.22e022% 匕首毒药升压;+7 匕首计数',
+      ],
     },
     {
       id: 'green33',
@@ -5827,23 +5247,7 @@ export const db = {
       tier: 3,
       column: 3,
       need: 20,
-      costs: [
-        2,
-        2,
-        3,
-        3,
-        3,
-        4,
-        5,
-        5,
-        6,
-        7,
-        8,
-        9,
-        11,
-        12,
-        14,
-      ],
+      costs: [2, 2, 3, 3, 3, 4, 5, 5, 6, 7, 8, 9, 11, 12, 14],
       effects: [
         '+10% 隐形跳过机会;+15% 隐形阶段',
         '+12.9% 隐形跳过机会;+16.8% 隐形阶段',
@@ -5860,7 +5264,7 @@ export const db = {
         '+44.3% 隐形跳过机会;+36.4% 隐形阶段',
         '+47.1% 隐形跳过机会;+38.2% 隐形阶段',
         '+50% 隐形跳过机会;+40% 隐形阶段',
-      ]
+      ],
     },
     {
       id: 'green41',
@@ -5887,7 +5291,7 @@ export const db = {
         '+7.65e020 故宫合同最大伤害;+1.4 故宫合同法力消耗每秒',
         '+8.41e024 故宫合同最大伤害;+1.35 故宫合同法力消耗每秒',
         '+5.59e029 故宫合同最大伤害;+1.3 故宫合同法力消耗每秒',
-      ]
+      ],
     },
     {
       id: 'green42',
@@ -5914,7 +5318,7 @@ export const db = {
         '+5 匕首飞溅跳过;-13秒 匕首冷却',
         '+5 匕首飞溅跳过;-14秒 匕首冷却',
         '+5 匕首飞溅跳过;-15秒 匕首冷却',
-      ]
+      ],
     },
     {
       id: 'green43',
@@ -5941,7 +5345,7 @@ export const db = {
         '+6.50T% 造成致命一击升压;+6 提升最大计数',
         '+6.16e015% 造成致命一击升压;+7 提升最大计数',
         '+5.07e019% 造成致命一击升压;+7 提升最大计数',
-      ]
+      ],
     },
   ],
   crit_reductions: {
@@ -5950,64 +5354,64 @@ export const db = {
     hs: 0,
     hscs: 0,
     hssc: 0,
-    pet: 1
+    pet: 1,
   },
   gold_hom_adj: 0.32000000000000006,
   warcry_effects: {
-    '0': 1,
-    '1': 2,
-    '2': 2.1,
-    '3': 2.3,
-    '4': 2.5,
-    '5': 2.8,
-    '6': 3.1,
-    '7': 3.5,
-    '8': 3.9,
-    '9': 4.4,
-    '10': 4.9,
-    '11': 5.4,
-    '12': 6,
-    '13': 6.6,
-    '14': 7.3,
-    '15': 8,
-    '16': 8.7,
-    '17': 9.5,
-    '18': 10.3,
-    '19': 11.1,
-    '20': 12,
-    '21': 12,
-    '22': 12,
-    '23': 12,
-    '24': 12,
-    '25': 12
+    0: 1,
+    1: 2,
+    2: 2.1,
+    3: 2.3,
+    4: 2.5,
+    5: 2.8,
+    6: 3.1,
+    7: 3.5,
+    8: 3.9,
+    9: 4.4,
+    10: 4.9,
+    11: 5.4,
+    12: 6,
+    13: 6.6,
+    14: 7.3,
+    15: 8,
+    16: 8.7,
+    17: 9.5,
+    18: 10.3,
+    19: 11.1,
+    20: 12,
+    21: 12,
+    22: 12,
+    23: 12,
+    24: 12,
+    25: 12,
   },
   clone_effects: {
-    '0': 0,
-    '1': 1,
-    '2': 1.9,
-    '3': 3.3,
-    '4': 5.2,
-    '5': 7.3,
-    '6': 9.7,
-    '7': 12.3,
-    '8': 15.1,
-    '9': 18.1,
-    '10': 21.2,
-    '11': 24.6,
-    '12': 28,
-    '13': 31.6,
-    '14': 35.4,
-    '15': 39.2,
-    '16': 43.2,
-    '17': 47.3,
-    '18': 51.5,
-    '19': 55.9,
-    '20': 60.3,
-    '21': 64.8,
-    '22': 69.5,
-    '23': 74.2,
-    '24': 79,
-    '25': 84
+    0: 0,
+    1: 1,
+    2: 1.9,
+    3: 3.3,
+    4: 5.2,
+    5: 7.3,
+    6: 9.7,
+    7: 12.3,
+    8: 15.1,
+    9: 18.1,
+    10: 21.2,
+    11: 24.6,
+    12: 28,
+    13: 31.6,
+    14: 35.4,
+    15: 39.2,
+    16: 43.2,
+    17: 47.3,
+    18: 51.5,
+    19: 55.9,
+    20: 60.3,
+    21: 64.8,
+    22: 69.5,
+    23: 74.2,
+    24: 79,
+    25: 84,
   },
   heroes: [
     { en: 'maya', cn: '守望者玛雅·穆塔', faction: 'spell', type: 'ground' },
@@ -6019,7 +5423,7 @@ export const db = {
       en: 'rosabella',
       cn: '弓箭手罗莎贝拉·邦妮',
       faction: 'ranged',
-      type: 'ground'
+      type: 'ground',
     },
     { en: 'gulbrand', cn: '毁灭者布尔兰德', faction: 'melee', type: 'ground' },
     { en: 'davey', cn: '戴维·加农船长', faction: 'ranged', type: 'ground' },
@@ -6029,7 +5433,7 @@ export const db = {
       en: 'cosette',
       cn: '佩剑家族之宝柯赛特',
       faction: 'melee',
-      type: 'ground'
+      type: 'ground',
     },
     { en: 'kiki', cn: '龙骑士琪琪', faction: 'spell', type: 'ground' },
     { en: 'maddie', cn: '影子盗贼玛迪', faction: 'ranged', type: 'ground' },
@@ -6057,7 +5461,7 @@ export const db = {
       en: 'zolom',
       cn: '太空猎人佐龙·布拉斯特',
       faction: 'ranged',
-      type: 'flying'
+      type: 'flying',
     },
     { en: 'finn', cn: '怪异卫兵费恩', faction: 'ranged', type: 'ground' },
     { en: 'nohni', cn: '矛灵诺尼', faction: 'melee', type: 'flying' },
@@ -6066,13 +5470,13 @@ export const db = {
       en: 'split',
       cn: '保持所有类型的英雄均衡发展',
       faction: 'melee, spell, ranged',
-      type: 'ground, flying'
-    }
+      type: 'ground, flying',
+    },
   ],
-  maxStage: 92000
+  maxStage: 92000,
 };
 
 export default {
   vision,
-  db
+  db,
 };

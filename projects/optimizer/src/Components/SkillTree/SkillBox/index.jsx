@@ -7,7 +7,7 @@ class SkillBox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      skillType: props.skills[0].type
+      skillType: props.skills[0].type,
     };
     this.preFixedSkills = this.preFixedSkills.bind(this);
     this.calcTotal = this.calcTotal.bind(this);
@@ -15,15 +15,15 @@ class SkillBox extends React.Component {
 
   preFixedSkills() {
     const { skills } = this.props;
-    const arr = [1, 2, 3, 4];
-    return arr.map(index => skills.filter(i => i.tier === index));
+    const arr = [1, 2, 3, 4, 5];
+    return arr.map((index) => skills.filter((i) => i.tier === index));
   }
 
   calcTotal() {
     const { skills, skillTree } = this.props;
     let total = 0;
-    skills.forEach(i => {
-      const level = skillTree.find(item => item.id === i.id).level;
+    skills.forEach((i) => {
+      const level = skillTree.find((item) => item.id === i.id).level;
       const costs = [...i.costs];
       costs.splice(level);
       if (costs.length) {
@@ -56,7 +56,12 @@ class SkillBox extends React.Component {
             {this.calcTotal()}
           </Grid>
           <Grid container item alignContent="center">
-            <Button className={styles.btn} color="primary" variant="contained" onClick={() => reset(skillType)}>
+            <Button
+              className={styles.btn}
+              color="primary"
+              variant="contained"
+              onClick={() => reset(skillType)}
+            >
               重置
             </Button>
           </Grid>
@@ -69,13 +74,14 @@ class SkillBox extends React.Component {
               item
               justify={k === 0 ? 'center' : 'space-between'}
             >
+              {k === 4 && <Grid item xs={3} sm={2} />}
               {i.map((item, index) => (
                 <Grid key={index} item xs={3} sm={2}>
                   <SkillItem
                     id={item.id}
                     select={this.props.select}
                     level={
-                      skillTree.find(skillItem => skillItem.id === item.id)
+                      skillTree.find((skillItem) => skillItem.id === item.id)
                         .level
                     }
                     icon={item.icon}
