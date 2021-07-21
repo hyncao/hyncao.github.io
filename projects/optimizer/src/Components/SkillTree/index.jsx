@@ -7,7 +7,7 @@ import config from '../../config';
 import styles from './index.module.scss';
 
 const { db } = config;
-const skillType = ['Knight', 'Warload', 'Sorcerer', 'Rogue'];
+const skillType = ['Knight', 'Summoner', 'Warload', 'Sorcerer', 'Rogue'];
 const skills = skillType.map((i) =>
   db.skills.filter((item) => item.type === i)
 );

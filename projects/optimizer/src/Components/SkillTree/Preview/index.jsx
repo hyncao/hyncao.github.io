@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './index.module.scss';
 
-const SKILL_TYPE_LIST = ['Knight', 'Warload', 'Sorcerer', 'Rogue'];
+const SKILL_TYPE_LIST = ['Knight', 'Summoner', 'Warload', 'Sorcerer', 'Rogue'];
 
 export default class extends React.Component {
   constructor(props) {
@@ -49,9 +49,7 @@ export default class extends React.Component {
             <div className={styles.box}>
               {this.prepareSection(type).map((section, index) => (
                 <div key={index} className={styles.section}>
-                  {type === SKILL_TYPE_LIST[2] && index === 4 && (
-                    <div className={styles.item} />
-                  )}
+                  {section[0] && section[0].id.includes('42') && <div className={styles.item} />}
                   {section.map((item) => (
                     <div key={item.id} className={styles.item}>
                       <img
@@ -60,6 +58,7 @@ export default class extends React.Component {
                       <div>{item.level}</div>
                     </div>
                   ))}
+                  {section[section.length-1] && section[section.length-1].id.includes('42') && <div className={styles.item} />}
                 </div>
               ))}
             </div>

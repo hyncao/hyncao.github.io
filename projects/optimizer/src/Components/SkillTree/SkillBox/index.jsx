@@ -74,7 +74,7 @@ class SkillBox extends React.Component {
               item
               justify={k === 0 ? 'center' : 'space-between'}
             >
-              {k === 4 && <Grid item xs={3} sm={2} />}
+              {i[0] && i[0].id.includes('42') && <Grid item xs={3} sm={2} />}
               {i.map((item, index) => (
                 <Grid key={index} item xs={3} sm={2}>
                   <SkillItem
@@ -88,6 +88,7 @@ class SkillBox extends React.Component {
                   />
                 </Grid>
               ))}
+              {i[i.length - 1] && i[i.length - 1].id.includes('42') && <Grid item xs={3} sm={2} />}
             </Grid>
           ))}
         </Grid>
