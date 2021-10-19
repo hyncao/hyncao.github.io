@@ -2,11 +2,11 @@ import { observable, action } from 'mobx';
 
 export default class EdStore {
   @observable list = [
-    { id: 'max', title: '极限层数', type: 'tel', placeholder: '请输入极限层数', maxlength: 5, value: '' },
+    { id: 'max', title: '极限层数', type: 'tel', placeholder: '请输入极限层数', maxlength: 6, value: '' },
     { id: 'arcane', title: '讨价还价等级', type: 'tel', placeholder: '请输入讨价还价等级', maxlength: 4, value: '' },
     { id: 'mystic', title: '神秘冲击等级', type: 'tel', placeholder: '请输入神秘冲击等级', maxlength: 4, value: '' },
     { id: 'presence', title: '威名赫赫等级', type: 'tel', placeholder: '请输入威名赫赫等级', maxlength: 4, value: '' },
-    { id: 'platinum', title: '周年白金套装乘数', type: 'number', placeholder: '请输入周年白金套装乘数', maxlength: 4, defaultValue: '1', value: '' },
+    { id: 'platinum', title: '周年白金套装乘数', type: 'number', placeholder: '请输入周年白金套装乘数', maxlength: 5, defaultValue: '1', value: '' },
   ];
 
   @observable edData = [
