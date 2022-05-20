@@ -3,8 +3,29 @@
   <head>
     <meta charset="utf-8" />
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no" />
-    <meta name="theme-color" content="#000000" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5, user-scalable=no"
+    />
+    <meta name="theme-color" content="#ffffff" />
+
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="标题" />
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <!-- 是否启用 WebApp 全屏模式 -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <!-- 设置状态栏的背景颜色，只有在 `"apple-mobile-web-app-capable" content="yes"` 时生效 -->
+
+    <!-- iOS 启动画面 begin -->
+    <link rel="apple-touch-startup-image" href="/startup-320x480.png" />
+    <!-- iPhone/iPod Touch 竖屏 320x480 (标准分辨率) -->
+    <link rel="apple-touch-startup-image" sizes="640x960" href="/startup-640x960.png" />
+    <!-- iPhone/iPod Touch 竖屏 640x960 (Retina) -->
+    <link rel="apple-touch-startup-image" sizes="640x1136" href="/startup-640x1136.png" />
+    <!-- iPhone 5/iPod Touch 5 竖屏 640x1136 (Retina) -->
+    <!-- iOS 启动画面 end -->
+
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -22,10 +43,10 @@
     <title>TT2 tools</title>
     <script>
       var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "https://hm.baidu.com/hm.js?2c5f620b9bc93453d20ec0256199d5b4";
-        var s = document.getElementsByTagName("script")[0]; 
+      (function () {
+        var hm = document.createElement('script');
+        hm.src = 'https://hm.baidu.com/hm.js?2c5f620b9bc93453d20ec0256199d5b4';
+        var s = document.getElementsByTagName('script')[0];
         s.parentNode.insertBefore(hm, s);
       })();
     </script>
